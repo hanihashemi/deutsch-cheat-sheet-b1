@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Deutsch Cheat Sheet für die telc B1 Prüfung — Prüfungsüberblick, Brief schreiben, Redemittel, Grammatik, Präpositionen, Fälle und Adjektivendungen mit Visualisierungen.">
+<meta name="description" content="Deutsch Cheat Sheet für die telc B1 Prüfung — Prüfungsüberblick, Brief schreiben, Redemittel, Zeiten &amp; Modalverben, Präpositionen, Fälle, Nebensätze und Adjektivendungen mit Visualisierungen.">
 <meta name="theme-color" content="#2b3f97">
 <title>telc B1 · Deutsch Cheat Sheet</title>
 <style>
@@ -398,6 +398,50 @@ kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8em;background:
 
 /* two-tone redemittel table */
 table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
+
+/* ---------- Case buckets (fixed-case prepositions) ---------- */
+.buckets{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin:6px 0 4px}
+.bucket{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface-2);display:flex;flex-direction:column}
+.bucket-head{padding:9px 14px;font-weight:800;color:#fff;font-size:.92rem;display:flex;align-items:center;justify-content:space-between;gap:8px}
+[data-theme="dark"] .bucket-head{color:#0d1020}
+.bucket.dat .bucket-head{background:var(--dat)}
+.bucket.akk .bucket-head{background:var(--akk)}
+.bucket.gen .bucket-head{background:var(--gen)}
+.bucket-head .bh-en{font-weight:600;font-size:.74rem;opacity:.9}
+.bucket-body{padding:11px 12px 8px;display:flex;flex-wrap:wrap;gap:7px;align-content:flex-start}
+.bp{background:var(--surface);border:1px solid var(--border-strong);border-radius:999px;padding:4px 11px;font-weight:700;font-size:.9rem}
+.bp small{font-weight:500;color:var(--text-muted)}
+.bucket-note{padding:4px 13px 11px;font-size:.8rem;color:var(--text-muted)}
+
+/* ---------- Timeline figures ---------- */
+.fig .tline{stroke:var(--border-strong);stroke-width:2.5;stroke-linecap:round}
+.fig .tarr{fill:var(--border-strong)}
+.fig .tnow{stroke:var(--primary);stroke-width:2;stroke-dasharray:4 5}
+.fig .pt-past{fill:var(--akk)}.fig .pt-now{fill:var(--primary)}.fig .pt-fut{fill:var(--nom)}
+.fig .t-past{fill:var(--akk)}.fig .t-now{fill:var(--primary)}.fig .t-fut{fill:var(--nom)}
+.fig .pt-akk{fill:var(--akk)}.fig .pt-nom{fill:var(--nom)}
+.fig .t-akk{fill:var(--akk)}.fig .t-nom{fill:var(--nom)}
+
+/* ---------- Komparativ steps ---------- */
+.steps{display:flex;align-items:flex-end;gap:10px;max-width:480px;margin:2px auto 4px}
+.step{flex:1;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,var(--primary-2),var(--primary));color:#fff;
+  display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:8px 6px;font-weight:800;font-size:.95rem}
+[data-theme="dark"] .step{color:#0d1020}
+.step small{font-weight:600;opacity:.85;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em}
+.step.s1{min-height:58px}.step.s2{min-height:88px}.step.s3{min-height:118px}
+
+/* flow variants: haben/sein & kein/nicht */
+.flow-out.sein{background:var(--dat-bg);color:var(--dat);border:1px solid var(--dat)}
+.flow-out.haben{background:var(--nom-bg);color:var(--nom);border:1px solid var(--nom)}
+
+/* case-colored row headers in grid tables */
+table.grid tbody th.h-nom{background:var(--nom-bg);color:var(--nom)}
+table.grid tbody th.h-akk{background:var(--akk-bg);color:var(--akk)}
+table.grid tbody th.h-dat{background:var(--dat-bg);color:var(--dat)}
+table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
+
+/* transformation arrow (Aktiv → Passiv) */
+.tf-arr{text-align:center;color:var(--text-muted);font-size:.9rem;font-weight:600;line-height:1.3;margin:2px 0}
 </style>
 </head>
 <body>
@@ -406,7 +450,7 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
   <div class="hero-inner">
     <div class="flag"><i class="b"></i><i class="r"></i><i class="g"></i></div>
     <h1>Deutsch Cheat Sheet <span class="h1badge">telc B1</span></h1>
-    <p class="sub">Alles für die <b>telc Deutsch B1 Prüfung</b> auf einer durchsuchbaren Seite — Prüfungsüberblick, Brief schreiben, Redemittel fürs Sprechen sowie die wichtigste Grammatik (Präpositionen, Fälle, Konjunktionen, Adjektivendungen) — mit Diagrammen &amp; Bildern.</p>
+    <p class="sub">Alles für die <b>telc Deutsch B1 Prüfung</b> auf einer durchsuchbaren Seite — Prüfungsüberblick, Brief schreiben, Redemittel fürs Sprechen sowie die wichtigste Grammatik (Zeiten &amp; Modalverben, Präpositionen, Fälle, Nebensätze, Adjektivendungen) — mit Diagrammen &amp; Bildern.</p>
     <div class="meta">
       <span class="pill">🎓 telc B1 Prüfung</span>
       <span class="pill">✍️ Brief &amp; Redemittel</span>
@@ -422,7 +466,7 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
   <div class="toolbar-inner">
     <div class="search-wrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
-      <input id="search" type="search" placeholder="Suchen…  z. B. „Brief“, „weil“, „Meinung“, „Dativ“" autocomplete="off" aria-label="Cheat Sheet durchsuchen">
+      <input id="search" type="search" placeholder="Suchen…  z. B. „Brief“, „Perfekt“, „weil“, „Dativ“" autocomplete="off" aria-label="Cheat Sheet durchsuchen">
       <button class="clear-btn" id="clear" aria-label="Suche löschen">✕</button>
     </div>
     <button class="tbtn" id="themeBtn" aria-label="Farbschema wechseln">
@@ -446,23 +490,43 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
     </div>
   </div>
   <div class="navgroup">
+    <div class="navgroup-label">Verben &amp; Zeiten</div>
+    <div class="chips">
+      <a class="chip" href="#sec-perfekt"><span class="ico">🕰️</span>Perfekt</a>
+      <a class="chip" href="#sec-praeteritum"><span class="ico">📜</span>Präteritum</a>
+      <a class="chip" href="#sec-modal"><span class="ico">🧰</span>Modalverben</a>
+      <a class="chip" href="#sec-trennbar"><span class="ico">✂️</span>Trennbare Verben</a>
+      <a class="chip" href="#sec-imperativ"><span class="ico">📣</span>Imperativ</a>
+      <a class="chip" href="#sec-passiv"><span class="ico">🏗️</span>Passiv</a>
+      <a class="chip" href="#sec-sein"><span class="ico">⏳</span>„sein“ (Zeitformen)</a>
+    </div>
+  </div>
+  <div class="navgroup">
     <div class="navgroup-label">Fälle &amp; Präpositionen</div>
     <div class="chips">
+      <a class="chip" href="#sec-artikel"><span class="ico">📦</span>Artikel &amp; Pronomen</a>
       <a class="chip" href="#sec-wechsel"><span class="ico">🧭</span>Wechselpräpositionen</a>
+      <a class="chip" href="#sec-fest"><span class="ico">📌</span>Feste Präpositionen</a>
+      <a class="chip" href="#sec-temporal"><span class="ico">🕒</span>Zeitangaben</a>
       <a class="chip" href="#sec-datakk"><span class="ico">🎁</span>Dativ + Akkusativ</a>
       <a class="chip" href="#sec-verbprep"><span class="ico">🔌</span>Verb + Präposition</a>
       <a class="chip" href="#sec-woda"><span class="ico">❓</span>wo(r)- / da(r)-</a>
       <a class="chip" href="#sec-reflexiv"><span class="ico">🔁</span>Reflexive Verben</a>
       <a class="chip" href="#sec-adjektiv"><span class="ico">🎨</span>Adjektivendungen</a>
+      <a class="chip" href="#sec-komparativ"><span class="ico">📈</span>Komparativ</a>
     </div>
   </div>
   <div class="navgroup">
-    <div class="navgroup-label">Satzbau &amp; Konjunktionen</div>
+    <div class="navgroup-label">Satzbau &amp; Nebensätze</div>
     <div class="chips">
       <a class="chip" href="#sec-wortstellung"><span class="ico">🧩</span>Wortstellung</a>
+      <a class="chip" href="#sec-negation"><span class="ico">🚫</span>Negation</a>
       <a class="chip" href="#sec-wwddw"><span class="ico">🔗</span>wann·wenn·denn·dann·weil</a>
       <a class="chip" href="#sec-als"><span class="ico">⚖️</span>als</a>
       <a class="chip" href="#sec-dass"><span class="ico">💬</span>dass</a>
+      <a class="chip" href="#sec-relativ"><span class="ico">🧷</span>Relativsätze</a>
+      <a class="chip" href="#sec-zuinf"><span class="ico">🎯</span>zu + Infinitiv · damit</a>
+      <a class="chip" href="#sec-indirekt"><span class="ico">❔</span>Indirekte Fragen</a>
       <a class="chip" href="#sec-trotzdem"><span class="ico">🌧️</span>trotzdem / obwohl</a>
     </div>
   </div>
@@ -471,7 +535,7 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
     <div class="chips">
       <a class="chip" href="#sec-lust"><span class="ico">😋</span>Lust haben</a>
       <a class="chip" href="#sec-wasfuer"><span class="ico">🔍</span>Was für …</a>
-      <a class="chip" href="#sec-konditional"><span class="ico">🙏</span>Konditional II</a>
+      <a class="chip" href="#sec-konditional"><span class="ico">🙏</span>Konjunktiv II</a>
       <a class="chip" href="#sec-vorschlag"><span class="ico">🗣️</span>Vorschläge</a>
       <a class="chip" href="#sec-bestaetigen"><span class="ico">✅</span>Bestätigen &amp; Reagieren</a>
     </div>
@@ -481,7 +545,6 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
     <div class="chips">
       <a class="chip" href="#sec-richtung"><span class="ico">↕️</span>Richtungen (hin/her)</a>
       <a class="chip" href="#sec-haeufig"><span class="ico">📊</span>Häufigkeit</a>
-      <a class="chip" href="#sec-sein"><span class="ico">⏳</span>„sein“ (Zeitformen)</a>
     </div>
   </div>
 </nav>
@@ -672,6 +735,505 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
     </div>
   </section>
 
+  <!-- ============ PERFEKT ============ -->
+  <section class="card" id="sec-perfekt">
+    <div class="card-head">
+      <div class="card-ico">🕰️</div>
+      <h2 class="card-title">Perfekt — über Vergangenes sprechen<span class="en">Present perfect — the spoken past tense</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Beim <b>Sprechen</b> benutzt man für die Vergangenheit fast immer das Perfekt: <code>haben/sein (Position 2) + Partizip II (Ende)</code>.</p>
+
+      <div class="figure">
+        <svg class="fig" viewBox="0 0 560 122" role="img" aria-label="Zeitstrahl: Vergangenheit, jetzt, Zukunft" style="max-width:560px;margin:0 auto;height:auto;display:block">
+          <line class="tline" x1="20" y1="78" x2="534" y2="78"/>
+          <polygon class="tarr" points="548,78 534,71 534,85"/>
+          <circle class="pt-past" cx="115" cy="78" r="7"/>
+          <text class="flabel t-past" x="115" y="50" text-anchor="middle">Perfekt · Präteritum</text>
+          <text class="t-mut" x="115" y="102" text-anchor="middle">gestern · letzte Woche</text>
+          <line class="tnow" x1="295" y1="30" x2="295" y2="94"/>
+          <circle class="pt-now" cx="295" cy="78" r="7"/>
+          <text class="flabel t-now" x="295" y="20" text-anchor="middle">JETZT · Präsens</text>
+          <text class="t-mut" x="295" y="102" text-anchor="middle">heute · gerade</text>
+          <circle class="pt-fut" cx="465" cy="78" r="7"/>
+          <text class="flabel t-fut" x="465" y="50" text-anchor="middle">Futur I / Präsens</text>
+          <text class="t-mut" x="465" y="102" text-anchor="middle">morgen · bald</text>
+        </svg>
+        <div class="figcap">Für die Zukunft reicht meist <b>Präsens + Zeitangabe</b>: <em>Ich fahre <b>morgen</b> nach Bonn.</em></div>
+      </div>
+
+      <div class="subh">Die Satzklammer</div>
+      <div class="satzbau">
+        <div class="sb-row">
+          <div class="sb-track">
+            <span class="slot">Ich</span>
+            <span class="slot verb">habe<span class="pos">②</span></span>
+            <span class="slot">gestern</span>
+            <span class="slot">eine Pizza</span>
+            <span class="slot end">gegessen.<span class="pos">Ende</span></span>
+          </div>
+        </div>
+        <div class="sb-row">
+          <div class="sb-track">
+            <span class="slot">Wir</span>
+            <span class="slot verb">sind<span class="pos">②</span></span>
+            <span class="slot">am Samstag</span>
+            <span class="slot">nach Köln</span>
+            <span class="slot end">gefahren.<span class="pos">Ende</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="subh">haben oder sein?</div>
+      <div class="figure">
+        <div class="flow">
+          <div class="flow-q">Welches Hilfsverb braucht das Verb?</div>
+          <div class="flow-stem"></div>
+          <div class="flow-branches">
+            <div class="flow-branch">
+              <div class="flow-cond">Bewegung A → B<small>gehen · fahren · kommen · fliegen · laufen</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out sein">SEIN<small>ich bin gegangen</small></div>
+            </div>
+            <div class="flow-branch">
+              <div class="flow-cond">Zustandsänderung<small>aufstehen · einschlafen · sterben — auch: bleiben, passieren, werden</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out sein">SEIN<small>ich bin aufgestanden</small></div>
+            </div>
+            <div class="flow-branch">
+              <div class="flow-cond">alle anderen Verben<small>machen · essen · sehen · kaufen …</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out haben">HABEN<small>ich habe gemacht</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subh">Partizip II bilden</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Verbtyp</th><th>Muster</th><th>Beispiele</th></tr></thead>
+          <tbody>
+            <tr><td class="fn">regelmäßig</td><td class="de">ge + Stamm + t</td><td class="ex">machen → gemacht · kaufen → gekauft · lernen → gelernt</td></tr>
+            <tr><td class="fn">unregelmäßig</td><td class="de">ge + Stamm + en</td><td class="ex">sehen → gesehen · trinken → getrunken · essen → gegessen</td></tr>
+            <tr><td class="fn">trennbar</td><td class="de wrap">Präfix + ge + …</td><td class="ex">einkaufen → ein<b>ge</b>kauft · anrufen → an<b>ge</b>rufen</td></tr>
+            <tr><td class="fn">untrennbar</td><td class="de wrap">ohne ge- (be-, ver-, er-, ent-, emp-, zer-)</td><td class="ex">besuchen → besucht · verstehen → verstanden</td></tr>
+            <tr><td class="fn">-ieren</td><td class="de">ohne ge-, mit -t</td><td class="ex">studieren → studiert · telefonieren → telefoniert</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid2">
+        <div>
+          <div class="subh" style="color:var(--dat)">Wichtige Verben mit sein</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Infinitiv</th><th>Perfekt</th><th>English</th></tr></thead>
+              <tbody>
+                <tr><td class="de">gehen</td><td class="de">ist gegangen</td><td class="en">to go</td></tr>
+                <tr><td class="de">fahren</td><td class="de">ist gefahren</td><td class="en">to drive / go</td></tr>
+                <tr><td class="de">kommen</td><td class="de">ist gekommen</td><td class="en">to come</td></tr>
+                <tr><td class="de">bleiben</td><td class="de">ist geblieben</td><td class="en">to stay</td></tr>
+                <tr><td class="de">aufstehen</td><td class="de">ist aufgestanden</td><td class="en">to get up</td></tr>
+                <tr><td class="de">werden</td><td class="de">ist geworden</td><td class="en">to become</td></tr>
+                <tr><td class="de">passieren</td><td class="de">ist passiert</td><td class="en">to happen</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subh">Wichtige unregelmäßige Verben mit haben</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Infinitiv</th><th>Perfekt</th><th>English</th></tr></thead>
+              <tbody>
+                <tr><td class="de">essen</td><td class="de">hat gegessen</td><td class="en">to eat</td></tr>
+                <tr><td class="de">trinken</td><td class="de">hat getrunken</td><td class="en">to drink</td></tr>
+                <tr><td class="de">sehen</td><td class="de">hat gesehen</td><td class="en">to see</td></tr>
+                <tr><td class="de">lesen</td><td class="de">hat gelesen</td><td class="en">to read</td></tr>
+                <tr><td class="de">schreiben</td><td class="de">hat geschrieben</td><td class="en">to write</td></tr>
+                <tr><td class="de">sprechen</td><td class="de">hat gesprochen</td><td class="en">to speak</td></tr>
+                <tr><td class="de">nehmen</td><td class="de">hat genommen</td><td class="en">to take</td></tr>
+                <tr><td class="de">geben</td><td class="de">hat gegeben</td><td class="en">to give</td></tr>
+                <tr><td class="de">finden</td><td class="de">hat gefunden</td><td class="en">to find</td></tr>
+                <tr><td class="de">helfen</td><td class="de">hat geholfen</td><td class="en">to help</td></tr>
+                <tr><td class="de">treffen</td><td class="de">hat getroffen</td><td class="en">to meet</td></tr>
+                <tr><td class="de">wissen</td><td class="de">hat gewusst</td><td class="en">to know</td></tr>
+                <tr><td class="de">denken</td><td class="de">hat gedacht</td><td class="en">to think</td></tr>
+                <tr><td class="de">bringen</td><td class="de">hat gebracht</td><td class="en">to bring</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRÄTERITUM ============ -->
+  <section class="card" id="sec-praeteritum">
+    <div class="card-head">
+      <div class="card-ico">📜</div>
+      <h2 class="card-title">Präteritum — war, hatte &amp; Modalverben<span class="en">Simple past — the forms you really need</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Im Alltag brauchst du das Präteritum vor allem von <b>sein</b>, <b>haben</b> und den <b>Modalverben</b> — alles andere sagt man im <a href="#sec-perfekt">Perfekt</a>. In Texten (Zeitung, Märchen) liest du es öfter.</p>
+      <div class="grid2">
+        <div>
+          <div class="subh">sein &amp; haben</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Person</th><th>sein</th><th>haben</th></tr></thead>
+              <tbody>
+                <tr><td class="de">ich</td><td class="de">war</td><td class="de">hatte</td></tr>
+                <tr><td class="de">du</td><td class="de">warst</td><td class="de">hattest</td></tr>
+                <tr><td class="de">er / sie / es</td><td class="de">war</td><td class="de">hatte</td></tr>
+                <tr><td class="de">wir</td><td class="de">waren</td><td class="de">hatten</td></tr>
+                <tr><td class="de">ihr</td><td class="de">wart</td><td class="de">hattet</td></tr>
+                <tr><td class="de">sie / Sie</td><td class="de">waren</td><td class="de">hatten</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subh">Modalverben</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Infinitiv</th><th>Präteritum</th><th>Beispiel</th></tr></thead>
+              <tbody>
+                <tr><td class="de">können</td><td class="de">konnte</td><td class="ex">Ich konnte nicht kommen.</td></tr>
+                <tr><td class="de">müssen</td><td class="de">musste</td><td class="ex">Er musste arbeiten.</td></tr>
+                <tr><td class="de">dürfen</td><td class="de">durfte</td><td class="ex">Wir durften hier nicht parken.</td></tr>
+                <tr><td class="de">wollen</td><td class="de">wollte</td><td class="ex">Sie wollte nur schlafen.</td></tr>
+                <tr><td class="de">sollen</td><td class="de">sollte</td><td class="ex">Ich sollte ihn anrufen.</td></tr>
+                <tr><td class="de">mögen</td><td class="de">mochte</td><td class="ex">Er mochte den Film nicht.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="subh">Häufige Formen in Texten</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Infinitiv</th><th>Präteritum</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">geben</td><td class="de">gab</td><td class="ex">Es gab keinen Kaffee mehr.</td></tr>
+            <tr><td class="de">gehen</td><td class="de">ging</td><td class="ex">Sie ging nach Hause.</td></tr>
+            <tr><td class="de">kommen</td><td class="de">kam</td><td class="ex">Er kam zu spät.</td></tr>
+            <tr><td class="de">sehen</td><td class="de">sah</td><td class="ex">Ich sah ihn am Bahnhof.</td></tr>
+            <tr><td class="de">wissen</td><td class="de">wusste</td><td class="ex">Das wusste ich nicht.</td></tr>
+            <tr><td class="de">machen <em>(regelmäßig)</em></td><td class="de">machte</td><td class="ex">Stamm + te: machte · sagte · spielte</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>konnte ≠ könnte!</b> <em>konnte</em> = Präteritum (Vergangenheit). <em>könnte</em> mit Umlaut = <a href="#sec-konditional">Konjunktiv II</a> (höfliche Bitte). ich- und er-Form sind im Präteritum immer <b>gleich</b>: <em>ich war, er war</em>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ MODALVERBEN ============ -->
+  <section class="card" id="sec-modal">
+    <div class="card-head">
+      <div class="card-ico">🧰</div>
+      <h2 class="card-title">Modalverben<span class="en">Modal verbs — können, müssen, dürfen …</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Modalverb auf <b>Position 2</b> + Infinitiv am <b>Ende</b> (Satzklammer → siehe <a href="#sec-wortstellung">Wortstellung</a>).</p>
+      <div class="satzbau" style="margin-bottom:14px">
+        <div class="sb-row">
+          <div class="sb-track">
+            <span class="slot">Ich</span>
+            <span class="slot verb">muss<span class="pos">②</span></span>
+            <span class="slot">heute lange</span>
+            <span class="slot end">arbeiten.<span class="pos">Ende</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="subh">Bedeutungen</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Verb</th><th>Bedeutung</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">💪 können</td><td class="en">can — Fähigkeit / Möglichkeit</td><td class="ex">Ich kann gut schwimmen.</td></tr>
+            <tr><td class="de">❗ müssen</td><td class="en">must — Notwendigkeit / Pflicht</td><td class="ex">Ich muss heute arbeiten.</td></tr>
+            <tr><td class="de">✅ dürfen</td><td class="en">may — Erlaubnis</td><td class="ex">Hier darf man parken.</td></tr>
+            <tr><td class="de">🚫 nicht dürfen</td><td class="en">must not — Verbot</td><td class="ex">Hier darf man nicht rauchen.</td></tr>
+            <tr><td class="de">🎯 wollen</td><td class="en">to want — starker Wunsch / Plan</td><td class="ex">Ich will Deutsch lernen.</td></tr>
+            <tr><td class="de">📋 sollen</td><td class="en">should — Auftrag / Rat von anderen</td><td class="ex">Du sollst mehr schlafen, sagt der Arzt.</td></tr>
+            <tr><td class="de">🙏 möchten</td><td class="en">would like — höflicher Wunsch</td><td class="ex">Ich möchte einen Kaffee, bitte.</td></tr>
+            <tr><td class="de">❤️ mögen</td><td class="en">to like — gern haben</td><td class="ex">Ich mag Kaffee. <em>(ohne 2. Verb)</em></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Konjugation (Präsens)</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Person</th><th>können</th><th>müssen</th><th>dürfen</th><th>wollen</th><th>sollen</th><th>möchten</th></tr></thead>
+          <tbody>
+            <tr><td class="de">ich</td><td class="de">kann</td><td class="de">muss</td><td class="de">darf</td><td class="de">will</td><td class="de">soll</td><td class="de">möchte</td></tr>
+            <tr><td class="de">du</td><td class="de">kannst</td><td class="de">musst</td><td class="de">darfst</td><td class="de">willst</td><td class="de">sollst</td><td class="de">möchtest</td></tr>
+            <tr><td class="de">er / sie / es</td><td class="de">kann</td><td class="de">muss</td><td class="de">darf</td><td class="de">will</td><td class="de">soll</td><td class="de">möchte</td></tr>
+            <tr><td class="de">wir</td><td class="de">können</td><td class="de">müssen</td><td class="de">dürfen</td><td class="de">wollen</td><td class="de">sollen</td><td class="de">möchten</td></tr>
+            <tr><td class="de">ihr</td><td class="de">könnt</td><td class="de">müsst</td><td class="de">dürft</td><td class="de">wollt</td><td class="de">sollt</td><td class="de">möchtet</td></tr>
+            <tr><td class="de">sie / Sie</td><td class="de">können</td><td class="de">müssen</td><td class="de">dürfen</td><td class="de">wollen</td><td class="de">sollen</td><td class="de">möchten</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>Klassische Falle:</b> <em>Du <b>musst nicht</b> kommen</em> = du kannst, aber es ist nicht nötig (don't have to). <em>Du <b>darfst nicht</b> kommen</em> = es ist verboten (must not)!</div></div>
+      <div class="tip"><span class="ti">💡</span><div>ich- und er-Form sind gleich und <b>ohne Endung</b> (ich kann, er kann). Vergangenheit → <a href="#sec-praeteritum">Präteritum</a> (konnte, musste …).</div></div>
+    </div>
+  </section>
+
+  <!-- ============ TRENNBARE VERBEN ============ -->
+  <section class="card" id="sec-trennbar">
+    <div class="card-head">
+      <div class="card-ico">✂️</div>
+      <h2 class="card-title">Trennbare &amp; untrennbare Verben<span class="en">Separable verbs — anrufen, aufstehen …</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Trennbare Präfixe sind <b>betont</b> und wandern im Hauptsatz ans <b>Satzende</b>: <em>anrufen → Ich rufe … an.</em></p>
+
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">Präsens — Präfix ans Ende</span>
+            <div class="sb-track">
+              <span class="slot">Ich</span>
+              <span class="slot verb">rufe<span class="pos">②</span></span>
+              <span class="slot">dich morgen</span>
+              <span class="slot end">an.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">Perfekt — Partizip mit -ge- in der Mitte</span>
+            <div class="sb-track">
+              <span class="slot">Ich</span>
+              <span class="slot verb">habe<span class="pos">②</span></span>
+              <span class="slot">dich gestern</span>
+              <span class="slot end">an·ge·rufen.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">Nebensatz — Verb wieder zusammen, am Ende</span>
+            <div class="sb-track">
+              <span class="slot konj">…, weil</span>
+              <span class="slot">ich</span>
+              <span class="slot">dich morgen</span>
+              <span class="slot end">anrufe.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div>
+          <div class="subh">Trennbar (Präfix betont)</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Präfixe</th><th>Beispiele</th></tr></thead>
+              <tbody>
+                <tr><td class="de wrap">ab- · an- · auf- · aus-</td><td class="ex">abholen · anrufen · aufstehen · ausfüllen</td></tr>
+                <tr><td class="de wrap">ein- · mit- · nach-</td><td class="ex">einkaufen · mitkommen · nachdenken</td></tr>
+                <tr><td class="de wrap">vor- · zu- · zurück-</td><td class="ex">vorbereiten · zuhören · zurückkommen</td></tr>
+                <tr><td class="de">fern-</td><td class="ex">fernsehen — Ich sehe abends fern.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subh">Untrennbar (Präfix unbetont)</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Präfixe</th><th>Beispiele</th></tr></thead>
+              <tbody>
+                <tr><td class="de wrap">be- · emp- · ent-</td><td class="ex">besuchen · empfehlen · entschuldigen</td></tr>
+                <tr><td class="de wrap">er- · ge- · miss-</td><td class="ex">erklären · gefallen · missverstehen</td></tr>
+                <tr><td class="de wrap">ver- · zer-</td><td class="ex">verstehen · verkaufen · zerbrechen</td></tr>
+                <tr><td class="de">—</td><td class="ex">Präfix bleibt immer am Verb: Ich verstehe dich.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div><b>Partizip II:</b> trennbar → an<b>ge</b>rufen (ge- in der Mitte) · untrennbar → verstanden (<b>kein</b> ge-). Mit <b>zu</b>: an<b>zu</b>rufen → siehe <a href="#sec-zuinf">zu + Infinitiv</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ IMPERATIV ============ -->
+  <section class="card" id="sec-imperativ">
+    <div class="card-head">
+      <div class="card-ico">📣</div>
+      <h2 class="card-title">Imperativ — Aufforderungen<span class="en">Commands &amp; requests</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Drei Formen: <b>du</b>, <b>ihr</b>, <b>Sie</b>. Die du-Form = Präsens-du <b>ohne -st</b> (und ohne du): <em>du machst → Mach!</em></p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Verb</th><th>du</th><th>ihr</th><th>Sie</th><th>Notiz</th></tr></thead>
+          <tbody>
+            <tr><td class="de">machen</td><td class="de">Mach!</td><td class="de">Macht!</td><td class="de">Machen Sie!</td><td class="en">Standard</td></tr>
+            <tr><td class="de">kommen</td><td class="de">Komm!</td><td class="de">Kommt!</td><td class="de">Kommen Sie!</td><td class="en">Standard</td></tr>
+            <tr><td class="de">nehmen</td><td class="de">Nimm!</td><td class="de">Nehmt!</td><td class="de">Nehmen Sie!</td><td class="en">e → i bleibt</td></tr>
+            <tr><td class="de">fahren</td><td class="de">Fahr!</td><td class="de">Fahrt!</td><td class="de">Fahren Sie!</td><td class="en"><b>kein</b> Umlaut!</td></tr>
+            <tr><td class="de">arbeiten</td><td class="de">Arbeite!</td><td class="de">Arbeitet!</td><td class="de">Arbeiten Sie!</td><td class="en">-t/-d Stamm → -e</td></tr>
+            <tr><td class="de">sein</td><td class="de">Sei ruhig!</td><td class="de">Seid ruhig!</td><td class="de">Seien Sie ruhig!</td><td class="en">unregelmäßig</td></tr>
+            <tr><td class="de">haben</td><td class="de wrap">Hab keine Angst!</td><td class="de">Habt …!</td><td class="de">Haben Sie …!</td><td class="en">unregelmäßig</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div>Freundlicher mit <b>bitte / doch / mal</b>: <em>Mach doch mal das Fenster auf!</em> — trennbare Präfixe gehen auch hier ans <b>Ende</b>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ PASSIV ============ -->
+  <section class="card" id="sec-passiv">
+    <div class="card-head">
+      <div class="card-ico">🏗️</div>
+      <h2 class="card-title">Passiv<span class="en">Passive voice — werden + Partizip II</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Wichtig ist die <b>Handlung</b>, nicht wer sie macht: <code>werden (Position 2) + Partizip II (Ende)</code>.</p>
+
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">Aktiv</span>
+            <div class="sb-track">
+              <span class="slot">Man</span>
+              <span class="slot verb">repariert<span class="pos">②</span></span>
+              <span class="slot"><span class="k akk">das Auto</span>.</span>
+            </div>
+          </div>
+          <div class="tf-arr">↓ &nbsp;Das <span class="k akk">Akkusativ-Objekt</span> wird zum <span class="k nom">Subjekt</span></div>
+          <div class="sb-row">
+            <span class="sb-tag">Passiv</span>
+            <div class="sb-track">
+              <span class="slot"><span class="k nom">Das Auto</span></span>
+              <span class="slot verb">wird<span class="pos">②</span></span>
+              <span class="slot end">repariert.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div>
+          <div class="subh">Die Formen</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Zeit</th><th>Muster</th><th>Beispiel</th></tr></thead>
+              <tbody>
+                <tr><td class="fn">Präsens</td><td class="de wrap">wird + Partizip II</td><td class="ex">Das Haus wird gebaut.</td></tr>
+                <tr><td class="fn">Präteritum</td><td class="de wrap">wurde + Partizip II</td><td class="ex">Das Haus wurde 1990 gebaut.</td></tr>
+                <tr><td class="fn">Perfekt</td><td class="de wrap">ist + Partizip II + worden</td><td class="ex">Das Haus ist gebaut worden.</td></tr>
+                <tr><td class="fn">mit Modalverb</td><td class="de wrap">muss + Partizip II + werden</td><td class="ex">Das Auto muss repariert werden.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subh">werden (Präsens)</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Person</th><th>Form</th></tr></thead>
+              <tbody>
+                <tr><td class="de">ich</td><td class="de">werde</td></tr>
+                <tr><td class="de">du</td><td class="de">wirst</td></tr>
+                <tr><td class="de">er / sie / es</td><td class="de">wird</td></tr>
+                <tr><td class="de">wir / sie / Sie</td><td class="de">werden</td></tr>
+                <tr><td class="de">ihr</td><td class="de">werdet</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tip" style="margin-top:12px"><span class="ti">💡</span><div>Wer es macht → <b>von + <span class="k dat">Dativ</span></b>: <em>Der Brief wird <span class="k dat">von der Lehrerin</span> korrigiert.</em></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEIN KONJUGATION ============ -->
+  <section class="card" id="sec-sein">
+    <div class="card-head">
+      <div class="card-ico">⏳</div>
+      <h2 class="card-title">„sein“ in vier Zeitformen<span class="en">Conjugation of "to be"</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Person</th><th>Präsens<span style="font-weight:500;text-transform:none"> · present</span></th><th>Präteritum<span style="font-weight:500;text-transform:none"> · simple past</span></th><th>Perfekt<span style="font-weight:500;text-transform:none"> · present perfect</span></th><th>Futur I<span style="font-weight:500;text-transform:none"> · future</span></th></tr></thead>
+          <tbody>
+            <tr><td class="de">ich</td><td class="de">bin</td><td class="de">war</td><td class="de">bin gewesen</td><td class="de">werde sein</td></tr>
+            <tr><td class="de">du</td><td class="de">bist</td><td class="de">warst</td><td class="de">bist gewesen</td><td class="de">wirst sein</td></tr>
+            <tr><td class="de">er / sie / es</td><td class="de">ist</td><td class="de">war</td><td class="de">ist gewesen</td><td class="de">wird sein</td></tr>
+            <tr><td class="de">wir</td><td class="de">sind</td><td class="de">waren</td><td class="de">sind gewesen</td><td class="de">werden sein</td></tr>
+            <tr><td class="de">ihr</td><td class="de">seid</td><td class="de">wart</td><td class="de">seid gewesen</td><td class="de">werdet sein</td></tr>
+            <tr><td class="de">sie / Sie</td><td class="de">sind</td><td class="de">waren</td><td class="de">sind gewesen</td><td class="de">werden sein</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div><b>sein</b> bildet das Perfekt mit <b>sein</b> (nicht haben): <em>ich <b>bin</b> gewesen</em>. Im Alltag benutzt man für die Vergangenheit meist das <b>Präteritum</b> (<em>war</em>).</div></div>
+    </div>
+  </section>
+
+  <!-- ============ ARTIKEL & PRONOMEN ============ -->
+  <section class="card" id="sec-artikel">
+    <div class="card-head">
+      <div class="card-ico">📦</div>
+      <h2 class="card-title">Artikel &amp; Pronomen — Deklination<span class="en">The foundation: article &amp; pronoun endings</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Die Basis für alles: Fälle, Präpositionen, Adjektivendungen. Wichtigste Regel: <b>nur Maskulin ändert sich im Akkusativ</b> (der → den, ein → einen).</p>
+
+      <div class="grid2">
+        <div>
+          <table class="grid">
+            <caption>Bestimmter Artikel <span style="color:var(--text-muted);font-weight:500">(der / die / das)</span></caption>
+            <thead><tr><th></th><th>M</th><th>F</th><th>N</th><th>Pl</th></tr></thead>
+            <tbody>
+              <tr><th class="h-nom">Nom</th><td>der</td><td>die</td><td>das</td><td>die</td></tr>
+              <tr><th class="h-akk">Akk</th><td><span class="ec">den</span></td><td>die</td><td>das</td><td>die</td></tr>
+              <tr><th class="h-dat">Dat</th><td><span class="ec">dem</span></td><td><span class="ec">der</span></td><td><span class="ec">dem</span></td><td><span class="ec">den</span> +n</td></tr>
+              <tr><th class="h-gen">Gen</th><td><span class="ec">des</span> +s</td><td><span class="ec">der</span></td><td><span class="ec">des</span> +s</td><td><span class="ec">der</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <table class="grid">
+            <caption>Unbestimmter Artikel <span style="color:var(--text-muted);font-weight:500">(ein / kein / mein …)</span></caption>
+            <thead><tr><th></th><th>M</th><th>F</th><th>N</th><th>Pl (kein)</th></tr></thead>
+            <tbody>
+              <tr><th class="h-nom">Nom</th><td>ein</td><td>eine</td><td>ein</td><td>keine</td></tr>
+              <tr><th class="h-akk">Akk</th><td><span class="ec">einen</span></td><td>eine</td><td>ein</td><td>keine</td></tr>
+              <tr><th class="h-dat">Dat</th><td><span class="ec">einem</span></td><td><span class="ec">einer</span></td><td><span class="ec">einem</span></td><td><span class="ec">keinen</span> +n</td></tr>
+              <tr><th class="h-gen">Gen</th><td><span class="ec">eines</span> +s</td><td><span class="ec">einer</span></td><td><span class="ec">eines</span> +s</td><td><span class="ec">keiner</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subh">Personalpronomen</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Nominativ</th><th>Akkusativ</th><th>Dativ</th></tr></thead>
+          <tbody>
+            <tr><td class="de"><span class="k nom">ich</span></td><td class="de"><span class="k akk">mich</span></td><td class="de"><span class="k dat">mir</span></td></tr>
+            <tr><td class="de"><span class="k nom">du</span></td><td class="de"><span class="k akk">dich</span></td><td class="de"><span class="k dat">dir</span></td></tr>
+            <tr><td class="de"><span class="k nom">er</span></td><td class="de"><span class="k akk">ihn</span></td><td class="de"><span class="k dat">ihm</span></td></tr>
+            <tr><td class="de"><span class="k nom">sie</span></td><td class="de"><span class="k akk">sie</span></td><td class="de"><span class="k dat">ihr</span></td></tr>
+            <tr><td class="de"><span class="k nom">es</span></td><td class="de"><span class="k akk">es</span></td><td class="de"><span class="k dat">ihm</span></td></tr>
+            <tr><td class="de"><span class="k nom">wir</span></td><td class="de"><span class="k akk">uns</span></td><td class="de"><span class="k dat">uns</span></td></tr>
+            <tr><td class="de"><span class="k nom">ihr</span></td><td class="de"><span class="k akk">euch</span></td><td class="de"><span class="k dat">euch</span></td></tr>
+            <tr><td class="de"><span class="k nom">sie / Sie</span></td><td class="de"><span class="k akk">sie / Sie</span></td><td class="de"><span class="k dat">ihnen / Ihnen</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip"><span class="ti">💡</span><div><b>Dativ Plural:</b> auch das Nomen bekommt <b>-n</b>: <em>mit <span class="k dat">den Kinder<b>n</b></span></em>.</div></div>
+      <div class="tip rule"><span class="ti">📎</span><div><b>n-Deklination:</b> Einige Maskulina bekommen <b>-(e)n</b> in allen Fällen außer Nominativ: <em>der Junge → <span class="k akk">den Jungen</span> / <span class="k dat">dem Jungen</span></em>. Auch: der Mensch, der Kunde, der Kollege, der Student, der Nachbar, der Herr (den Herrn).</div></div>
+    </div>
+  </section>
+
   <!-- ============ WECHSELPRÄPOSITIONEN ============ -->
   <section class="card" id="sec-wechsel">
     <div class="card-head">
@@ -760,6 +1322,144 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
     </div>
   </section>
 
+  <!-- ============ FESTE PRÄPOSITIONEN ============ -->
+  <section class="card" id="sec-fest">
+    <div class="card-head">
+      <div class="card-ico">📌</div>
+      <h2 class="card-title">Präpositionen mit festem Kasus<span class="en">Prepositions that always take the same case</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Diese Präpositionen nehmen <b>immer denselben Fall</b> — am besten als Reihe auswendig lernen. (Die 9 <a href="#sec-wechsel">Wechselpräpositionen</a> haben eine eigene Karte.)</p>
+
+      <div class="buckets">
+        <div class="bucket dat">
+          <div class="bucket-head">immer + DATIV <span class="bh-en">always dative</span></div>
+          <div class="bucket-body">
+            <span class="bp">aus <small>from · out of</small></span>
+            <span class="bp">bei <small>at · near</small></span>
+            <span class="bp">mit <small>with</small></span>
+            <span class="bp">nach <small>after · to</small></span>
+            <span class="bp">seit <small>since · for</small></span>
+            <span class="bp">von <small>from · of</small></span>
+            <span class="bp">zu <small>to</small></span>
+            <span class="bp">gegenüber <small>opposite</small></span>
+          </div>
+          <div class="bucket-note">Merkspruch: „aus, bei, mit, nach, seit, von, zu — immer mit dem Dativ, du!“</div>
+        </div>
+        <div class="bucket akk">
+          <div class="bucket-head">immer + AKKUSATIV <span class="bh-en">always accusative</span></div>
+          <div class="bucket-body">
+            <span class="bp">durch <small>through</small></span>
+            <span class="bp">für <small>for</small></span>
+            <span class="bp">gegen <small>against · approx.</small></span>
+            <span class="bp">ohne <small>without</small></span>
+            <span class="bp">um <small>at · around</small></span>
+            <span class="bp">bis <small>until</small></span>
+            <span class="bp">entlang <small>along (nachgestellt)</small></span>
+          </div>
+          <div class="bucket-note">Im Rhythmus lernen: „durch – für – gegen – ohne – um“.</div>
+        </div>
+        <div class="bucket gen">
+          <div class="bucket-head">+ GENITIV <span class="bh-en">genitive</span></div>
+          <div class="bucket-body">
+            <span class="bp">wegen <small>because of</small></span>
+            <span class="bp">während <small>during</small></span>
+            <span class="bp">trotz <small>despite</small></span>
+            <span class="bp">statt <small>instead of</small></span>
+          </div>
+          <div class="bucket-note">Gesprochen oft mit Dativ (<em>wegen dem Wetter</em>) — im Brief besser Genitiv: <em>wegen des Wetters</em>.</div>
+        </div>
+      </div>
+
+      <div class="subh">Beispiele</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Ich fahre mit <span class="k dat">dem Bus</span> zu <span class="k dat">meiner Freundin</span>.</td><td class="en">I take the bus to my friend's place.</td></tr>
+            <tr><td class="ex">Er kommt aus <span class="k dat">der Türkei</span> und wohnt bei <span class="k dat">seinen Eltern</span>.</td><td class="en">He's from Turkey and lives with his parents.</td></tr>
+            <tr><td class="ex">Das Geschenk ist für <span class="k akk">meinen Bruder</span>.</td><td class="en">The present is for my brother.</td></tr>
+            <tr><td class="ex">Wir gehen ohne <span class="k akk">ihn</span> durch <span class="k akk">den Park</span>.</td><td class="en">We walk through the park without him.</td></tr>
+            <tr><td class="ex">Wegen <span class="k gen">des Regens</span> bleiben wir zu Hause.</td><td class="en">Because of the rain we stay home.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Kurzformen (Kontraktionen)</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:6px">
+        <span class="bp">zu dem → <b>zum</b></span>
+        <span class="bp">zu der → <b>zur</b></span>
+        <span class="bp">von dem → <b>vom</b></span>
+        <span class="bp">bei dem → <b>beim</b></span>
+        <span class="bp">an dem → <b>am</b></span>
+        <span class="bp">in dem → <b>im</b></span>
+        <span class="bp">an das → <b>ans</b></span>
+        <span class="bp">in das → <b>ins</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ZEITANGABEN ============ -->
+  <section class="card" id="sec-temporal">
+    <div class="card-head">
+      <div class="card-ico">🕒</div>
+      <h2 class="card-title">Zeitangaben — wann sagt man was?<span class="en">Time prepositions: am, um, im, seit, vor …</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Für Termine, Briefe und Small Talk: die richtige Präposition für <b>Uhrzeit, Tag, Monat</b> und Zeiträume.</p>
+
+      <div class="figure">
+        <svg class="fig" viewBox="0 0 560 150" role="img" aria-label="Zeitstrahl: vor, seit, in, ab" style="max-width:560px;margin:0 auto;height:auto;display:block">
+          <line class="tline" x1="16" y1="84" x2="534" y2="84"/>
+          <polygon class="tarr" points="548,84 534,77 534,91"/>
+          <line class="tnow" x1="290" y1="26" x2="290" y2="104"/>
+          <text class="flabel t-now" x="290" y="18" text-anchor="middle">JETZT</text>
+          <!-- vor: point in the past -->
+          <circle class="pt-akk" cx="80" cy="84" r="7"/>
+          <text class="flabel t-akk" x="80" y="46" text-anchor="middle">vor</text>
+          <text class="t-mut" x="80" y="62" text-anchor="middle">vor zwei Jahren</text>
+          <!-- seit: from past until now -->
+          <line class="a-her" x1="150" y1="84" x2="276" y2="84"/>
+          <polygon class="ah-her" points="284,84 272,77 272,91"/>
+          <text class="flabel t-her" x="215" y="64" text-anchor="middle">seit →</text>
+          <!-- in: point in the future -->
+          <circle class="pt-nom" cx="380" cy="84" r="7"/>
+          <text class="flabel t-nom" x="380" y="46" text-anchor="middle">in</text>
+          <text class="t-mut" x="380" y="62" text-anchor="middle">in einer Woche</text>
+          <!-- ab: from a point onwards -->
+          <line class="a-hin" x1="450" y1="84" x2="520" y2="84"/>
+          <polygon class="ah-hin" points="528,84 516,77 516,91"/>
+          <text class="flabel t-hin" x="485" y="64" text-anchor="middle">ab →</text>
+          <text class="t-mut" x="110" y="128" text-anchor="middle">Vergangenheit</text>
+          <text class="t-mut" x="450" y="128" text-anchor="middle">Zukunft</text>
+        </svg>
+        <div class="figcap"><b style="color:var(--akk)">vor</b> = Punkt in der Vergangenheit („ago“) · <b style="color:var(--dat)">seit</b> = läuft bis jetzt · <b style="color:var(--nom)">in</b> = Punkt in der Zukunft · <b style="color:var(--gen)">ab</b> = von da an</div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Präposition</th><th>Verwendung</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">um</td><td class="en">Uhrzeit</td><td class="ex">um 8 Uhr · um halb neun</td></tr>
+            <tr><td class="de">am</td><td class="en">Tag · Datum · Tageszeit</td><td class="ex">am Montag · am 3. Mai · am Abend <em>(aber: in der Nacht)</em></td></tr>
+            <tr><td class="de">im</td><td class="en">Monat · Jahreszeit</td><td class="ex">im Juli · im Winter</td></tr>
+            <tr><td class="de">—</td><td class="en">Jahreszahl allein</td><td class="ex">2026 / im Jahr 2026 <em>(nicht „in 2026“)</em></td></tr>
+            <tr><td class="de">von … bis</td><td class="en">Zeitraum</td><td class="ex">von Montag bis Freitag</td></tr>
+            <tr><td class="de">ab</td><td class="en">Startpunkt (Zukunft)</td><td class="ex">ab morgen · ab nächster Woche</td></tr>
+            <tr><td class="de">seit <span class="tag dativ">Dat</span></td><td class="en">begann früher, dauert noch</td><td class="ex">seit <span class="k dat">einem Jahr</span> <em>(+ Präsens!)</em></td></tr>
+            <tr><td class="de">vor <span class="tag dativ">Dat</span></td><td class="en">„ago“</td><td class="ex">vor <span class="k dat">zwei Jahren</span></td></tr>
+            <tr><td class="de">in <span class="tag dativ">Dat</span></td><td class="en">in der Zukunft</td><td class="ex">in <span class="k dat">einer Woche</span></td></tr>
+            <tr><td class="de">nach <span class="tag dativ">Dat</span></td><td class="en">danach</td><td class="ex">nach <span class="k dat">dem Kurs</span></td></tr>
+            <tr><td class="de">zwischen <span class="tag dativ">Dat</span></td><td class="en">Zeitspanne</td><td class="ex">zwischen 8 und 9 Uhr</td></tr>
+            <tr><td class="de">gegen <span class="tag akku">Akk</span></td><td class="en">ungefähre Zeit</td><td class="ex">gegen 8 Uhr (≈ um 8)</td></tr>
+            <tr><td class="de">während</td><td class="en">Zeitraum (Genitiv)</td><td class="ex">während <span class="k gen">der Pause</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>seit + Präsens:</b> <em>Ich <b>lerne</b> seit zwei Jahren Deutsch.</em> — nicht Perfekt wie im Englischen („I have been learning“)!</div></div>
+    </div>
+  </section>
+
   <!-- ============ DATIV + AKKUSATIV ============ -->
   <section class="card" id="sec-datakk">
     <div class="card-head">
@@ -793,6 +1493,28 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
         </table>
       </div>
       <div class="tip warn"><span class="ti">⚠️</span><div><b>Reihenfolge:</b> Zwei Nomen → <span class="k dat">Dativ</span> zuerst. Zwei Pronomen → <span class="k akk">Akkusativ</span> zuerst. Ein Pronomen kommt immer <b>vor</b> das Nomen.</div></div>
+
+      <div class="subh">Verben nur mit Dativ</div>
+      <p class="lead" style="margin-bottom:8px">Diese Verben haben <b>kein</b> Akkusativ-Objekt — die Person steht direkt im <span class="k dat">Dativ</span>:</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Verb</th><th>English</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">helfen</td><td class="en">to help</td><td class="ex">Ich helfe <span class="k dat">dir</span>.</td></tr>
+            <tr><td class="de">danken</td><td class="en">to thank</td><td class="ex">Ich danke <span class="k dat">Ihnen</span>.</td></tr>
+            <tr><td class="de">gefallen</td><td class="en">to please / like</td><td class="ex">Der Film gefällt <span class="k dat">mir</span>.</td></tr>
+            <tr><td class="de">gehören</td><td class="en">to belong to</td><td class="ex">Das Buch gehört <span class="k dat">meinem Bruder</span>.</td></tr>
+            <tr><td class="de">schmecken</td><td class="en">to taste (good)</td><td class="ex">Die Pizza schmeckt <span class="k dat">uns</span>.</td></tr>
+            <tr><td class="de">passen</td><td class="en">to fit / suit</td><td class="ex">Der Termin passt <span class="k dat">mir</span> gut.</td></tr>
+            <tr><td class="de">antworten</td><td class="en">to answer sb.</td><td class="ex">Er antwortet <span class="k dat">der Lehrerin</span>.</td></tr>
+            <tr><td class="de">gratulieren</td><td class="en">to congratulate</td><td class="ex">Wir gratulieren <span class="k dat">dir</span> zum Geburtstag!</td></tr>
+            <tr><td class="de">zuhören</td><td class="en">to listen to</td><td class="ex">Hör <span class="k dat">mir</span> bitte zu!</td></tr>
+            <tr><td class="de">glauben</td><td class="en">to believe sb.</td><td class="ex">Ich glaube <span class="k dat">dir</span>.</td></tr>
+            <tr><td class="de">wehtun</td><td class="en">to hurt</td><td class="ex">Der Kopf tut <span class="k dat">mir</span> weh.</td></tr>
+            <tr><td class="de">fehlen</td><td class="en">to be missing / missed</td><td class="ex">Du fehlst <span class="k dat">mir</span>.</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -974,6 +1696,63 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
     </div>
   </section>
 
+  <!-- ============ KOMPARATIV & SUPERLATIV ============ -->
+  <section class="card" id="sec-komparativ">
+    <div class="card-head">
+      <div class="card-ico">📈</div>
+      <h2 class="card-title">Komparativ &amp; Superlativ<span class="en">Comparing: schneller, am schnellsten</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="figure">
+        <div class="steps">
+          <div class="step s1">schnell<small>Grundform</small></div>
+          <div class="step s2">schneller<small>Komparativ +er</small></div>
+          <div class="step s3">am schnellsten<small>Superlativ am …sten</small></div>
+        </div>
+        <div class="figcap">Immer <b>+er</b> (nie „mehr schnell“!) und <b>am …sten</b>.</div>
+      </div>
+
+      <div class="subh">Regeln</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Typ</th><th>Regel</th><th>Beispiele</th></tr></thead>
+          <tbody>
+            <tr><td class="fn">regelmäßig</td><td class="de">+er · am …sten</td><td class="ex">klein → kleiner → am kleinsten</td></tr>
+            <tr><td class="fn">a / o / u</td><td class="de wrap">oft Umlaut ä / ö / ü</td><td class="ex">alt → älter · groß → größer · jung → jünger</td></tr>
+            <tr><td class="fn">-el / -er</td><td class="de">-e- fällt weg</td><td class="ex">teuer → teurer · dunkel → dunkler</td></tr>
+            <tr><td class="fn">-d / -t / -s / -z</td><td class="de">am …esten</td><td class="ex">kalt → am kältesten · kurz → am kürzesten</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Unregelmäßige Formen (auswendig!)</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Grundform</th><th>Komparativ</th><th>Superlativ</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="de">gut</td><td class="de">besser</td><td class="de">am besten</td><td class="en">good</td></tr>
+            <tr><td class="de">viel</td><td class="de">mehr</td><td class="de">am meisten</td><td class="en">much</td></tr>
+            <tr><td class="de">gern</td><td class="de">lieber</td><td class="de">am liebsten</td><td class="en">gladly (like to)</td></tr>
+            <tr><td class="de">hoch</td><td class="de">höher</td><td class="de">am höchsten</td><td class="en">high</td></tr>
+            <tr><td class="de">nah</td><td class="de">näher</td><td class="de">am nächsten</td><td class="en">near</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Vergleichen</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Muster</th><th>Bedeutung</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">so … wie</td><td class="en">gleich (A = B)</td><td class="ex">Er ist so groß wie ich.</td></tr>
+            <tr><td class="de">Komparativ + als</td><td class="en">ungleich (A ≠ B)</td><td class="ex">Sie ist größer als ich.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div>Vor einem Nomen bekommt der Komparativ/Superlativ normale <a href="#sec-adjektiv">Adjektivendungen</a>: <em>der schneller<b>e</b> Zug · der schnellst<b>e</b> Zug</em>. Mehr zu <em>als/wie</em> → <a href="#sec-als">als</a>.</div></div>
+    </div>
+  </section>
+
   <!-- ============ WORTSTELLUNG ============ -->
   <section class="card" id="sec-wortstellung">
     <div class="card-head">
@@ -1021,6 +1800,40 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
         </div>
       </div>
 
+      <div class="subh">Die Satzklammer — zwei Verbteile umklammern den Satz</div>
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">Perfekt</span>
+            <div class="sb-track">
+              <span class="slot">Ich</span>
+              <span class="slot verb">habe<span class="pos">②</span></span>
+              <span class="slot">gestern Pizza</span>
+              <span class="slot end">gegessen.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">Modalverb</span>
+            <div class="sb-track">
+              <span class="slot">Ich</span>
+              <span class="slot verb">muss<span class="pos">②</span></span>
+              <span class="slot">heute lange</span>
+              <span class="slot end">arbeiten.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">Trennbares Verb</span>
+            <div class="sb-track">
+              <span class="slot">Ich</span>
+              <span class="slot verb">rufe<span class="pos">②</span></span>
+              <span class="slot">dich morgen</span>
+              <span class="slot end">an.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="figcap">Teil 1 auf Position 2, Teil 2 am Ende — dazwischen ist alles „eingeklammert“.</div>
+      </div>
+
       <div class="subh">Konnektoren &amp; ihre Wortstellung</div>
       <div class="table-wrap">
         <table class="sheet">
@@ -1033,6 +1846,60 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
         </table>
       </div>
       <div class="tip"><span class="ti">💡</span><div>Auf <b>Position 1</b> kann das Subjekt <b>oder</b> etwas anderes stehen (Zeit, Ort, Konnektor-Adverb). Im Hauptsatz bleibt das konjugierte Verb <b>immer auf Position 2</b>.</div></div>
+
+      <div class="subh">Reihenfolge in der Satzmitte — TeKaMoLo</div>
+      <div class="sb-track" style="margin-bottom:8px">
+        <span class="slot">Ich</span>
+        <span class="slot verb">fahre<span class="pos">②</span></span>
+        <span class="slot"><b>Te</b> · morgen</span>
+        <span class="slot"><b>Ka</b> · wegen des Termins</span>
+        <span class="slot"><b>Mo</b> · mit dem Zug</span>
+        <span class="slot"><b>Lo</b> · nach Berlin.</span>
+      </div>
+      <div class="tip rule"><span class="ti">🧭</span><div><b>Te</b>mporal (wann?) → <b>Ka</b>usal (warum?) → <b>Mo</b>dal (wie?) → <b>Lo</b>kal (wohin/wo?). Kurze Faustregel: <b>Zeit vor Ort</b> — <em>Ich fahre <u>morgen</u> <u>nach Berlin</u>.</em></div></div>
+    </div>
+  </section>
+
+  <!-- ============ NEGATION ============ -->
+  <section class="card" id="sec-negation">
+    <div class="card-head">
+      <div class="card-ico">🚫</div>
+      <h2 class="card-title">Negation — nicht, kein &amp; doch<span class="en">How to say "not" &amp; "no"</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="figure">
+        <div class="flow">
+          <div class="flow-q">Was willst du verneinen?</div>
+          <div class="flow-stem"></div>
+          <div class="flow-branches" style="grid-template-columns:repeat(2,1fr);max-width:640px;margin:0 auto">
+            <div class="flow-branch">
+              <div class="flow-cond">Nomen mit „ein“ oder ohne Artikel<small>ein Auto · Zeit · Hunger</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out haben">KEIN-<small>Ich habe keine Zeit.</small></div>
+            </div>
+            <div class="flow-branch">
+              <div class="flow-cond">alles andere<small>Verb · Adjektiv · Ort · Nomen mit der/mein</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out strong">NICHT<small>Das ist nicht meine Tasche.</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subh">Wo steht „nicht“?</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Regel</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="en">ganzer Satz → <b>am Ende</b></td><td class="ex">Ich verstehe das <b>nicht</b>.</td></tr>
+            <tr><td class="en">vor dem Adjektiv/Adverb</td><td class="ex">Das Auto ist <b>nicht</b> neu. · Er fährt <b>nicht</b> schnell.</td></tr>
+            <tr><td class="en">vor der Ortsangabe</td><td class="ex">Ich wohne <b>nicht</b> in Berlin.</td></tr>
+            <tr><td class="en">vor dem 2. Verbteil (Partizip, Infinitiv, Präfix)</td><td class="ex">Ich habe <b>nicht</b> geschlafen. · Er kommt <b>nicht</b> mit.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div><b>kein</b> dekliniert wie <em>ein</em> (Plural: <em>keine</em>) → siehe <a href="#sec-artikel">Artikel &amp; Pronomen</a>: <em>Ich habe kein<span style="color:var(--akk)"><b>en</b></span> Hunger.</em></div></div>
+      <div class="tip rule"><span class="ti">✅</span><div><b>doch!</b> = positive Antwort auf eine negative Frage: <em>„Hast du keine Lust?“ — „<b>Doch!</b>“</em> (= ich habe Lust!)</div></div>
     </div>
   </section>
 
@@ -1174,6 +2041,118 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
     </div>
   </section>
 
+  <!-- ============ RELATIVSÄTZE ============ -->
+  <section class="card" id="sec-relativ">
+    <div class="card-head">
+      <div class="card-ico">🧷</div>
+      <h2 class="card-title">Relativsätze<span class="en">Relative clauses — der Mann, der …</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Ein Relativsatz beschreibt ein Nomen genauer. <b>Genus &amp; Numerus</b> kommen vom Nomen davor, der <b>Kasus</b> von der Rolle im Nebensatz. Verb ans <b>Ende</b>!</p>
+
+      <div class="grid2">
+        <div>
+          <table class="grid">
+            <caption>Relativpronomen <span style="color:var(--text-muted);font-weight:500">(fast wie der/die/das)</span></caption>
+            <thead><tr><th></th><th>M</th><th>F</th><th>N</th><th>Pl</th></tr></thead>
+            <tbody>
+              <tr><th class="h-nom">Nom</th><td>der</td><td>die</td><td>das</td><td>die</td></tr>
+              <tr><th class="h-akk">Akk</th><td><span class="ec">den</span></td><td>die</td><td>das</td><td>die</td></tr>
+              <tr><th class="h-dat">Dat</th><td><span class="ec">dem</span></td><td><span class="ec">der</span></td><td><span class="ec">dem</span></td><td><span class="ec">denen</span></td></tr>
+              <tr><th class="h-gen">Gen</th><td><span class="ec">dessen</span></td><td><span class="ec">deren</span></td><td><span class="ec">dessen</span></td><td><span class="ec">deren</span></td></tr>
+            </tbody>
+          </table>
+          <p class="lead" style="margin:8px 2px 0;font-size:.86rem">Anders als der Artikel: Dativ Plural = <b>denen</b>, Genitiv = <b>dessen/deren</b> (auf B1 selten).</p>
+        </div>
+        <div>
+          <div class="tip rule" style="margin-top:0"><span class="ti">🎯</span><div><b>Kasus-Trick:</b> Mach aus dem Relativsatz einen einfachen Satz mit Pronomen:<br><em>Der Film, ___ ich gesehen habe.</em> → <em>Ich habe <span class="k akk">ihn</span> gesehen.</em> → Akkusativ → <b>den</b>.</div></div>
+          <div class="tip" style="margin-top:12px"><span class="ti">💡</span><div>Mit Präposition steht die Präposition <b>vor</b> dem Pronomen: <em>Die Stadt, <b>in der</b> ich wohne …</em></div></div>
+        </div>
+      </div>
+
+      <div class="subh">Beispiele</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>Warum dieser Kasus?</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Der Mann, <span class="k nom">der</span> dort steht, ist mein Lehrer.</td><td class="en">er steht → Nominativ</td></tr>
+            <tr><td class="ex">Der Film, <span class="k akk">den</span> ich gestern gesehen habe, war super.</td><td class="en">ich habe ihn gesehen → Akkusativ</td></tr>
+            <tr><td class="ex">Die Freundin, <span class="k dat">der</span> ich oft helfe, wohnt in Bonn.</td><td class="en">ich helfe ihr → Dativ (helfen + Dat)</td></tr>
+            <tr><td class="ex">Die Stadt, in <span class="k dat">der</span> ich wohne, ist klein.</td><td class="en">wo? → in + Dativ</td></tr>
+            <tr><td class="ex">Die Leute, mit <span class="k dat">denen</span> ich arbeite, sind nett.</td><td class="en">mit + Dativ Plural → denen</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ZU + INFINITIV / UM ZU / DAMIT ============ -->
+  <section class="card" id="sec-zuinf">
+    <div class="card-head">
+      <div class="card-ico">🎯</div>
+      <h2 class="card-title">zu + Infinitiv · um … zu · damit<span class="en">Infinitive clauses &amp; purpose ("in order to")</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="subh">zu + Infinitiv</div>
+      <p class="lead" style="margin-bottom:8px">Nach vielen Verben und Ausdrücken folgt <code>…, … zu + Infinitiv</code> (am Ende):</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Auslöser</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de wrap">anfangen / aufhören</td><td class="ex">Ich höre auf, Süßigkeiten zu essen.</td></tr>
+            <tr><td class="de wrap">versuchen / vergessen</td><td class="ex">Vergiss nicht, die Tür ab<b>zu</b>schließen!</td></tr>
+            <tr><td class="de wrap">vorhaben / planen</td><td class="ex">Ich habe vor, mehr Sport zu machen.</td></tr>
+            <tr><td class="de wrap">Lust / Zeit / Angst haben</td><td class="ex">Hast du Lust, ins Kino zu gehen?</td></tr>
+            <tr><td class="de wrap">es ist + Adjektiv</td><td class="ex">Es ist wichtig, pünktlich zu sein.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div>Bei <a href="#sec-trennbar">trennbaren Verben</a> steht <b>zu</b> in der Mitte: <em>ab<b>zu</b>schließen, an<b>zu</b>rufen</em>. Nach <a href="#sec-modal">Modalverben</a> <b>kein</b> zu: <em>Ich muss gehen.</em></div></div>
+
+      <div class="subh">Ziel &amp; Zweck: um … zu vs. damit</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Struktur</th><th>Wann?</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de wrap">um … zu + Infinitiv</td><td class="en"><b>gleiches</b> Subjekt</td><td class="ex">Ich lerne Deutsch, <b>um</b> in Deutschland <b>zu arbeiten</b>. <em>(ich lerne, ich arbeite)</em></td></tr>
+            <tr><td class="de wrap">damit + Nebensatz</td><td class="en"><b>anderes</b> Subjekt</td><td class="ex">Ich spreche langsam, <b>damit</b> du mich <b>verstehst</b>. <em>(ich spreche, du verstehst)</em></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INDIREKTE FRAGEN ============ -->
+  <section class="card" id="sec-indirekt">
+    <div class="card-head">
+      <div class="card-ico">❔</div>
+      <h2 class="card-title">Indirekte Fragen — ob &amp; W-Wörter<span class="en">Indirect questions — polite &amp; useful in letters</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Höflicher fragen — perfekt für den <a href="#sec-brief">Brief</a> und die mündliche Prüfung. Das Verb geht ans <b>Ende</b>.</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Direkte Frage</th><th>Indirekte Frage</th><th>Regel</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Kommst du morgen?</td><td class="ex">Ich weiß nicht, <b>ob</b> du morgen <b>kommst</b>.</td><td class="en">Ja/Nein-Frage → <b>ob</b></td></tr>
+            <tr><td class="ex">Wann fährt der Zug?</td><td class="ex">Können Sie mir sagen, <b>wann</b> der Zug <b>fährt</b>?</td><td class="en">W-Wort bleibt</td></tr>
+            <tr><td class="ex">Wo ist der Bahnhof?</td><td class="ex">Wissen Sie, <b>wo</b> der Bahnhof <b>ist</b>?</td><td class="en">W-Wort bleibt</td></tr>
+            <tr><td class="ex">Wie viel kostet der Kurs?</td><td class="ex">Ich möchte wissen, <b>wie viel</b> der Kurs <b>kostet</b>.</td><td class="en">W-Wort bleibt</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="subh">Nützliche Einleitungen</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:6px">
+        <span class="bp">Können Sie mir sagen, …?</span>
+        <span class="bp">Ich möchte wissen, …</span>
+        <span class="bp">Ich weiß nicht, …</span>
+        <span class="bp">Ich frage mich, …</span>
+        <span class="bp">Weißt du, …?</span>
+        <span class="bp">Ich bin nicht sicher, ob …</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ TROTZDEM / OBWOHL ============ -->
   <section class="card" id="sec-trotzdem">
     <div class="card-head">
@@ -1265,10 +2244,12 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
   <section class="card" id="sec-konditional">
     <div class="card-head">
       <div class="card-ico">🙏</div>
-      <h2 class="card-title">Konditional II — höfliche Bitten<span class="en">Polite requests &amp; suggestions</span></h2>
+      <h2 class="card-title">Konjunktiv II — Bitten, Wünsche &amp; Irreales<span class="en">Polite requests, wishes &amp; unreal conditions</span></h2>
     </div>
     <div class="card-body">
-      <p class="lead">Konjunktiv II für höfliche Bitten, Vorschläge und Angebote.</p>
+      <p class="lead"><b>Bauplan:</b> <em>sein → wäre</em>, <em>haben → hätte</em>, <em>können → könnte</em> direkt benutzen. Alle anderen Verben: <b>würde + Infinitiv</b>.</p>
+
+      <div class="subh">Höfliche Bitten</div>
       <div class="table-wrap">
         <table class="sheet">
           <thead><tr><th>Verb</th><th>Form (Konjunktiv II)</th><th>Bedeutung</th><th>Beispiel</th></tr></thead>
@@ -1280,6 +2261,21 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
           </tbody>
         </table>
       </div>
+
+      <div class="subh">Wünsche &amp; irreale Bedingungen</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Wenn ich mehr Zeit <b>hätte</b>, <b>würde</b> ich mehr Sport <b>machen</b>.</td><td class="en">If I had more time, I would do more sports.</td></tr>
+            <tr><td class="ex">Wenn das Wetter schön <b>wäre</b>, <b>würden</b> wir <b>grillen</b>.</td><td class="en">If the weather were nice, we would barbecue.</td></tr>
+            <tr><td class="ex">An deiner Stelle <b>würde</b> ich mit dem Chef <b>sprechen</b>.</td><td class="en">In your place I'd talk to the boss. <em>(Rat geben)</em></td></tr>
+            <tr><td class="ex">Ich <b>hätte</b> gern einen Termin.</td><td class="en">I'd like an appointment. <em>(bestellen/buchen)</em></td></tr>
+            <tr><td class="ex">Ich <b>wäre</b> jetzt gern am Meer.</td><td class="en">I wish I were at the sea right now.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>könnte ≠ konnte:</b> mit Umlaut = Konjunktiv II (höflich/irreal), ohne Umlaut = <a href="#sec-praeteritum">Präteritum</a> (Vergangenheit). Der Umlaut macht den Unterschied!</div></div>
     </div>
   </section>
 
@@ -1440,30 +2436,6 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
         <div class="freq-row"><span class="de">fast nie</span><span class="en">hardly ever</span><span class="bar"><i style="width:7%"></i></span></div>
         <div class="freq-row"><span class="de">nie</span><span class="en">never</span><span class="bar"><i style="width:2%"></i></span></div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ SEIN KONJUGATION ============ -->
-  <section class="card" id="sec-sein">
-    <div class="card-head">
-      <div class="card-ico">⏳</div>
-      <h2 class="card-title">„sein“ in vier Zeitformen<span class="en">Conjugation of "to be"</span></h2>
-    </div>
-    <div class="card-body">
-      <div class="table-wrap">
-        <table class="sheet">
-          <thead><tr><th>Person</th><th>Präsens<span style="font-weight:500;text-transform:none"> · present</span></th><th>Präteritum<span style="font-weight:500;text-transform:none"> · simple past</span></th><th>Perfekt<span style="font-weight:500;text-transform:none"> · present perfect</span></th><th>Futur I<span style="font-weight:500;text-transform:none"> · future</span></th></tr></thead>
-          <tbody>
-            <tr><td class="de">ich</td><td class="de">bin</td><td class="de">war</td><td class="de">bin gewesen</td><td class="de">werde sein</td></tr>
-            <tr><td class="de">du</td><td class="de">bist</td><td class="de">warst</td><td class="de">bist gewesen</td><td class="de">wirst sein</td></tr>
-            <tr><td class="de">er / sie / es</td><td class="de">ist</td><td class="de">war</td><td class="de">ist gewesen</td><td class="de">wird sein</td></tr>
-            <tr><td class="de">wir</td><td class="de">sind</td><td class="de">waren</td><td class="de">sind gewesen</td><td class="de">werden sein</td></tr>
-            <tr><td class="de">ihr</td><td class="de">seid</td><td class="de">wart</td><td class="de">seid gewesen</td><td class="de">werdet sein</td></tr>
-            <tr><td class="de">sie / Sie</td><td class="de">sind</td><td class="de">waren</td><td class="de">sind gewesen</td><td class="de">werden sein</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="tip"><span class="ti">💡</span><div><b>sein</b> bildet das Perfekt mit <b>sein</b> (nicht haben): <em>ich <b>bin</b> gewesen</em>. Im Alltag benutzt man für die Vergangenheit meist das <b>Präteritum</b> (<em>war</em>).</div></div>
     </div>
   </section>
 
