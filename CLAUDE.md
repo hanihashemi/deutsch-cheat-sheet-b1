@@ -31,7 +31,7 @@ Live site: https://hanihashemi.github.io/deutsch-cheat-sheet-b1/ (`.nojekyll` di
 
 **Search & scrollspy auto-discover cards** — no JS edits needed when you add a section. Search (`runSearch`) decides section visibility from the whole section's text, then filters individual `tbody tr` rows only when the match is inside a row. So: put searchable prose/visuals anywhere inside a `.card`; put tabular data in `tbody` rows to get row-level filtering.
 
-**Theming.** All colors are CSS custom properties defined in `:root` (light) and `[data-theme="dark"]`. The toggle flips `data-theme` on `<html>` and persists to `localStorage` (initial value falls back to `prefers-color-scheme`). New UI is only theme-aware if it uses `var(--...)` tokens — including SVG diagrams.
+**Theming.** Light-only "Ozean" palette (cyan/petrol): all colors are CSS custom properties defined in `:root`; there is **no dark mode** (deliberately removed — don't re-add a toggle). New UI must use `var(--...)` tokens — including SVG diagrams — so a future palette change stays a one-block edit.
 
 **Case color code (keep consistent everywhere).** Inline highlights use `.k` plus one of `.nom` (blue), `.akk` (red), `.dat` (green), `.gen` (amber); pill variants are `.tag.akku` / `.tag.dativ`. Convention: green = Dativ, red = Akkusativ, blue = Nominativ, amber = Genitiv.
 
@@ -41,4 +41,4 @@ Live site: https://hanihashemi.github.io/deutsch-cheat-sheet-b1/ (`.nojekyll` di
 
 1. Add the `<section class="card" id="sec-x">` in the DOM position that matches where its chip sits in the nav, and add the `.chip` to the correct `.navgroup`.
 2. Reuse the existing classes above; no JavaScript changes are required for it to be searchable/navigable.
-3. Verify by loading it in a browser (via the local server) in **both** light and dark themes, test the search, and confirm no console errors.
+3. Verify by loading it in a browser (via the local server), test the search, and confirm no console errors.

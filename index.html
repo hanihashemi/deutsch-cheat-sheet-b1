@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="light">
+<html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Deutsch Cheat Sheet für die telc B1 Prüfung — Prüfungsüberblick, Brief schreiben, Redemittel, Zeiten &amp; Modalverben, Präpositionen, Fälle, Nebensätze und Adjektivendungen mit Visualisierungen.">
-<meta name="theme-color" content="#2b3f97">
+<meta name="theme-color" content="#0f4c5c">
 <title>telc B1 · Deutsch Cheat Sheet</title>
 <style>
-/* ---------- Theme tokens ---------- */
+/* ---------- Theme tokens (Ozean — hell) ---------- */
 :root{
-  --bg:#eef1f8;
+  --bg:#edf4f7;
   --surface:#ffffff;
-  --surface-2:#f5f7fc;
-  --surface-3:#eaeefb;
-  --text:#1b2033;
-  --text-muted:#5c6580;
-  --border:#e2e7f2;
-  --border-strong:#cdd5e8;
-  --primary:#3a56c5;
-  --primary-2:#5069d6;
-  --primary-dark:#2b3f97;
+  --surface-2:#f4f9fb;
+  --surface-3:#e6f0f5;
+  --text:#182430;
+  --text-muted:#54687a;
+  --border:#dde9ef;
+  --border-strong:#c4d8e2;
+  --primary:#0e7490;
+  --primary-2:#0d94b4;
+  --primary-dark:#0f4c5c;
   --gold:#f2c53d;
   --shadow-sm:0 1px 2px rgba(20,28,60,.06);
   --shadow:0 2px 6px rgba(20,28,60,.06), 0 12px 28px rgba(20,28,60,.07);
@@ -32,29 +32,6 @@
   --gen:#d97706;  --gen-bg:rgba(217,119,6,.14);
   --ok:#15a34a;   --ok-bg:rgba(21,163,74,.12);
   --no:#e0245e;   --no-bg:rgba(224,36,94,.10);
-}
-[data-theme="dark"]{
-  --bg:#0d1020;
-  --surface:#161a2c;
-  --surface-2:#1c2138;
-  --surface-3:#232a45;
-  --text:#e7eaf4;
-  --text-muted:#9aa3be;
-  --border:#2a3150;
-  --border-strong:#39426a;
-  --primary:#7089ef;
-  --primary-2:#5f7ae8;
-  --primary-dark:#8ea2f5;
-  --gold:#f2c53d;
-  --shadow-sm:0 1px 2px rgba(0,0,0,.4);
-  --shadow:0 2px 6px rgba(0,0,0,.35), 0 14px 34px rgba(0,0,0,.45);
-
-  --nom:#7aa2ff;  --nom-bg:rgba(122,162,255,.16);
-  --akk:#ff6b93;  --akk-bg:rgba(255,107,147,.16);
-  --dat:#54cf85;  --dat-bg:rgba(84,207,133,.16);
-  --gen:#f0ab4c;  --gen-bg:rgba(240,171,76,.16);
-  --ok:#54cf85;   --ok-bg:rgba(84,207,133,.14);
-  --no:#ff6b93;   --no-bg:rgba(255,107,147,.14);
 }
 
 *{box-sizing:border-box}
@@ -80,7 +57,6 @@ h1,h2,h3{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;line-heig
   color:#fff;
   padding:34px 22px 30px;
 }
-[data-theme="dark"] .hero{color:#f4f6ff}
 .hero-inner{max-width:1180px;margin:0 auto}
 .flag{display:flex;height:6px;border-radius:6px;overflow:hidden;width:120px;margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.25)}
 .flag i{flex:1}
@@ -183,7 +159,6 @@ table.sheet thead th{
   color:#fff;text-align:left;padding:10px 14px;font-weight:700;font-size:.82rem;
   letter-spacing:.03em;text-transform:uppercase;position:sticky;left:auto;
 }
-[data-theme="dark"] table.sheet thead th{color:#0d1020}
 table.sheet tbody td{padding:9px 14px;border-top:1px solid var(--border);vertical-align:top}
 table.sheet tbody tr:nth-child(even){background:var(--surface-2)}
 table.sheet tbody tr:hover{background:var(--surface-3)}
@@ -199,7 +174,6 @@ table.grid{width:100%;border-collapse:collapse;font-size:.95rem;text-align:cente
 table.grid caption{caption-side:top;font-weight:700;padding:0 0 8px;text-align:left;color:var(--text)}
 table.grid th,table.grid td{border:1px solid var(--border);padding:8px 6px}
 table.grid thead th{background:var(--primary);color:#fff;font-size:.82rem;text-transform:uppercase;letter-spacing:.03em}
-[data-theme="dark"] table.grid thead th{color:#0d1020}
 table.grid tbody th{background:var(--surface-2);font-weight:700}
 table.grid tbody td{font-weight:600}
 table.grid td .ec{color:var(--primary);font-weight:800}
@@ -276,6 +250,7 @@ tr.neg td.de{box-shadow:inset 3px 0 0 var(--no)}
 footer{max-width:1180px;margin:0 auto 40px;padding:22px 16px;color:var(--text-muted);
   font-size:.85rem;border-top:1px solid var(--border);text-align:center}
 footer a{color:var(--primary)}
+main a{color:var(--primary)}
 
 kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8em;background:var(--surface-3);
   border:1px solid var(--border-strong);border-bottom-width:2px;border-radius:5px;padding:1px 6px}
@@ -339,12 +314,10 @@ kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8em;background:
 .exam{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
 .exam-panel{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface-2);display:flex;flex-direction:column}
 .exam-panel .ep-head{padding:12px 16px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:8px}
-[data-theme="dark"] .exam-panel .ep-head{color:#0d1020}
 .exam-panel.written .ep-head{background:linear-gradient(135deg,var(--primary-dark),var(--primary))}
 .exam-panel.oral .ep-head{background:linear-gradient(135deg,#1f7a46,var(--dat))}
 .ep-head h3{font-family:system-ui,sans-serif;font-size:1.02rem;font-weight:800}
 .ep-time{font-size:.75rem;font-weight:700;background:rgba(255,255,255,.22);padding:3px 9px;border-radius:999px;white-space:nowrap}
-[data-theme="dark"] .ep-time{background:rgba(0,0,0,.16)}
 .part{display:flex;gap:11px;padding:11px 15px;border-top:1px solid var(--border);align-items:flex-start}
 .part:first-of-type{border-top:none}
 .part .p-ico{flex:none;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:1rem;background:var(--surface-3);border:1px solid var(--border)}
@@ -403,7 +376,6 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
 .buckets{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin:6px 0 4px}
 .bucket{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface-2);display:flex;flex-direction:column}
 .bucket-head{padding:9px 14px;font-weight:800;color:#fff;font-size:.92rem;display:flex;align-items:center;justify-content:space-between;gap:8px}
-[data-theme="dark"] .bucket-head{color:#0d1020}
 .bucket.dat .bucket-head{background:var(--dat)}
 .bucket.akk .bucket-head{background:var(--akk)}
 .bucket.gen .bucket-head{background:var(--gen)}
@@ -426,7 +398,6 @@ table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
 .steps{display:flex;align-items:flex-end;gap:10px;max-width:480px;margin:2px auto 4px}
 .step{flex:1;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,var(--primary-2),var(--primary));color:#fff;
   display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:8px 6px;font-weight:800;font-size:.95rem}
-[data-theme="dark"] .step{color:#0d1020}
 .step small{font-weight:600;opacity:.85;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em}
 .step.s1{min-height:58px}.step.s2{min-height:88px}.step.s3{min-height:118px}
 
@@ -457,7 +428,6 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
       <span class="pill">🖼️ Visualisierungen</span>
       <span class="pill">🔎 Live-Suche</span>
       <span class="pill">🖨️ Druckfreundlich</span>
-      <span class="pill">🌓 Dark Mode</span>
     </div>
   </div>
 </header>
@@ -469,10 +439,6 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
       <input id="search" type="search" placeholder="Suchen…  z. B. „Brief“, „Perfekt“, „weil“, „Dativ“" autocomplete="off" aria-label="Cheat Sheet durchsuchen">
       <button class="clear-btn" id="clear" aria-label="Suche löschen">✕</button>
     </div>
-    <button class="tbtn" id="themeBtn" aria-label="Farbschema wechseln">
-      <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
-      <span id="themeLbl">Dunkel</span>
-    </button>
     <button class="tbtn" id="printBtn" aria-label="Drucken">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M6 14h12v8H6z"></path></svg>
       <span>Drucken</span>
@@ -2455,26 +2421,6 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
 <script>
 (function(){
   "use strict";
-  var root=document.documentElement;
-
-  /* ----- Theme ----- */
-  var themeBtn=document.getElementById('themeBtn');
-  var themeLbl=document.getElementById('themeLbl');
-  function applyTheme(t){
-    root.setAttribute('data-theme',t);
-    themeLbl.textContent = t==='dark' ? 'Hell' : 'Dunkel';
-  }
-  var stored=null;
-  try{stored=localStorage.getItem('theme');}catch(e){}
-  if(!stored){
-    stored = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark':'light';
-  }
-  applyTheme(stored);
-  themeBtn.addEventListener('click',function(){
-    var next = root.getAttribute('data-theme')==='dark' ? 'light':'dark';
-    applyTheme(next);
-    try{localStorage.setItem('theme',next);}catch(e){}
-  });
 
   /* ----- Print ----- */
   document.getElementById('printBtn').addEventListener('click',function(){window.print();});
