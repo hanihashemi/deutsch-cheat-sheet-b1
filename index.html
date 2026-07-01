@@ -413,6 +413,25 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
 
 /* transformation arrow (Aktiv → Passiv) */
 .tf-arr{text-align:center;color:var(--text-muted);font-size:.9rem;font-weight:600;line-height:1.3;margin:2px 0}
+
+/* ---------- Merksatz callout (memory hooks) ---------- */
+.tip.merk{border-left-color:var(--gold);background:rgba(242,197,61,.12)}
+
+/* ---------- Schnell-Check memo cards ---------- */
+.memo{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:4px 0 2px}
+.memo-card{position:relative;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:10px 12px 11px 44px;font-size:.88rem;line-height:1.45}
+.memo-card .n{position:absolute;left:12px;top:11px;width:22px;height:22px;border-radius:50%;background:var(--primary);color:#fff;font-size:.75rem;font-weight:800;display:grid;place-items:center}
+.memo-card .mx{display:block;color:var(--text-muted);margin-top:2px}
+
+/* extra figure tokens */
+.fig .pt-dat{fill:var(--dat)}
+.fig .t-dat{fill:var(--dat)}
+.fig .ball-dat{fill:var(--dat)}
+.fig .a-akk{fill:none;stroke:var(--akk);stroke-width:3;stroke-linecap:round}
+.fig .ah-akk{fill:var(--akk)}
+
+/* adjective-table pattern highlight */
+table.grid td.hl{background:rgba(242,197,61,.22)}
 </style>
 </head>
 <body>
@@ -450,6 +469,7 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
   <div class="navgroup">
     <div class="navgroup-label">🎓 telc B1 Prüfung</div>
     <div class="chips">
+      <a class="chip" href="#sec-check"><span class="ico">⚡</span>Schnell-Check</a>
       <a class="chip" href="#sec-telc"><span class="ico">🎓</span>Prüfungsüberblick</a>
       <a class="chip" href="#sec-brief"><span class="ico">✍️</span>Brief schreiben</a>
       <a class="chip" href="#sec-meinung"><span class="ico">💭</span>Meinung &amp; Sprechen</a>
@@ -526,6 +546,29 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
         <span class="lg"><span class="dot akk"></span>Akkusativ <span style="color:var(--text-muted);font-weight:500">— direktes Objekt</span></span>
         <span class="lg"><span class="dot dat"></span>Dativ <span style="color:var(--text-muted);font-weight:500">— indirektes Objekt</span></span>
         <span class="lg"><span class="dot gen"></span>Genitiv <span style="color:var(--text-muted);font-weight:500">— Besitz</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCHNELL-CHECK ============ -->
+  <section class="card" id="sec-check">
+    <div class="card-head">
+      <div class="card-ico">⚡</div>
+      <h2 class="card-title">Schnell-Check — die 10 wichtigsten Regeln<span class="en">Daily 60-second review</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Einmal am Tag durchlesen — diese 10 Regeln decken die häufigsten B1-Fehler ab. Jede Karte verlinkt zur ausführlichen Erklärung.</p>
+      <div class="memo">
+        <div class="memo-card"><span class="n">1</span><b>Verb: Position ② oder Ende</b><span class="mx">Hauptsatz → Verb auf Position 2 · Nebensatz (weil, dass, wenn, obwohl) → Verb ans Ende → <a href="#sec-wortstellung">Wortstellung</a></span></div>
+        <div class="memo-card"><span class="n">2</span><b>Wohin? <span class="k akk">Akk</span> · Wo? <span class="k dat">Dat</span></b><span class="mx">auf <b>den</b> Tisch (Bewegung) · auf <b>dem</b> Tisch (Ort) → <a href="#sec-wechsel">Wechselpräpositionen</a></span></div>
+        <div class="memo-card"><span class="n">3</span><b>aus · bei · mit · nach · seit · von · zu</b><span class="mx">… immer mit dem <span class="k dat">Dativ</span>, du! → <a href="#sec-fest">Feste Präpositionen</a></span></div>
+        <div class="memo-card"><span class="n">4</span><b>durch · für · gegen · ohne · um</b><span class="mx">… immer mit dem <span class="k akk">Akkusativ</span>! → <a href="#sec-fest">Feste Präpositionen</a></span></div>
+        <div class="memo-card"><span class="n">5</span><b>Perfekt: haben/sein + ge…t / ge…en</b><span class="mx">Bewegung &amp; Veränderung → <b>sein</b>: ich <b>bin</b> gefahren → <a href="#sec-perfekt">Perfekt</a></span></div>
+        <div class="memo-card"><span class="n">6</span><b>Nur Maskulin ändert sich im Akkusativ</b><span class="mx">der → <b>den</b> · ein → <b>einen</b> — die/das bleiben → <a href="#sec-artikel">Artikel</a></span></div>
+        <div class="memo-card"><span class="n">7</span><b>musst nicht ≠ darfst nicht</b><span class="mx">nicht nötig vs. verboten! → <a href="#sec-modal">Modalverben</a></span></div>
+        <div class="memo-card"><span class="n">8</span><b>seit + Präsens</b><span class="mx">Ich <b>lerne</b> seit zwei Jahren Deutsch. → <a href="#sec-temporal">Zeitangaben</a></span></div>
+        <div class="memo-card"><span class="n">9</span><b>als = 1× früher · wenn = immer wieder</b><span class="mx">Als ich Kind war … · Wenn ich Zeit habe … → <a href="#sec-als">als</a></span></div>
+        <div class="memo-card"><span class="n">10</span><b>Höflich: hätte · könnte · würde</b><span class="mx">Ich hätte gern … · Könnten Sie …? → <a href="#sec-konditional">Konjunktiv II</a></span></div>
       </div>
     </div>
   </section>
@@ -1257,6 +1300,30 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
         <b>Wo?</b> → fester Ort, keine Bewegung → <span class="tag dativ">Dativ</span>
       </div></div>
 
+      <div class="figure">
+        <div class="grid2">
+          <div>
+            <svg class="fig" viewBox="0 0 260 100" role="img" aria-label="Wohin: Ball fliegt in die Kiste — Akkusativ">
+              <line class="ground" x1="12" y1="86" x2="248" y2="86"/>
+              <rect class="box-o" x="160" y="40" width="56" height="46" rx="3"/>
+              <circle class="ball" cx="42" cy="74" r="11"/>
+              <path class="a-akk" d="M60 60 C 95 28, 140 30, 176 52"/>
+              <polygon class="ah-akk" points="184,58 168,44 172,60"/>
+              <text class="flabel t-akk" x="100" y="18" text-anchor="middle">Wohin? → Akkusativ</text>
+            </svg>
+          </div>
+          <div>
+            <svg class="fig" viewBox="0 0 260 100" role="img" aria-label="Wo: Ball liegt ruhig in der Kiste — Dativ">
+              <line class="ground" x1="12" y1="86" x2="248" y2="86"/>
+              <circle class="ball-dat" cx="130" cy="72" r="11"/>
+              <rect class="box-o" x="100" y="40" width="60" height="46" rx="3"/>
+              <text class="flabel t-dat" x="130" y="18" text-anchor="middle">Wo? → Dativ</text>
+            </svg>
+          </div>
+        </div>
+        <div class="figcap"><b style="color:var(--akk)">Bewegung</b>: <em>Er legt das Buch auf <b>den</b> Tisch.</em> &nbsp;·&nbsp; <b style="color:var(--dat)">Position</b>: <em>Das Buch liegt auf <b>dem</b> Tisch.</em></div>
+      </div>
+
       <div class="table-wrap">
         <table class="sheet">
           <thead><tr><th>Präposition</th><th>Bedeutung</th><th class="center">Wohin? (Akk)</th><th class="center">Wo? (Dat)</th></tr></thead>
@@ -1284,7 +1351,7 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
           </tbody>
         </table>
       </div>
-      <div class="tip"><span class="ti">💡</span><div><b>Merkhilfe:</b> Bewegung <b>wohin?</b> = Akkusativ (Aktion → A). Ruhe <b>wo?</b> = Dativ (Da bleibt es).</div></div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Merkhilfe:</b> <b>A</b>ktion → <b>A</b>kkusativ &nbsp;·&nbsp; <b>D</b>a bleibt es → <b>D</b>ativ.</div></div>
     </div>
   </section>
 
@@ -1491,37 +1558,53 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
       <h2 class="card-title">Verb + Kasus + Präposition<span class="en">Verbs with fixed prepositions</span></h2>
     </div>
     <div class="card-body">
-      <p class="lead">Viele Verben haben eine feste Präposition und einen festen Fall. Am besten als Einheit lernen: <em>Verb + Präposition + Kasus</em>.</p>
-      <div class="table-wrap">
-        <table class="sheet">
-          <thead><tr><th>Verb + Präposition</th><th class="center">Kasus</th><th>Beispiel</th></tr></thead>
-          <tbody>
-            <tr><td class="de">warten auf</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Ich warte <span class="k akk">auf den Bus</span>.</td></tr>
-            <tr><td class="de">sich interessieren für</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Er interessiert sich <span class="k akk">für Musik</span>.</td></tr>
-            <tr><td class="de">träumen von</td><td class="center"><span class="tag dativ">Dat</span></td><td class="ex">Sie träumt <span class="k dat">von einer Reise</span>.</td></tr>
-            <tr><td class="de">denken an</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Ich denke <span class="k akk">an dich</span>.</td></tr>
-            <tr><td class="de">sprechen über</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Wir sprechen <span class="k akk">über den Film</span>.</td></tr>
-            <tr><td class="de">sich freuen auf</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Ich freue mich <span class="k akk">auf das Wochenende</span>. <em>(future)</em></td></tr>
-            <tr><td class="de">sich freuen über</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Sie freut sich <span class="k akk">über das Geschenk</span>. <em>(now/past)</em></td></tr>
-            <tr><td class="de">teilnehmen an</td><td class="center"><span class="tag dativ">Dat</span></td><td class="ex">Er nimmt <span class="k dat">an dem Kurs</span> teil.</td></tr>
-            <tr><td class="de">sich kümmern um</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Sie kümmert sich <span class="k akk">um die Kinder</span>.</td></tr>
-            <tr><td class="de">abhängen von</td><td class="center"><span class="tag dativ">Dat</span></td><td class="ex">Es hängt <span class="k dat">vom Wetter</span> ab.</td></tr>
-            <tr><td class="de">sich erinnern an</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Ich erinnere mich <span class="k akk">an dich</span>.</td></tr>
-            <tr><td class="de">sich bedanken für</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Ich bedanke mich <span class="k akk">für die Hilfe</span>.</td></tr>
-            <tr><td class="de">lachen über</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Wir lachen <span class="k akk">über den Witz</span>.</td></tr>
-            <tr><td class="de">Angst haben vor</td><td class="center"><span class="tag dativ">Dat</span></td><td class="ex">Sie hat Angst <span class="k dat">vor Spinnen</span>.</td></tr>
-            <tr><td class="de">sich verlieben in</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Er hat sich <span class="k akk">in Maria</span> verliebt.</td></tr>
-            <tr><td class="de">sprechen mit</td><td class="center"><span class="tag dativ">Dat</span></td><td class="ex">Ich spreche <span class="k dat">mit meinem Lehrer</span>.</td></tr>
-            <tr><td class="de">helfen bei</td><td class="center"><span class="tag dativ">Dat</span></td><td class="ex">Er hilft <span class="k dat">bei den Hausaufgaben</span>.</td></tr>
-            <tr><td class="de">anfangen mit</td><td class="center"><span class="tag dativ">Dat</span></td><td class="ex">Sie fängt <span class="k dat">mit der Arbeit</span> an.</td></tr>
-            <tr><td class="de">sich beschäftigen mit</td><td class="center"><span class="tag dativ">Dat</span></td><td class="ex">Ich beschäftige mich <span class="k dat">mit Musik</span>.</td></tr>
-            <tr><td class="de">schreiben an</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Er schreibt <span class="k akk">an seine Freundin</span>.</td></tr>
-            <tr><td class="de">fragen nach</td><td class="center"><span class="tag dativ">Dat</span></td><td class="ex">Ich frage <span class="k dat">nach dem Weg</span>.</td></tr>
-            <tr><td class="de">sich entscheiden für</td><td class="center"><span class="tag akku">Akk</span></td><td class="ex">Sie entscheidet sich <span class="k akk">für das rote Kleid</span>.</td></tr>
-            <tr><td class="de">sich treffen mit</td><td class="center"><span class="tag dativ">Dat</span></td><td class="ex">Ich treffe mich <span class="k dat">mit meinen Freunden</span>.</td></tr>
-          </tbody>
-        </table>
+      <p class="lead">Viele Verben haben eine feste Präposition und einen festen Fall. Am besten in <b>Gruppen</b> lernen — hier nach Kasus und Präposition sortiert.</p>
+      <div class="grid2">
+        <div>
+          <div class="subh" style="color:var(--akk)">mit Akkusativ</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Verb + Präposition</th><th>Beispiel</th></tr></thead>
+              <tbody>
+                <tr><td class="de">denken <b>an</b></td><td class="ex">Ich denke <span class="k akk">an dich</span>.</td></tr>
+                <tr><td class="de">sich erinnern <b>an</b></td><td class="ex">Ich erinnere mich <span class="k akk">an dich</span>.</td></tr>
+                <tr><td class="de">schreiben <b>an</b></td><td class="ex">Er schreibt <span class="k akk">an seine Freundin</span>.</td></tr>
+                <tr><td class="de">warten <b>auf</b></td><td class="ex">Ich warte <span class="k akk">auf den Bus</span>.</td></tr>
+                <tr><td class="de">sich freuen <b>auf</b></td><td class="ex">Ich freue mich <span class="k akk">auf das Wochenende</span>. <em>(Zukunft)</em></td></tr>
+                <tr><td class="de">sich freuen <b>über</b></td><td class="ex">Sie freut sich <span class="k akk">über das Geschenk</span>. <em>(jetzt)</em></td></tr>
+                <tr><td class="de">sprechen <b>über</b></td><td class="ex">Wir sprechen <span class="k akk">über den Film</span>.</td></tr>
+                <tr><td class="de">lachen <b>über</b></td><td class="ex">Wir lachen <span class="k akk">über den Witz</span>.</td></tr>
+                <tr><td class="de">sich interessieren <b>für</b></td><td class="ex">Er interessiert sich <span class="k akk">für Musik</span>.</td></tr>
+                <tr><td class="de">sich bedanken <b>für</b></td><td class="ex">Ich bedanke mich <span class="k akk">für die Hilfe</span>.</td></tr>
+                <tr><td class="de">sich entscheiden <b>für</b></td><td class="ex">Sie entscheidet sich <span class="k akk">für das rote Kleid</span>.</td></tr>
+                <tr><td class="de">sich kümmern <b>um</b></td><td class="ex">Sie kümmert sich <span class="k akk">um die Kinder</span>.</td></tr>
+                <tr><td class="de">sich verlieben <b>in</b></td><td class="ex">Er hat sich <span class="k akk">in Maria</span> verliebt.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subh" style="color:var(--dat)">mit Dativ</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Verb + Präposition</th><th>Beispiel</th></tr></thead>
+              <tbody>
+                <tr><td class="de">sprechen <b>mit</b></td><td class="ex">Ich spreche <span class="k dat">mit meinem Lehrer</span>.</td></tr>
+                <tr><td class="de">sich treffen <b>mit</b></td><td class="ex">Ich treffe mich <span class="k dat">mit meinen Freunden</span>.</td></tr>
+                <tr><td class="de">anfangen <b>mit</b></td><td class="ex">Sie fängt <span class="k dat">mit der Arbeit</span> an.</td></tr>
+                <tr><td class="de">sich beschäftigen <b>mit</b></td><td class="ex">Ich beschäftige mich <span class="k dat">mit Musik</span>.</td></tr>
+                <tr><td class="de">träumen <b>von</b></td><td class="ex">Sie träumt <span class="k dat">von einer Reise</span>.</td></tr>
+                <tr><td class="de">abhängen <b>von</b></td><td class="ex">Es hängt <span class="k dat">vom Wetter</span> ab.</td></tr>
+                <tr><td class="de">helfen <b>bei</b></td><td class="ex">Er hilft <span class="k dat">bei den Hausaufgaben</span>.</td></tr>
+                <tr><td class="de">fragen <b>nach</b></td><td class="ex">Ich frage <span class="k dat">nach dem Weg</span>.</td></tr>
+                <tr><td class="de">teilnehmen <b>an</b> ⚠️</td><td class="ex">Er nimmt <span class="k dat">an dem Kurs</span> teil.</td></tr>
+                <tr><td class="de">Angst haben <b>vor</b> ⚠️</td><td class="ex">Sie hat Angst <span class="k dat">vor Spinnen</span>.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Muster statt Auswendiglernen:</b> <b>mit · von · bei · nach</b> → immer <span class="k dat">Dativ</span> (wie immer!). <b>für · um</b> → immer <span class="k akk">Akkusativ</span>. Nur bei <b>an / auf / über / in / vor</b> musst du aufpassen: meist <span class="k akk">Akkusativ</span> — Ausnahmen mit ⚠️: <em>teilnehmen an, Angst haben vor</em> (+ Dativ).</div></div>
     </div>
   </section>
 
@@ -1551,7 +1634,7 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
           </tbody>
         </table>
       </div>
-      <div class="tip"><span class="ti">💡</span><div>Ein <b>-r-</b> kommt dazu, wenn die Präposition mit einem <b>Vokal</b> beginnt: <code>wo<b>r</b>auf</code>, <code>da<b>r</b>auf</code>, <code>wo<b>r</b>an</code> — aber <code>womit</code>, <code>davon</code> (Konsonant, kein -r-).</div></div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Die -r-Regel:</b> Präposition beginnt mit <b>Vokal</b> (a, e, i, o, u) → <b>+r</b> als Brücke: <code>wo<b>r</b>+auf</code>, <code>da<b>r</b>+über</code>. Konsonant → kein r: <code>wo+mit</code>, <code>da+von</code>. Zwei Vokale nebeneinander klingen schlecht — deshalb das r!</div></div>
     </div>
   </section>
 
@@ -1563,6 +1646,19 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
     </div>
     <div class="card-body">
       <p class="lead">Reflexivpronomen im <b>Akkusativ</b> (z. B. <em>sich freuen</em>, <em>sich interessieren</em>).</p>
+
+      <div class="figure">
+        <svg class="fig" viewBox="0 0 300 124" role="img" aria-label="Die Aktion geht zum Subjekt zurück" style="max-width:340px;margin:0 auto;height:auto;display:block">
+          <circle class="fperson" cx="70" cy="42" r="12"/>
+          <path class="fperson" d="M50 100 Q50 60 70 60 Q90 60 90 100 Z"/>
+          <path class="a-akk" d="M96 52 C 175 8, 240 60, 122 86"/>
+          <polygon class="ah-akk" points="112,89 130,78 132,94"/>
+          <text class="flabel t-akk" x="192" y="28" text-anchor="middle">mich · dich · sich …</text>
+          <text class="t-mut" x="70" y="118" text-anchor="middle">Subjekt</text>
+        </svg>
+        <div class="figcap">Reflexiv = die Aktion kommt <b>zum Subjekt zurück</b>: <em>Ich wasche <b style="color:var(--akk)">mich</b>.</em></div>
+      </div>
+
       <div class="grid2">
         <div class="table-wrap" style="margin:0">
           <table class="sheet">
@@ -1623,8 +1719,8 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
             <caption>1 · Bestimmter Artikel <span style="color:var(--text-muted);font-weight:500">(der/die/das)</span> → <b>schwach</b></caption>
             <thead><tr><th></th><th>M</th><th>F</th><th>N</th><th>Pl</th></tr></thead>
             <tbody>
-              <tr><th>Nom</th><td><span class="ec">e</span></td><td><span class="ec">e</span></td><td><span class="ec">e</span></td><td><span class="ec">en</span></td></tr>
-              <tr><th>Akk</th><td><span class="ec">en</span></td><td><span class="ec">e</span></td><td><span class="ec">e</span></td><td><span class="ec">en</span></td></tr>
+              <tr><th>Nom</th><td class="hl"><span class="ec">e</span></td><td class="hl"><span class="ec">e</span></td><td class="hl"><span class="ec">e</span></td><td><span class="ec">en</span></td></tr>
+              <tr><th>Akk</th><td><span class="ec">en</span></td><td class="hl"><span class="ec">e</span></td><td class="hl"><span class="ec">e</span></td><td><span class="ec">en</span></td></tr>
               <tr><th>Dat</th><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td></tr>
               <tr><th>Gen</th><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td></tr>
             </tbody>
@@ -1658,6 +1754,7 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
           <p class="lead" style="margin:8px 2px 0;font-size:.86rem"><em>großer Hunger, schöne Musik, kaltes Wasser, mit frisch gekochtem Tee</em></p>
         </div>
       </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Merke:</b> Nach <b>der/die/das</b> gibt es nur <b>zwei</b> Endungen: <b>-e</b> (die 5 gelb markierten Felder — der Block oben links) oder <b>-en</b> (alle anderen). Die halbe Tabelle ist also geschenkt!</div></div>
       <div class="tip"><span class="ti">💡</span><div><b>Logik:</b> Zeigt der Artikel schon Fall &amp; Genus (das <em>Signal</em>), reicht dem Adjektiv das schwache <b>-e/-en</b>. Fehlt das Signal, muss das Adjektiv die Arbeit übernehmen (starke Endung).</div></div>
     </div>
   </section>
@@ -1949,7 +2046,38 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
           </tbody>
         </table>
       </div>
-      <div class="tip"><span class="ti">🕒</span><div><b>als vs. wenn (Zeit):</b> <b>als</b> = einmaliges Ereignis in der Vergangenheit. <b>wenn</b> = wiederholte Ereignisse oder Gegenwart/Zukunft (und „if“).</div></div>
+      <div class="subh">als vs. wenn (Zeit)</div>
+      <div class="figure">
+        <div class="grid2">
+          <div>
+            <svg class="fig" viewBox="0 0 260 96" role="img" aria-label="als: ein Punkt in der Vergangenheit">
+              <line class="tline" x1="14" y1="58" x2="230" y2="58"/>
+              <polygon class="tarr" points="242,58 230,52 230,64"/>
+              <line class="tnow" x1="192" y1="26" x2="192" y2="74"/>
+              <text class="t-mut" x="192" y="18" text-anchor="middle">JETZT</text>
+              <circle class="pt-akk" cx="80" cy="58" r="8"/>
+              <text class="flabel t-akk" x="80" y="38" text-anchor="middle">als</text>
+              <text class="t-mut" x="80" y="82" text-anchor="middle">1× · Vergangenheit</text>
+            </svg>
+          </div>
+          <div>
+            <svg class="fig" viewBox="0 0 260 96" role="img" aria-label="wenn: wiederholte Punkte, auch Zukunft">
+              <line class="tline" x1="14" y1="58" x2="230" y2="58"/>
+              <polygon class="tarr" points="242,58 230,52 230,64"/>
+              <line class="tnow" x1="150" y1="26" x2="150" y2="74"/>
+              <text class="t-mut" x="150" y="18" text-anchor="middle">JETZT</text>
+              <circle class="pt-dat" cx="50" cy="58" r="7"/>
+              <circle class="pt-dat" cx="90" cy="58" r="7"/>
+              <circle class="pt-dat" cx="130" cy="58" r="7"/>
+              <circle class="pt-dat" cx="196" cy="58" r="7"/>
+              <text class="flabel t-dat" x="98" y="38" text-anchor="middle">wenn</text>
+              <text class="t-mut" x="120" y="82" text-anchor="middle">immer wieder · auch Zukunft</text>
+            </svg>
+          </div>
+        </div>
+        <div class="figcap"><b style="color:var(--akk)">als</b> = einmaliges Ereignis in der Vergangenheit &nbsp;·&nbsp; <b style="color:var(--dat)">wenn</b> = wiederholt oder Gegenwart/Zukunft (und „if“)</div>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Merksatz:</b> <em>„<b>Als</b> ich ein Kind <b>war</b> …“</em> (nur einmal Kind!) — aber <em>„(Immer) <b>wenn</b> ich Zeit <b>habe</b> …“</em>.</div></div>
     </div>
   </section>
 
@@ -1961,6 +2089,17 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
     </div>
     <div class="card-body">
       <p class="lead"><b>dass</b> = that. Man berichtet, was jemand sagt, denkt, fühlt oder glaubt. Das Verb geht ans <b>Ende</b> der dass-Klausel.</p>
+      <div class="satzbau" style="margin-bottom:14px">
+        <div class="sb-row">
+          <div class="sb-track">
+            <span class="slot">Ich</span>
+            <span class="slot verb">glaube,<span class="pos">②</span></span>
+            <span class="slot konj">dass</span>
+            <span class="slot">er krank</span>
+            <span class="slot end">ist.<span class="pos">Ende</span></span>
+          </div>
+        </div>
+      </div>
       <div class="subh">Beispiele</div>
       <div class="table-wrap">
         <table class="sheet">
@@ -2126,7 +2265,32 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
       <h2 class="card-title">trotzdem &amp; obwohl<span class="en">nevertheless · although</span></h2>
     </div>
     <div class="card-body">
-      <p class="lead"><b>trotzdem</b> = trotzdem / dennoch / regardless. Etwas passiert, obwohl es einen Grund dagegen gibt.</p>
+      <p class="lead"><b>obwohl</b> und <b>trotzdem</b> verbinden einen Gegengrund (although / nevertheless): Etwas passiert, obwohl es einen Grund dagegen gibt.</p>
+
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">obwohl — Konjunktion: Verb ans Ende des Nebensatzes</span>
+            <div class="sb-track">
+              <span class="slot konj">Obwohl</span>
+              <span class="slot">es</span>
+              <span class="slot end">regnet,<span class="pos">Ende</span></span>
+              <span class="slot verb">gehe<span class="pos">②</span></span>
+              <span class="slot">ich spazieren.</span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">trotzdem — Adverb auf Position 1: danach sofort das Verb</span>
+            <div class="sb-track">
+              <span class="slot">Es regnet.</span>
+              <span class="slot konj">Trotzdem</span>
+              <span class="slot verb">gehe<span class="pos">②</span></span>
+              <span class="slot">ich spazieren.</span>
+            </div>
+          </div>
+        </div>
+        <div class="figcap">Gleiche Bedeutung — andere Wortstellung. Genau das prüfen die <b>Sprachbausteine</b> gern.</div>
+      </div>
 
       <div class="subh">Position von „trotzdem“</div>
       <div class="table-wrap">
@@ -2391,16 +2555,16 @@ table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
     <div class="card-body">
       <p class="lead">Von <b>immer</b> (100 %) bis <b>nie</b> (0 %).</p>
       <div class="freq">
-        <div class="freq-row"><span class="de">immer</span><span class="en">always</span><span class="bar"><i style="width:100%"></i></span></div>
-        <div class="freq-row"><span class="de">meistens</span><span class="en">usually</span><span class="bar"><i style="width:86%"></i></span></div>
-        <div class="freq-row"><span class="de">häufig</span><span class="en">frequently</span><span class="bar"><i style="width:73%"></i></span></div>
-        <div class="freq-row"><span class="de">oft</span><span class="en">often</span><span class="bar"><i style="width:62%"></i></span></div>
-        <div class="freq-row"><span class="de">manchmal</span><span class="en">sometimes</span><span class="bar"><i style="width:46%"></i></span></div>
-        <div class="freq-row"><span class="de">gelegentlich</span><span class="en">occasionally</span><span class="bar"><i style="width:34%"></i></span></div>
-        <div class="freq-row"><span class="de">ab und zu</span><span class="en">rarely / now and then</span><span class="bar"><i style="width:24%"></i></span></div>
-        <div class="freq-row"><span class="de">selten</span><span class="en">seldom</span><span class="bar"><i style="width:15%"></i></span></div>
-        <div class="freq-row"><span class="de">fast nie</span><span class="en">hardly ever</span><span class="bar"><i style="width:7%"></i></span></div>
-        <div class="freq-row"><span class="de">nie</span><span class="en">never</span><span class="bar"><i style="width:2%"></i></span></div>
+        <div class="freq-row"><span class="de">immer</span><span class="en">always · <b>100 %</b></span><span class="bar"><i style="width:100%"></i></span></div>
+        <div class="freq-row"><span class="de">meistens</span><span class="en">usually · <b>90 %</b></span><span class="bar"><i style="width:90%"></i></span></div>
+        <div class="freq-row"><span class="de">häufig</span><span class="en">frequently · <b>75 %</b></span><span class="bar"><i style="width:75%"></i></span></div>
+        <div class="freq-row"><span class="de">oft</span><span class="en">often · <b>60 %</b></span><span class="bar"><i style="width:60%"></i></span></div>
+        <div class="freq-row"><span class="de">manchmal</span><span class="en">sometimes · <b>45 %</b></span><span class="bar"><i style="width:45%"></i></span></div>
+        <div class="freq-row"><span class="de">gelegentlich</span><span class="en">occasionally · <b>35 %</b></span><span class="bar"><i style="width:35%"></i></span></div>
+        <div class="freq-row"><span class="de">ab und zu</span><span class="en">now and then · <b>25 %</b></span><span class="bar"><i style="width:25%"></i></span></div>
+        <div class="freq-row"><span class="de">selten</span><span class="en">seldom · <b>15 %</b></span><span class="bar"><i style="width:15%"></i></span></div>
+        <div class="freq-row"><span class="de">fast nie</span><span class="en">hardly ever · <b>5 %</b></span><span class="bar"><i style="width:5%"></i></span></div>
+        <div class="freq-row"><span class="de">nie</span><span class="en">never · <b>0 %</b></span><span class="bar"><i style="width:2%"></i></span></div>
       </div>
     </div>
   </section>
