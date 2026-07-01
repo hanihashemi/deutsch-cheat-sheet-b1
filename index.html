@@ -508,12 +508,12 @@ table.grid td.hl{background:rgba(242,197,61,.22)}
       <a class="chip" href="#sec-wortstellung"><span class="ico">🧩</span>Wortstellung</a>
       <a class="chip" href="#sec-negation"><span class="ico">🚫</span>Negation</a>
       <a class="chip" href="#sec-wwddw"><span class="ico">🔗</span>wann·wenn·denn·dann·weil</a>
+      <a class="chip" href="#sec-trotzdem"><span class="ico">🌧️</span>obwohl / trotzdem</a>
       <a class="chip" href="#sec-als"><span class="ico">⚖️</span>als</a>
       <a class="chip" href="#sec-dass"><span class="ico">💬</span>dass</a>
       <a class="chip" href="#sec-relativ"><span class="ico">🧷</span>Relativsätze</a>
       <a class="chip" href="#sec-zuinf"><span class="ico">🎯</span>zu + Infinitiv · damit</a>
       <a class="chip" href="#sec-indirekt"><span class="ico">❔</span>Indirekte Fragen</a>
-      <a class="chip" href="#sec-trotzdem"><span class="ico">🌧️</span>trotzdem / obwohl</a>
     </div>
   </div>
   <div class="navgroup">
@@ -1902,9 +1902,9 @@ table.grid td.hl{background:rgba(242,197,61,.22)}
         <table class="sheet">
           <thead><tr><th>Typ</th><th>Beispiele</th><th>Wortstellung</th></tr></thead>
           <tbody>
-            <tr><td class="fn">koordinierend</td><td class="de wrap">und · aber · oder · denn · sondern</td><td class="en">normale Reihenfolge (Verb Position 2)</td></tr>
-            <tr><td class="fn">subordinierend</td><td class="de wrap">weil · dass · wenn · obwohl · als · damit</td><td class="en">Verb ans <b>Ende</b> des Nebensatzes</td></tr>
-            <tr><td class="fn">Konnektor-Adverb</td><td class="de wrap">deshalb · dann · trotzdem · danach · sonst</td><td class="en">Inversion: Verb auf Position 2, Subjekt danach</td></tr>
+            <tr><td class="fn">koordinierend</td><td class="de wrap">und · aber · oder · denn · sondern <em>(ADUSO)</em></td><td class="en">normale Reihenfolge (Verb Position 2)</td></tr>
+            <tr><td class="fn">subordinierend</td><td class="de wrap">weil · dass · wenn · obwohl · als · damit · ob · bevor · nachdem · während · bis · sobald</td><td class="en">Verb ans <b>Ende</b> des Nebensatzes</td></tr>
+            <tr><td class="fn">Konnektor-Adverb</td><td class="de wrap">deshalb · darum · deswegen · dann · trotzdem · danach · sonst</td><td class="en">Inversion: Verb auf Position 2, Subjekt danach</td></tr>
           </tbody>
         </table>
       </div>
@@ -1973,32 +1973,161 @@ table.grid td.hl{background:rgba(242,197,61,.22)}
       <h2 class="card-title">wann · wenn · denn · dann · weil<span class="en">Easily-confused connectors</span></h2>
     </div>
     <div class="card-body">
+      <p class="lead">Fünf fast gleiche Wörter — nur <b>drei Jobs</b>. Frag dich zuerst: Meinst du <b>„when“</b>, <b>„because“</b> oder <b>„then“</b>?</p>
+
+      <div class="subh" style="margin-top:14px">1 · „when“ — wann oder wenn?</div>
+      <div class="grid2">
+        <div>
+          <div class="tip" style="margin-top:0"><span class="ti">❓</span><div><b>wann</b> → nur in <b>Fragen</b> (auch indirekt)</div></div>
+          <div class="figure">
+            <div class="satzbau">
+              <div class="sb-row"><div class="sb-track">
+                <span class="slot konj">Wann</span>
+                <span class="slot verb">kommst<span class="pos">②</span></span>
+                <span class="slot">du?</span>
+              </div></div>
+              <div class="sb-row"><div class="sb-track">
+                <span class="slot">Ich weiß nicht,</span>
+                <span class="slot konj">wann</span>
+                <span class="slot">du</span>
+                <span class="slot end">kommst.<span class="pos">Ende</span></span>
+              </div></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="tip" style="margin-top:0"><span class="ti">🔁</span><div><b>wenn</b> → Aussagesatz („when / if“), Verb ans <b>Ende</b></div></div>
+          <div class="figure">
+            <div class="satzbau">
+              <div class="sb-row"><div class="sb-track">
+                <span class="slot konj">Wenn</span>
+                <span class="slot">ich Hunger</span>
+                <span class="slot end">habe,<span class="pos">Ende</span></span>
+                <span class="slot verb">esse<span class="pos">②</span></span>
+                <span class="slot">ich etwas.</span>
+              </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div>Versteckte Frage? → <b>wann</b>. Sonst → <b>wenn</b>. &nbsp;<span style="color:var(--text-muted)">(1× in der Vergangenheit → <a href="#sec-als">als</a> · Ja/Nein-Frage → <a href="#sec-indirekt">ob</a>)</span></div></div>
+
+      <div class="subh" style="margin-top:32px">2 · „because“ — weil oder denn?</div>
+      <p class="lead" style="margin-bottom:10px">Gleiche Bedeutung — nur die <b>Wortstellung</b> ist anders:</p>
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">weil → Verb ans Ende</span>
+            <div class="sb-track">
+              <span class="slot">Ich esse etwas,</span>
+              <span class="slot konj">weil</span>
+              <span class="slot">ich Hunger</span>
+              <span class="slot end">habe.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">denn → alles bleibt normal</span>
+            <div class="sb-track">
+              <span class="slot">Ich esse etwas,</span>
+              <span class="slot konj">denn</span>
+              <span class="slot">ich</span>
+              <span class="slot verb">habe<span class="pos">②</span></span>
+              <span class="slot">Hunger.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>ADUSO</b> (<b>a</b>ber · <b>d</b>enn · <b>u</b>nd · <b>s</b>ondern · <b>o</b>der) = „Position 0“ → Wortstellung bleibt normal. <b>weil</b> gehört nicht dazu!</div></div>
+
+      <div class="subh" style="margin-top:32px">3 · „then / that’s why“ — dann &amp; deshalb</div>
+      <p class="lead" style="margin-bottom:10px">Beide besetzen Position 1 → das Verb kommt <b>sofort danach</b>:</p>
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">dann = danach (Zeit)</span>
+            <div class="sb-track">
+              <span class="slot">Ich habe Hunger,</span>
+              <span class="slot konj">dann</span>
+              <span class="slot verb">esse<span class="pos">②</span></span>
+              <span class="slot">ich etwas.</span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">deshalb (= darum / deswegen) = Folge</span>
+            <div class="sb-track">
+              <span class="slot">Ich habe Hunger,</span>
+              <span class="slot konj">deshalb</span>
+              <span class="slot verb">esse<span class="pos">②</span></span>
+              <span class="slot">ich etwas.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>dann ≠ denn:</b> dann = „then“ (Zeit / Folge) · denn = „because“ (Grund).</div></div>
+
+      <div class="subh" style="margin-top:32px">Alles auf einen Blick</div>
       <div class="table-wrap">
         <table class="sheet">
           <thead><tr><th>Wort</th><th>Bedeutung</th><th>Wortstellung</th></tr></thead>
           <tbody>
-            <tr><td class="de">wann</td><td class="en">when (question)</td><td class="en">Frage / indirekte Frage</td></tr>
-            <tr><td class="de">wenn</td><td class="en">when · if</td><td class="en">Verb ans <b>Ende</b> der wenn-Klausel</td></tr>
-            <tr><td class="de">dann</td><td class="en">then · afterwards</td><td class="en">Verb <b>direkt nach</b> „dann“</td></tr>
-            <tr><td class="de">denn</td><td class="en">because · since</td><td class="en">normale Wortstellung <em>(koordinierend)</em></td></tr>
-            <tr><td class="de">weil</td><td class="en">because</td><td class="en">Verb ans <b>Ende</b> <em>(subordinierend)</em></td></tr>
+            <tr><td class="de">wann</td><td class="en">when? (Frage)</td><td class="en">Frage / indirekte Frage</td></tr>
+            <tr><td class="de">wenn</td><td class="en">when · if</td><td class="en">Verb ans <b>Ende</b></td></tr>
+            <tr><td class="de">weil</td><td class="en">because</td><td class="en">Verb ans <b>Ende</b></td></tr>
+            <tr><td class="de">denn</td><td class="en">because (ADUSO)</td><td class="en"><b>normal</b></td></tr>
+            <tr><td class="de">dann</td><td class="en">then · danach</td><td class="en">Verb <b>direkt danach</b></td></tr>
+            <tr><td class="de">deshalb</td><td class="en">that’s why</td><td class="en">Verb <b>direkt danach</b></td></tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TROTZDEM / OBWOHL ============ -->
+  <section class="card" id="sec-trotzdem">
+    <div class="card-head">
+      <div class="card-ico">🌧️</div>
+      <h2 class="card-title">obwohl &amp; trotzdem<span class="en">although · nevertheless</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Beide verbinden einen <b>Gegengrund</b> — wie <em>weil/deshalb</em>, nur umgekehrt. Der Unterschied ist wieder die <b>Wortstellung</b>:</p>
+
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">obwohl → Verb ans Ende (wie weil)</span>
+            <div class="sb-track">
+              <span class="slot konj">Obwohl</span>
+              <span class="slot">es</span>
+              <span class="slot end">regnet,<span class="pos">Ende</span></span>
+              <span class="slot verb">gehe<span class="pos">②</span></span>
+              <span class="slot">ich spazieren.</span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">trotzdem → Position 1, Verb sofort danach (wie deshalb)</span>
+            <div class="sb-track">
+              <span class="slot">Es regnet.</span>
+              <span class="slot konj">Trotzdem</span>
+              <span class="slot verb">gehe<span class="pos">②</span></span>
+              <span class="slot">ich spazieren.</span>
+            </div>
+          </div>
+        </div>
+        <div class="figcap">Gleiche Bedeutung — andere Wortstellung. Genau das prüfen die <b>Sprachbausteine</b> gern.</div>
       </div>
 
-      <div class="subh">Beispiele</div>
+      <div class="subh" style="margin-top:28px">Wo kann „trotzdem“ stehen?</div>
       <div class="table-wrap">
         <table class="sheet">
-          <thead><tr><th>Deutsch</th><th>English</th><th>Notiz</th></tr></thead>
+          <thead><tr><th>Position</th><th>Beispiel</th></tr></thead>
           <tbody>
-            <tr><td class="ex">Ich esse etwas, <b>denn</b> ich <b>habe</b> Hunger.</td><td class="en">I'm eating because I'm hungry.</td><td class="en">denn — normale Ordnung</td></tr>
-            <tr><td class="ex">Ich esse etwas, <b>weil</b> ich Hunger <b>habe</b>.</td><td class="en">I'm eating because I'm hungry.</td><td class="en">weil — Verb am Ende</td></tr>
-            <tr><td class="ex">Ich esse etwas, <b>wenn</b> ich Hunger <b>habe</b>.</td><td class="en">I eat when I'm hungry.</td><td class="en">wenn — Verb am Ende</td></tr>
-            <tr><td class="ex">Ich habe Hunger, <b>dann esse</b> ich etwas.</td><td class="en">I'm hungry, then I eat something.</td><td class="en">dann — Verb nach dann</td></tr>
+            <tr><td class="de">Am Anfang</td><td class="ex">Es regnet. <b>Trotzdem gehe</b> ich spazieren.</td></tr>
+            <tr><td class="de wrap">Nach dem Verb</td><td class="ex">Es regnet. Ich <b>gehe trotzdem</b> spazieren.</td></tr>
+            <tr><td class="de">Am Ende <em>(gesprochen)</em></td><td class="ex">Es regnet. Ich gehe spazieren, <b>trotzdem</b>.</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="tip warn"><span class="ti">⚠️</span><div><b>weil vs. denn:</b> gleiche Bedeutung („because“), aber <b>weil</b> schickt das Verb ans Ende, <b>denn</b> lässt die normale Wortstellung.</div></div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Paar-Trick:</b> <b>obwohl</b> verhält sich wie <b>weil</b> (Verb ans Ende) · <b>trotzdem</b> verhält sich wie <b>deshalb</b> (Verb direkt danach) → siehe <a href="#sec-wwddw">Karte oben</a>.</div></div>
     </div>
   </section>
 
@@ -2254,65 +2383,6 @@ table.grid td.hl{background:rgba(242,197,61,.22)}
         <span class="bp">Ich frage mich, …</span>
         <span class="bp">Weißt du, …?</span>
         <span class="bp">Ich bin nicht sicher, ob …</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TROTZDEM / OBWOHL ============ -->
-  <section class="card" id="sec-trotzdem">
-    <div class="card-head">
-      <div class="card-ico">🌧️</div>
-      <h2 class="card-title">trotzdem &amp; obwohl<span class="en">nevertheless · although</span></h2>
-    </div>
-    <div class="card-body">
-      <p class="lead"><b>obwohl</b> und <b>trotzdem</b> verbinden einen Gegengrund (although / nevertheless): Etwas passiert, obwohl es einen Grund dagegen gibt.</p>
-
-      <div class="figure">
-        <div class="satzbau">
-          <div class="sb-row">
-            <span class="sb-tag">obwohl — Konjunktion: Verb ans Ende des Nebensatzes</span>
-            <div class="sb-track">
-              <span class="slot konj">Obwohl</span>
-              <span class="slot">es</span>
-              <span class="slot end">regnet,<span class="pos">Ende</span></span>
-              <span class="slot verb">gehe<span class="pos">②</span></span>
-              <span class="slot">ich spazieren.</span>
-            </div>
-          </div>
-          <div class="sb-row">
-            <span class="sb-tag">trotzdem — Adverb auf Position 1: danach sofort das Verb</span>
-            <div class="sb-track">
-              <span class="slot">Es regnet.</span>
-              <span class="slot konj">Trotzdem</span>
-              <span class="slot verb">gehe<span class="pos">②</span></span>
-              <span class="slot">ich spazieren.</span>
-            </div>
-          </div>
-        </div>
-        <div class="figcap">Gleiche Bedeutung — andere Wortstellung. Genau das prüfen die <b>Sprachbausteine</b> gern.</div>
-      </div>
-
-      <div class="subh">Position von „trotzdem“</div>
-      <div class="table-wrap">
-        <table class="sheet">
-          <thead><tr><th>Position</th><th>Erklärung</th><th>Beispiel</th></tr></thead>
-          <tbody>
-            <tr><td class="de">Am Anfang</td><td class="en">Verb kommt direkt nach trotzdem</td><td class="ex">Es regnet. <b>Trotzdem gehe</b> ich spazieren.</td></tr>
-            <tr><td class="de wrap">Nach dem Verb</td><td class="en">trotzdem nach dem konjugierten Verb</td><td class="ex">Es regnet. Ich <b>gehe trotzdem</b> spazieren.</td></tr>
-            <tr><td class="de">Am Ende</td><td class="en">seltener, meist gesprochen</td><td class="ex">Es regnet. Ich gehe spazieren <b>trotzdem</b>.</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="subh">trotzdem vs. obwohl</div>
-      <div class="table-wrap">
-        <table class="sheet">
-          <thead><tr><th>Wort</th><th>Typ</th><th>Wortstellung</th><th>Bedeutung</th><th>Beispiel</th></tr></thead>
-          <tbody>
-            <tr><td class="de">obwohl</td><td class="en">subordinierende Konjunktion</td><td class="en">Verb am Ende</td><td class="en">although / even though</td><td class="ex">Obwohl es regnet, gehe ich spazieren.</td></tr>
-            <tr><td class="de">trotzdem</td><td class="en">Adverb</td><td class="en">Verb nach trotzdem</td><td class="en">nevertheless / still</td><td class="ex">Es regnet. Trotzdem gehe ich spazieren.</td></tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </section>
