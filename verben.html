@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Deutsch Cheat Sheet für die telc B1 Prüfung — Prüfungsüberblick, Brief schreiben, Redemittel, Zeiten &amp; Modalverben, Präpositionen, Fälle, Nebensätze und Adjektivendungen mit Visualisierungen.">
+<meta name="theme-color" content="#0f4c5c">
+<title>telc B1 · Verben &amp; Satzbau</title>
+<style>
+/* ---------- Theme tokens (Ozean — hell) ---------- */
+:root{
+  --bg:#edf4f7;
+  --surface:#ffffff;
+  --surface-2:#f4f9fb;
+  --surface-3:#e6f0f5;
+  --text:#182430;
+  --text-muted:#54687a;
+  --border:#dde9ef;
+  --border-strong:#c4d8e2;
+  --primary:#0e7490;
+  --primary-2:#0d94b4;
+  --primary-dark:#0f4c5c;
+  --gold:#f2c53d;
+  --shadow-sm:0 1px 2px rgba(20,28,60,.06);
+  --shadow:0 2px 6px rgba(20,28,60,.06), 0 12px 28px rgba(20,28,60,.07);
+  --radius:16px;
+  --radius-sm:10px;
+
+  --nom:#2563eb;  --nom-bg:rgba(37,99,235,.12);
+  --akk:#e0245e;  --akk-bg:rgba(224,36,94,.12);
+  --dat:#15a34a;  --dat-bg:rgba(21,163,74,.14);
+  --gen:#d97706;  --gen-bg:rgba(217,119,6,.14);
+  --ok:#15a34a;   --ok-bg:rgba(21,163,74,.12);
+  --no:#e0245e;   --no-bg:rgba(224,36,94,.10);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+h1,h2,h3{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;line-height:1.2;margin:0}
+
+/* ---------- Header / hero ---------- */
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(1200px 400px at 12% -20%, rgba(255,255,255,.14), transparent 60%),
+    linear-gradient(135deg,var(--primary-dark),var(--primary) 55%,var(--primary-2));
+  color:#fff;
+  padding:34px 22px 30px;
+}
+.hero-inner{max-width:1180px;margin:0 auto}
+.flag{display:flex;height:6px;border-radius:6px;overflow:hidden;width:120px;margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.flag i{flex:1}
+.flag .b{background:#111}.flag .r{background:#dd0000}.flag .g{background:#ffce00}
+.hero h1{font-size:clamp(1.9rem,4.4vw,3rem);letter-spacing:.3px;color:#fff}
+.hero .sub{margin:10px 0 0;font-size:1.02rem;max-width:60ch;color:rgba(255,255,255,.9)}
+.hero .meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);
+  color:#fff;padding:4px 11px;border-radius:999px;font-size:.82rem;font-weight:600;
+  backdrop-filter:blur(4px);
+}
+
+/* ---------- Toolbar (sticky) ---------- */
+.toolbar{
+  position:sticky;top:0;z-index:40;
+  background:color-mix(in srgb, var(--surface) 86%, transparent);
+  backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+}
+.toolbar-inner{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search-wrap{position:relative;flex:1;min-width:200px}
+.search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--text-muted);pointer-events:none}
+#search{
+  width:100%;padding:10px 36px 10px 36px;border-radius:999px;
+  border:1px solid var(--border-strong);background:var(--surface-2);color:var(--text);
+  font-size:.95rem;outline:none;transition:border-color .15s, box-shadow .15s;
+}
+#search:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--nom-bg)}
+.clear-btn{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  border:none;background:var(--surface-3);color:var(--text-muted);cursor:pointer;
+  width:22px;height:22px;border-radius:50%;font-size:14px;line-height:1;display:none;
+}
+.clear-btn.show{display:inline-flex;align-items:center;justify-content:center}
+.tbtn{
+  border:1px solid var(--border-strong);background:var(--surface-2);color:var(--text);
+  padding:9px 14px;border-radius:999px;cursor:pointer;font-size:.88rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:7px;transition:background .15s,border-color .15s,transform .05s;
+  white-space:nowrap;
+}
+.tbtn:hover{border-color:var(--primary);background:var(--surface-3)}
+.tbtn:active{transform:translateY(1px)}
+.tbtn svg{width:16px;height:16px}
+
+/* ---------- Section nav ---------- */
+nav.jump{max-width:1180px;margin:16px auto 0;padding:0 16px}
+.navgroup{margin-bottom:6px}
+.navgroup-label{
+  font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-muted);margin:10px 2px 6px;
+}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{
+  text-decoration:none;color:var(--text);
+  background:var(--surface);border:1px solid var(--border);
+  padding:6px 12px;border-radius:999px;font-size:.85rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:6px;transition:all .15s;box-shadow:var(--shadow-sm);
+}
+.chip:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-1px)}
+.chip.active{background:var(--primary);border-color:var(--primary);color:#fff}
+.chip .ico{font-size:.95rem;filter:saturate(1.1)}
+
+/* ---------- Layout ---------- */
+main{max-width:1180px;margin:22px auto 60px;padding:0 16px;display:grid;gap:22px}
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:82px;
+}
+.card-head{
+  display:flex;align-items:center;gap:12px;padding:16px 20px;
+  border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg,var(--surface-2),var(--surface));
+}
+.card-ico{
+  flex:none;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+  font-size:1.15rem;background:var(--surface-3);border:1px solid var(--border);
+}
+.card-title{font-size:1.28rem;color:var(--text)}
+.card-title .en{font-family:system-ui,sans-serif;font-size:.8rem;font-weight:600;color:var(--text-muted);display:block;margin-top:1px;letter-spacing:.01em}
+.card-body{padding:18px 20px 22px}
+.lead{margin:0 0 14px;color:var(--text-muted);font-size:.96rem}
+.lead code{background:var(--surface-3);padding:1px 6px;border-radius:6px;font-size:.9em}
+
+/* subheadings inside cards */
+.subh{
+  font-family:system-ui,sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--primary);margin:22px 0 9px;display:flex;align-items:center;gap:8px;
+}
+.subh:first-child{margin-top:2px}
+.subh::before{content:"";width:14px;height:2px;border-radius:2px;background:var(--primary);opacity:.6}
+
+/* ---------- Tables ---------- */
+.table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius-sm);margin:0 0 6px}
+table.sheet{width:100%;border-collapse:collapse;font-size:.94rem;min-width:min(100%,520px)}
+table.sheet thead th{
+  background:linear-gradient(180deg,var(--primary-2),var(--primary));
+  color:#fff;text-align:left;padding:10px 14px;font-weight:700;font-size:.82rem;
+  letter-spacing:.03em;text-transform:uppercase;position:sticky;left:auto;
+}
+table.sheet tbody td{padding:9px 14px;border-top:1px solid var(--border);vertical-align:top}
+table.sheet tbody tr:nth-child(even){background:var(--surface-2)}
+table.sheet tbody tr:hover{background:var(--surface-3)}
+table.sheet td.de{font-weight:600;color:var(--text);white-space:nowrap}
+table.sheet td.de.wrap{white-space:normal}
+table.sheet td.en{color:var(--text-muted)}
+table.sheet td.ex{color:var(--text);font-style:italic}
+table.sheet td.center,table.sheet th.center{text-align:center}
+.mono{font-variant-numeric:tabular-nums}
+
+/* grid table (adjective endings) */
+table.grid{width:100%;border-collapse:collapse;font-size:.95rem;text-align:center}
+table.grid caption{caption-side:top;font-weight:700;padding:0 0 8px;text-align:left;color:var(--text)}
+table.grid th,table.grid td{border:1px solid var(--border);padding:8px 6px}
+table.grid thead th{background:var(--primary);color:#fff;font-size:.82rem;text-transform:uppercase;letter-spacing:.03em}
+table.grid tbody th{background:var(--surface-2);font-weight:700}
+table.grid tbody td{font-weight:600}
+table.grid td .ec{color:var(--primary);font-weight:800}
+.grid3{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.grid2{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+
+/* ---------- Case highlight spans ---------- */
+.k{font-weight:700;border-radius:5px;padding:.02em .28em}
+.nom{color:var(--nom);background:var(--nom-bg)}
+.akk{color:var(--akk);background:var(--akk-bg)}
+.dat{color:var(--dat);background:var(--dat-bg)}
+.gen{color:var(--gen);background:var(--gen-bg)}
+
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.legend .lg{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:600;
+  border:1px solid var(--border);background:var(--surface);padding:5px 11px;border-radius:999px}
+.dot{width:11px;height:11px;border-radius:50%}
+.dot.nom{background:var(--nom)}.dot.akk{background:var(--akk)}.dot.dat{background:var(--dat)}.dot.gen{background:var(--gen)}
+
+/* ---------- Callouts / tips ---------- */
+.tip{
+  display:flex;gap:11px;background:var(--surface-2);border:1px solid var(--border);
+  border-left:4px solid var(--primary);border-radius:var(--radius-sm);
+  padding:12px 14px;margin:14px 0 4px;font-size:.92rem;
+}
+.tip.warn{border-left-color:var(--gold)}
+.tip.rule{border-left-color:var(--dat)}
+.tip .ti{font-size:1.05rem;line-height:1.4;flex:none}
+.tip b{color:var(--text)}
+.tip code{background:var(--surface-3);padding:1px 6px;border-radius:6px;font-size:.9em}
+
+/* affirm / negate row accents for confirmation phrases */
+tr.pos td.de{box-shadow:inset 3px 0 0 var(--ok)}
+tr.neg td.de{box-shadow:inset 3px 0 0 var(--no)}
+
+/* rule label tags */
+.tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.03em;
+  padding:2px 8px;border-radius:999px;text-transform:uppercase}
+.tag.akku{background:var(--akk-bg);color:var(--akk)}
+.tag.dativ{background:var(--dat-bg);color:var(--dat)}
+
+/* ---------- Frequency scale ---------- */
+.freq{display:grid;gap:7px}
+.freq-row{display:grid;grid-template-columns:130px 120px 1fr;align-items:center;gap:12px;
+  padding:6px 4px;border-radius:8px}
+.freq-row:hover{background:var(--surface-2)}
+.freq-row .de{font-weight:700}
+.freq-row .en{color:var(--text-muted);font-size:.9rem}
+.bar{height:12px;border-radius:999px;background:var(--surface-3);overflow:hidden}
+.bar>i{display:block;height:100%;border-radius:999px;
+  background:linear-gradient(90deg,var(--primary),var(--primary-2))}
+@media(max-width:520px){
+  .freq-row{grid-template-columns:1fr 1fr;gap:6px}
+  .freq-row .bar{grid-column:1/-1}
+}
+
+/* ---------- Back to top ---------- */
+#top{
+  position:fixed;right:18px;bottom:18px;z-index:50;
+  width:46px;height:46px;border-radius:50%;border:1px solid var(--border-strong);
+  background:var(--primary);color:#fff;cursor:pointer;box-shadow:var(--shadow);
+  display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;
+}
+#top.show{opacity:1;pointer-events:auto}
+#top:hover{transform:translateY(-2px)}
+#top svg{width:20px;height:20px}
+
+/* no results */
+.noresults{display:none;text-align:center;color:var(--text-muted);padding:40px 10px;font-size:1rem}
+.noresults.show{display:block}
+
+/* footer */
+footer{max-width:1180px;margin:0 auto 40px;padding:22px 16px;color:var(--text-muted);
+  font-size:.85rem;border-top:1px solid var(--border);text-align:center}
+footer a{color:var(--primary)}
+main a{color:var(--primary)}
+
+kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8em;background:var(--surface-3);
+  border:1px solid var(--border-strong);border-bottom-width:2px;border-radius:5px;padding:1px 6px}
+
+/* ---------- Print ---------- */
+@media print{
+  :root{--bg:#fff;--surface:#fff;--surface-2:#fff;--surface-3:#f2f2f2;--shadow:none;--shadow-sm:none}
+  .toolbar,nav.jump,#top,.hero .meta,.clear-btn{display:none !important}
+  .hero{background:#fff;color:#111;padding:0 0 8px;border-bottom:2px solid #111}
+  .hero h1{color:#111}.hero .sub{color:#333}
+  body{background:#fff}
+  main{gap:12px;margin-top:12px}
+  .card{break-inside:avoid;box-shadow:none;border:1px solid #bbb}
+  .card-head{background:#f3f3f3}
+  table.sheet thead th,table.grid thead th{color:#fff !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+@media(max-width:640px){
+  .card-body{padding:14px 13px 18px}
+  .card-head{padding:13px 14px}
+  .hero{padding:26px 16px 24px}
+  .prep-grid{grid-template-columns:repeat(auto-fit,minmax(96px,1fr))}
+}
+
+/* ---------- Hero badge ---------- */
+.h1badge{
+  display:inline-block;vertical-align:middle;font-family:system-ui,sans-serif;
+  font-size:.42em;font-weight:800;letter-spacing:.04em;
+  background:var(--gold);color:#3a2a00;padding:.28em .7em;border-radius:999px;
+  margin-left:.35em;box-shadow:0 2px 6px rgba(0,0,0,.2);text-transform:uppercase;
+}
+
+/* ---------- Figures / SVG ---------- */
+.figure{margin:6px 0 8px;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:14px 14px 10px}
+.figcap{margin-top:8px;font-size:.82rem;color:var(--text-muted);text-align:center}
+.fig .box{fill:var(--surface-3);stroke:var(--border-strong);stroke-width:2}
+.fig .box-o{fill:none;stroke:var(--border-strong);stroke-width:2.4}
+.fig .ball{fill:var(--akk)}
+.fig .ground{stroke:var(--border);stroke-width:2;stroke-linecap:round}
+
+/* Prepositions picture grid */
+.prep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:10px;margin:6px 0 4px}
+.prep-cell{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:8px 4px 7px;text-align:center;transition:border-color .15s,transform .1s}
+.prep-cell:hover{border-color:var(--primary);transform:translateY(-2px)}
+.prep-cell svg{width:100%;height:62px;display:block}
+.prep-name{display:block;font-weight:800;color:var(--primary);margin-top:3px}
+.prep-en{display:block;font-size:.7rem;color:var(--text-muted)}
+
+/* hin/her figure */
+.fig .fperson{fill:var(--text)}
+.fig .a-her{fill:none;stroke:var(--dat);stroke-width:3;stroke-linecap:round}
+.fig .a-hin{fill:none;stroke:var(--gen);stroke-width:3;stroke-linecap:round}
+.fig .ah-her{fill:var(--dat)}
+.fig .ah-hin{fill:var(--gen)}
+.fig .flabel{font:700 14px system-ui,sans-serif}
+.fig .t-her{fill:var(--dat)}
+.fig .t-hin{fill:var(--gen)}
+.fig .t-mut{fill:var(--text-muted);font:600 12px system-ui,sans-serif}
+
+/* ---------- telc exam overview ---------- */
+.exam{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.exam-panel{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface-2);display:flex;flex-direction:column}
+.exam-panel .ep-head{padding:12px 16px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.exam-panel.written .ep-head{background:linear-gradient(135deg,var(--primary-dark),var(--primary))}
+.exam-panel.oral .ep-head{background:linear-gradient(135deg,#1f7a46,var(--dat))}
+.ep-head h3{font-family:system-ui,sans-serif;font-size:1.02rem;font-weight:800}
+.ep-time{font-size:.75rem;font-weight:700;background:rgba(255,255,255,.22);padding:3px 9px;border-radius:999px;white-space:nowrap}
+.part{display:flex;gap:11px;padding:11px 15px;border-top:1px solid var(--border);align-items:flex-start}
+.part:first-of-type{border-top:none}
+.part .p-ico{flex:none;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:1rem;background:var(--surface-3);border:1px solid var(--border)}
+.part .p-main{flex:1;min-width:0}
+.part .p-t{font-weight:700;font-size:.95rem}
+.part .p-t .en{font-weight:500;color:var(--text-muted);font-size:.82rem}
+.part .p-d{color:var(--text-muted);font-size:.84rem;margin-top:1px}
+.exam-note{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.exam-note .lg{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:600;border:1px solid var(--border);background:var(--surface);padding:6px 12px;border-radius:999px}
+
+/* ---------- Brief (letter) template ---------- */
+.letter{position:relative;background:var(--surface);border:1px solid var(--border-strong);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;font-size:.9rem;line-height:1.65}
+.letter .z{border-left:3px solid var(--border-strong);padding:2px 0 2px 12px;margin:11px 0}
+.letter .z .zt{display:block;font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:2px}
+.letter .z.anrede{border-left-color:var(--nom)}.letter .z.anrede .zt{color:var(--nom)}
+.letter .z.einl{border-left-color:var(--dat)}.letter .z.einl .zt{color:var(--dat)}
+.letter .z.haupt{border-left-color:var(--gen)}.letter .z.haupt .zt{color:var(--gen)}
+.letter .z.schluss{border-left-color:var(--akk)}.letter .z.schluss .zt{color:var(--akk)}
+.letter .z.gruss{border-left-color:var(--primary)}.letter .z.gruss .zt{color:var(--primary)}
+.letter .datum{text-align:right;color:var(--text-muted);font-size:.84rem}
+.letter em{color:var(--text-muted)}
+
+/* ---------- Satzbau / word order ---------- */
+.satzbau{display:grid;gap:15px;margin:8px 0 6px}
+.sb-row .sb-tag{display:block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:6px}
+.sb-track{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.slot{background:var(--surface);border:1px solid var(--border-strong);border-radius:8px;padding:6px 11px;font-weight:600;font-size:.9rem}
+.slot .pos{font-size:.68rem;font-weight:800;margin-left:5px;opacity:.85}
+.slot.verb{background:var(--nom-bg);border-color:var(--nom);color:var(--nom)}
+.slot.end{background:var(--akk-bg);border-color:var(--akk);color:var(--akk)}
+.slot.konj{background:var(--gen-bg);border-color:var(--gen);color:var(--gen)}
+.sb-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.sb-legend span{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;color:var(--text-muted)}
+.sb-legend i{width:12px;height:12px;border-radius:4px;display:inline-block}
+
+/* ---------- Decision flow (adjective signal) ---------- */
+.flow{margin:6px 0 4px}
+.flow-q{text-align:center;font-weight:700;background:var(--surface-3);border:1px solid var(--border);border-radius:10px;padding:9px 12px;max-width:460px;margin:0 auto}
+.flow-stem{width:2px;height:16px;background:var(--border-strong);margin:0 auto}
+.flow-branches{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:560px){.flow-branches{grid-template-columns:1fr}}
+.flow-branch{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px}
+.flow-cond{background:var(--surface);border:1px dashed var(--border-strong);border-radius:9px;padding:7px 10px;font-weight:700;width:100%}
+.flow-cond small{display:block;font-weight:500;color:var(--text-muted);font-size:.75rem}
+.flow-arr{color:var(--text-muted);font-size:1.1rem;line-height:1}
+.flow-out{border-radius:9px;padding:8px 10px;font-weight:800;width:100%;letter-spacing:.02em}
+.flow-out small{display:block;font-weight:600;font-size:.78rem;margin-top:1px}
+.flow-out.weak{background:var(--nom-bg);color:var(--nom);border:1px solid var(--nom)}
+.flow-out.mixed{background:var(--gen-bg);color:var(--gen);border:1px solid var(--gen)}
+.flow-out.strong{background:var(--akk-bg);color:var(--akk);border:1px solid var(--akk)}
+
+/* two-tone redemittel table */
+table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
+
+/* ---------- Case buckets (fixed-case prepositions) ---------- */
+.buckets{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin:6px 0 4px}
+.bucket{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface-2);display:flex;flex-direction:column}
+.bucket-head{padding:9px 14px;font-weight:800;color:#fff;font-size:.92rem;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.bucket.dat .bucket-head{background:var(--dat)}
+.bucket.akk .bucket-head{background:var(--akk)}
+.bucket.gen .bucket-head{background:var(--gen)}
+.bucket-head .bh-en{font-weight:600;font-size:.74rem;opacity:.9}
+.bucket-body{padding:11px 12px 8px;display:flex;flex-wrap:wrap;gap:7px;align-content:flex-start}
+.bp{background:var(--surface);border:1px solid var(--border-strong);border-radius:999px;padding:4px 11px;font-weight:700;font-size:.9rem}
+.bp small{font-weight:500;color:var(--text-muted)}
+.bucket-note{padding:4px 13px 11px;font-size:.8rem;color:var(--text-muted)}
+
+/* ---------- Timeline figures ---------- */
+.fig .tline{stroke:var(--border-strong);stroke-width:2.5;stroke-linecap:round}
+.fig .tarr{fill:var(--border-strong)}
+.fig .tnow{stroke:var(--primary);stroke-width:2;stroke-dasharray:4 5}
+.fig .pt-past{fill:var(--akk)}.fig .pt-now{fill:var(--primary)}.fig .pt-fut{fill:var(--nom)}
+.fig .t-past{fill:var(--akk)}.fig .t-now{fill:var(--primary)}.fig .t-fut{fill:var(--nom)}
+.fig .pt-akk{fill:var(--akk)}.fig .pt-nom{fill:var(--nom)}
+.fig .t-akk{fill:var(--akk)}.fig .t-nom{fill:var(--nom)}
+
+/* ---------- Komparativ steps ---------- */
+.steps{display:flex;align-items:flex-end;gap:10px;max-width:480px;margin:2px auto 4px}
+.step{flex:1;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,var(--primary-2),var(--primary));color:#fff;
+  display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:8px 6px;font-weight:800;font-size:.95rem}
+.step small{font-weight:600;opacity:.85;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em}
+.step.s1{min-height:58px}.step.s2{min-height:88px}.step.s3{min-height:118px}
+
+/* flow variants: haben/sein & kein/nicht */
+.flow-out.sein{background:var(--dat-bg);color:var(--dat);border:1px solid var(--dat)}
+.flow-out.haben{background:var(--nom-bg);color:var(--nom);border:1px solid var(--nom)}
+
+/* case-colored row headers in grid tables */
+table.grid tbody th.h-nom{background:var(--nom-bg);color:var(--nom)}
+table.grid tbody th.h-akk{background:var(--akk-bg);color:var(--akk)}
+table.grid tbody th.h-dat{background:var(--dat-bg);color:var(--dat)}
+table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
+
+/* transformation arrow (Aktiv → Passiv) */
+.tf-arr{text-align:center;color:var(--text-muted);font-size:.9rem;font-weight:600;line-height:1.3;margin:2px 0}
+
+/* ---------- Merksatz callout (memory hooks) ---------- */
+.tip.merk{border-left-color:var(--gold);background:rgba(242,197,61,.12)}
+
+/* ---------- Schnell-Check memo cards ---------- */
+.memo{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:4px 0 2px}
+.memo-card{position:relative;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:10px 12px 11px 44px;font-size:.88rem;line-height:1.45}
+.memo-card .n{position:absolute;left:12px;top:11px;width:22px;height:22px;border-radius:50%;background:var(--primary);color:#fff;font-size:.75rem;font-weight:800;display:grid;place-items:center}
+.memo-card .mx{display:block;color:var(--text-muted);margin-top:2px}
+
+/* extra figure tokens */
+.fig .pt-dat{fill:var(--dat)}
+.fig .t-dat{fill:var(--dat)}
+.fig .ball-dat{fill:var(--dat)}
+.fig .a-akk{fill:none;stroke:var(--akk);stroke-width:3;stroke-linecap:round}
+.fig .ah-akk{fill:var(--akk)}
+
+/* adjective-table pattern highlight */
+table.grid td.hl{background:rgba(242,197,61,.22)}
+
+/* page switcher */
+.pageswitch{max-width:1180px;margin:0 auto;padding:14px 16px 0;display:flex;gap:8px;flex-wrap:wrap}
+.pageswitch a{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:999px;font-size:.86rem;font-weight:700;text-decoration:none;color:var(--text-muted);background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.pageswitch a:hover{border-color:var(--primary);color:var(--primary)}
+.pageswitch a[aria-current="page"]{background:var(--primary);color:#fff;border-color:var(--primary)}
+@media print{.pageswitch{display:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="flag"><i class="b"></i><i class="r"></i><i class="g"></i></div>
+    <h1>Deutsch Cheat Sheet <span class="h1badge">telc B1</span></h1>
+    <p class="sub">Verben, Zeitformen, Wortstellung &amp; Nebensätze — die <b>Grammatik</b> für die telc Deutsch B1 Prüfung.</p>
+    <div class="meta">
+      <span class="pill">🎓 telc B1 Prüfung</span>
+      <span class="pill">✍️ Brief &amp; Redemittel</span>
+      <span class="pill">🖼️ Visualisierungen</span>
+      <span class="pill">🔎 Live-Suche</span>
+      <span class="pill">🖨️ Druckfreundlich</span>
+    </div>
+  </div>
+</header>
+
+<nav class="pageswitch" aria-label="Seiten">
+  <a href="index.html">🎓 telc &amp; Redemittel</a>
+  <a href="verben.html" aria-current="page">🔧 Verben &amp; Sätze</a>
+  <a href="faelle.html">📦 Fälle &amp; Präpositionen</a>
+</nav>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      <input id="search" type="search" placeholder="Suchen…  z. B. „Brief“, „Perfekt“, „weil“, „Dativ“" autocomplete="off" aria-label="Cheat Sheet durchsuchen">
+      <button class="clear-btn" id="clear" aria-label="Suche löschen">✕</button>
+    </div>
+    <button class="tbtn" id="printBtn" aria-label="Drucken">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M6 14h12v8H6z"></path></svg>
+      <span>Drucken</span>
+    </button>
+  </div>
+</div>
+
+<nav class="jump" id="jump">
+  <div class="navgroup">
+    <div class="navgroup-label">Verben &amp; Zeiten</div>
+    <div class="chips">
+      <a class="chip" href="#sec-sein"><span class="ico">⏳</span>„sein“ (Zeitformen)</a>
+      <a class="chip" href="#sec-modal"><span class="ico">🧰</span>Modalverben</a>
+      <a class="chip" href="#sec-trennbar"><span class="ico">✂️</span>Trennbare Verben</a>
+      <a class="chip" href="#sec-imperativ"><span class="ico">📣</span>Imperativ</a>
+      <a class="chip" href="#sec-perfekt"><span class="ico">🕰️</span>Perfekt</a>
+      <a class="chip" href="#sec-praeteritum"><span class="ico">📜</span>Präteritum</a>
+      <a class="chip" href="#sec-plusquam"><span class="ico">⏮️</span>Plusquamperfekt</a>
+      <a class="chip" href="#sec-futur"><span class="ico">🔮</span>Futur I</a>
+      <a class="chip" href="#sec-passiv"><span class="ico">🏗️</span>Passiv</a>
+    </div>
+  </div>
+  <div class="navgroup">
+    <div class="navgroup-label">Satzbau &amp; Nebensätze</div>
+    <div class="chips">
+      <a class="chip" href="#sec-wortstellung"><span class="ico">🧩</span>Wortstellung</a>
+      <a class="chip" href="#sec-negation"><span class="ico">🚫</span>Negation</a>
+      <a class="chip" href="#sec-dass"><span class="ico">💬</span>dass</a>
+      <a class="chip" href="#sec-wwddw"><span class="ico">🔗</span>wann·wenn·denn·dann·weil</a>
+      <a class="chip" href="#sec-als"><span class="ico">⚖️</span>als</a>
+      <a class="chip" href="#sec-trotzdem"><span class="ico">🌧️</span>obwohl / trotzdem</a>
+      <a class="chip" href="#sec-zweiteilig"><span class="ico">🔀</span>Zweiteilige Konnektoren</a>
+      <a class="chip" href="#sec-relativ"><span class="ico">🧷</span>Relativsätze</a>
+      <a class="chip" href="#sec-zuinf"><span class="ico">🎯</span>zu + Infinitiv · damit</a>
+      <a class="chip" href="#sec-indirekt"><span class="ico">❔</span>Indirekte Fragen</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content">
+
+  <!-- Legend card -->
+  <section class="card" id="sec-legend" data-noindex>
+    <div class="card-body" style="padding-top:16px;padding-bottom:16px">
+      <div class="subh" style="margin-top:0">Farbcode der Fälle</div>
+      <div class="legend">
+        <span class="lg"><span class="dot nom"></span>Nominativ <span style="color:var(--text-muted);font-weight:500">— Subjekt</span></span>
+        <span class="lg"><span class="dot akk"></span>Akkusativ <span style="color:var(--text-muted);font-weight:500">— direktes Objekt</span></span>
+        <span class="lg"><span class="dot dat"></span>Dativ <span style="color:var(--text-muted);font-weight:500">— indirektes Objekt</span></span>
+        <span class="lg"><span class="dot gen"></span>Genitiv <span style="color:var(--text-muted);font-weight:500">— Besitz</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEIN KONJUGATION ============ -->
+  <section class="card" id="sec-sein">
+    <div class="card-head">
+      <div class="card-ico">⏳</div>
+      <h2 class="card-title">„sein“ in vier Zeitformen<span class="en">Conjugation of "to be"</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Person</th><th>Präsens<span style="font-weight:500;text-transform:none"> · present</span></th><th>Präteritum<span style="font-weight:500;text-transform:none"> · simple past</span></th><th>Perfekt<span style="font-weight:500;text-transform:none"> · present perfect</span></th><th>Futur I<span style="font-weight:500;text-transform:none"> · future</span></th></tr></thead>
+          <tbody>
+            <tr><td class="de">ich</td><td class="de">bin</td><td class="de">war</td><td class="de">bin gewesen</td><td class="de">werde sein</td></tr>
+            <tr><td class="de">du</td><td class="de">bist</td><td class="de">warst</td><td class="de">bist gewesen</td><td class="de">wirst sein</td></tr>
+            <tr><td class="de">er / sie / es</td><td class="de">ist</td><td class="de">war</td><td class="de">ist gewesen</td><td class="de">wird sein</td></tr>
+            <tr><td class="de">wir</td><td class="de">sind</td><td class="de">waren</td><td class="de">sind gewesen</td><td class="de">werden sein</td></tr>
+            <tr><td class="de">ihr</td><td class="de">seid</td><td class="de">wart</td><td class="de">seid gewesen</td><td class="de">werdet sein</td></tr>
+            <tr><td class="de">sie / Sie</td><td class="de">sind</td><td class="de">waren</td><td class="de">sind gewesen</td><td class="de">werden sein</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div><b>sein</b> bildet das Perfekt mit <b>sein</b> (nicht haben): <em>ich <b>bin</b> gewesen</em>. Im Alltag benutzt man für die Vergangenheit meist das <b>Präteritum</b> (<em>war</em>).</div></div>
+    </div>
+  </section>
+
+  <!-- ============ MODALVERBEN ============ -->
+  <section class="card" id="sec-modal">
+    <div class="card-head">
+      <div class="card-ico">🧰</div>
+      <h2 class="card-title">Modalverben<span class="en">Modal verbs — können, müssen, dürfen …</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Modalverb auf <b>Position 2</b> + Infinitiv am <b>Ende</b> (Satzklammer → siehe <a href="#sec-wortstellung">Wortstellung</a>).</p>
+      <div class="satzbau" style="margin-bottom:14px">
+        <div class="sb-row">
+          <div class="sb-track">
+            <span class="slot">Ich</span>
+            <span class="slot verb">muss<span class="pos">②</span></span>
+            <span class="slot">heute lange</span>
+            <span class="slot end">arbeiten.<span class="pos">Ende</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="subh">Bedeutungen</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Verb</th><th>Bedeutung</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">💪 können</td><td class="en">can — Fähigkeit / Möglichkeit</td><td class="ex">Ich kann gut schwimmen.</td></tr>
+            <tr><td class="de">❗ müssen</td><td class="en">must — Notwendigkeit / Pflicht</td><td class="ex">Ich muss heute arbeiten.</td></tr>
+            <tr><td class="de">✅ dürfen</td><td class="en">may — Erlaubnis</td><td class="ex">Hier darf man parken.</td></tr>
+            <tr><td class="de">🚫 nicht dürfen</td><td class="en">must not — Verbot</td><td class="ex">Hier darf man nicht rauchen.</td></tr>
+            <tr><td class="de">🎯 wollen</td><td class="en">to want — starker Wunsch / Plan</td><td class="ex">Ich will Deutsch lernen.</td></tr>
+            <tr><td class="de">📋 sollen</td><td class="en">should — Auftrag / Rat von anderen</td><td class="ex">Du sollst mehr schlafen, sagt der Arzt.</td></tr>
+            <tr><td class="de">🙏 möchten</td><td class="en">would like — höflicher Wunsch</td><td class="ex">Ich möchte einen Kaffee, bitte.</td></tr>
+            <tr><td class="de">❤️ mögen</td><td class="en">to like — gern haben</td><td class="ex">Ich mag Kaffee. <em>(ohne 2. Verb)</em></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Konjugation (Präsens)</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Person</th><th>können</th><th>müssen</th><th>dürfen</th><th>wollen</th><th>sollen</th><th>möchten</th></tr></thead>
+          <tbody>
+            <tr><td class="de">ich</td><td class="de">kann</td><td class="de">muss</td><td class="de">darf</td><td class="de">will</td><td class="de">soll</td><td class="de">möchte</td></tr>
+            <tr><td class="de">du</td><td class="de">kannst</td><td class="de">musst</td><td class="de">darfst</td><td class="de">willst</td><td class="de">sollst</td><td class="de">möchtest</td></tr>
+            <tr><td class="de">er / sie / es</td><td class="de">kann</td><td class="de">muss</td><td class="de">darf</td><td class="de">will</td><td class="de">soll</td><td class="de">möchte</td></tr>
+            <tr><td class="de">wir</td><td class="de">können</td><td class="de">müssen</td><td class="de">dürfen</td><td class="de">wollen</td><td class="de">sollen</td><td class="de">möchten</td></tr>
+            <tr><td class="de">ihr</td><td class="de">könnt</td><td class="de">müsst</td><td class="de">dürft</td><td class="de">wollt</td><td class="de">sollt</td><td class="de">möchtet</td></tr>
+            <tr><td class="de">sie / Sie</td><td class="de">können</td><td class="de">müssen</td><td class="de">dürfen</td><td class="de">wollen</td><td class="de">sollen</td><td class="de">möchten</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>Klassische Falle:</b> <em>Du <b>musst nicht</b> kommen</em> = du kannst, aber es ist nicht nötig (don't have to). <em>Du <b>darfst nicht</b> kommen</em> = es ist verboten (must not)!</div></div>
+      <div class="tip"><span class="ti">💡</span><div>ich- und er-Form sind gleich und <b>ohne Endung</b> (ich kann, er kann). Vergangenheit → <a href="#sec-praeteritum">Präteritum</a> (konnte, musste …).</div></div>
+    </div>
+  </section>
+
+  <!-- ============ TRENNBARE VERBEN ============ -->
+  <section class="card" id="sec-trennbar">
+    <div class="card-head">
+      <div class="card-ico">✂️</div>
+      <h2 class="card-title">Trennbare &amp; untrennbare Verben<span class="en">Separable verbs — anrufen, aufstehen …</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Trennbare Präfixe sind <b>betont</b> und wandern im Hauptsatz ans <b>Satzende</b>: <em>anrufen → Ich rufe … an.</em></p>
+
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">Präsens — Präfix ans Ende</span>
+            <div class="sb-track">
+              <span class="slot">Ich</span>
+              <span class="slot verb">rufe<span class="pos">②</span></span>
+              <span class="slot">dich morgen</span>
+              <span class="slot end">an.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">Perfekt — Partizip mit -ge- in der Mitte</span>
+            <div class="sb-track">
+              <span class="slot">Ich</span>
+              <span class="slot verb">habe<span class="pos">②</span></span>
+              <span class="slot">dich gestern</span>
+              <span class="slot end">an·ge·rufen.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">Nebensatz — Verb wieder zusammen, am Ende</span>
+            <div class="sb-track">
+              <span class="slot konj">…, weil</span>
+              <span class="slot">ich</span>
+              <span class="slot">dich morgen</span>
+              <span class="slot end">anrufe.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div>
+          <div class="subh">Trennbar (Präfix betont)</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Präfixe</th><th>Beispiele</th></tr></thead>
+              <tbody>
+                <tr><td class="de wrap">ab- · an- · auf- · aus-</td><td class="ex">abholen · anrufen · aufstehen · ausfüllen</td></tr>
+                <tr><td class="de wrap">ein- · mit- · nach-</td><td class="ex">einkaufen · mitkommen · nachdenken</td></tr>
+                <tr><td class="de wrap">vor- · zu- · zurück-</td><td class="ex">vorbereiten · zuhören · zurückkommen</td></tr>
+                <tr><td class="de">fern-</td><td class="ex">fernsehen — Ich sehe abends fern.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subh">Untrennbar (Präfix unbetont)</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Präfixe</th><th>Beispiele</th></tr></thead>
+              <tbody>
+                <tr><td class="de wrap">be- · emp- · ent-</td><td class="ex">besuchen · empfehlen · entschuldigen</td></tr>
+                <tr><td class="de wrap">er- · ge- · miss-</td><td class="ex">erklären · gefallen · missverstehen</td></tr>
+                <tr><td class="de wrap">ver- · zer-</td><td class="ex">verstehen · verkaufen · zerbrechen</td></tr>
+                <tr><td class="de">—</td><td class="ex">Präfix bleibt immer am Verb: Ich verstehe dich.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div><b>Partizip II:</b> trennbar → an<b>ge</b>rufen (ge- in der Mitte) · untrennbar → verstanden (<b>kein</b> ge-). Mit <b>zu</b>: an<b>zu</b>rufen → siehe <a href="#sec-zuinf">zu + Infinitiv</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ IMPERATIV ============ -->
+  <section class="card" id="sec-imperativ">
+    <div class="card-head">
+      <div class="card-ico">📣</div>
+      <h2 class="card-title">Imperativ — Aufforderungen<span class="en">Commands &amp; requests</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Drei Formen: <b>du</b>, <b>ihr</b>, <b>Sie</b>. Die du-Form = Präsens-du <b>ohne -st</b> (und ohne du): <em>du machst → Mach!</em></p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Verb</th><th>du</th><th>ihr</th><th>Sie</th><th>Notiz</th></tr></thead>
+          <tbody>
+            <tr><td class="de">machen</td><td class="de">Mach!</td><td class="de">Macht!</td><td class="de">Machen Sie!</td><td class="en">Standard</td></tr>
+            <tr><td class="de">kommen</td><td class="de">Komm!</td><td class="de">Kommt!</td><td class="de">Kommen Sie!</td><td class="en">Standard</td></tr>
+            <tr><td class="de">nehmen</td><td class="de">Nimm!</td><td class="de">Nehmt!</td><td class="de">Nehmen Sie!</td><td class="en">e → i bleibt</td></tr>
+            <tr><td class="de">fahren</td><td class="de">Fahr!</td><td class="de">Fahrt!</td><td class="de">Fahren Sie!</td><td class="en"><b>kein</b> Umlaut!</td></tr>
+            <tr><td class="de">arbeiten</td><td class="de">Arbeite!</td><td class="de">Arbeitet!</td><td class="de">Arbeiten Sie!</td><td class="en">-t/-d Stamm → -e</td></tr>
+            <tr><td class="de">sein</td><td class="de">Sei ruhig!</td><td class="de">Seid ruhig!</td><td class="de">Seien Sie ruhig!</td><td class="en">unregelmäßig</td></tr>
+            <tr><td class="de">haben</td><td class="de wrap">Hab keine Angst!</td><td class="de">Habt …!</td><td class="de">Haben Sie …!</td><td class="en">unregelmäßig</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div>Freundlicher mit <b>bitte / doch / mal</b>: <em>Mach doch mal das Fenster auf!</em> — trennbare Präfixe gehen auch hier ans <b>Ende</b>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ PERFEKT ============ -->
+  <section class="card" id="sec-perfekt">
+    <div class="card-head">
+      <div class="card-ico">🕰️</div>
+      <h2 class="card-title">Perfekt — über Vergangenes sprechen<span class="en">Present perfect — the spoken past tense</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Beim <b>Sprechen</b> benutzt man für die Vergangenheit fast immer das Perfekt: <code>haben/sein (Position 2) + Partizip II (Ende)</code>.</p>
+
+      <div class="figure">
+        <svg class="fig" viewBox="0 0 560 122" role="img" aria-label="Zeitstrahl: Vergangenheit, jetzt, Zukunft" style="max-width:560px;margin:0 auto;height:auto;display:block">
+          <line class="tline" x1="20" y1="78" x2="534" y2="78"/>
+          <polygon class="tarr" points="548,78 534,71 534,85"/>
+          <circle class="pt-past" cx="115" cy="78" r="7"/>
+          <text class="flabel t-past" x="115" y="50" text-anchor="middle">Perfekt · Präteritum</text>
+          <text class="t-mut" x="115" y="102" text-anchor="middle">gestern · letzte Woche</text>
+          <line class="tnow" x1="295" y1="30" x2="295" y2="94"/>
+          <circle class="pt-now" cx="295" cy="78" r="7"/>
+          <text class="flabel t-now" x="295" y="20" text-anchor="middle">JETZT · Präsens</text>
+          <text class="t-mut" x="295" y="102" text-anchor="middle">heute · gerade</text>
+          <circle class="pt-fut" cx="465" cy="78" r="7"/>
+          <text class="flabel t-fut" x="465" y="50" text-anchor="middle">Futur I / Präsens</text>
+          <text class="t-mut" x="465" y="102" text-anchor="middle">morgen · bald</text>
+        </svg>
+        <div class="figcap">Für die Zukunft reicht meist <b>Präsens + Zeitangabe</b>: <em>Ich fahre <b>morgen</b> nach Bonn.</em></div>
+      </div>
+
+      <div class="subh">Die Satzklammer</div>
+      <div class="satzbau">
+        <div class="sb-row">
+          <div class="sb-track">
+            <span class="slot">Ich</span>
+            <span class="slot verb">habe<span class="pos">②</span></span>
+            <span class="slot">gestern</span>
+            <span class="slot">eine Pizza</span>
+            <span class="slot end">gegessen.<span class="pos">Ende</span></span>
+          </div>
+        </div>
+        <div class="sb-row">
+          <div class="sb-track">
+            <span class="slot">Wir</span>
+            <span class="slot verb">sind<span class="pos">②</span></span>
+            <span class="slot">am Samstag</span>
+            <span class="slot">nach Köln</span>
+            <span class="slot end">gefahren.<span class="pos">Ende</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="subh">haben oder sein?</div>
+      <div class="figure">
+        <div class="flow">
+          <div class="flow-q">Welches Hilfsverb braucht das Verb?</div>
+          <div class="flow-stem"></div>
+          <div class="flow-branches">
+            <div class="flow-branch">
+              <div class="flow-cond">Bewegung A → B<small>gehen · fahren · kommen · fliegen · laufen</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out sein">SEIN<small>ich bin gegangen</small></div>
+            </div>
+            <div class="flow-branch">
+              <div class="flow-cond">Zustandsänderung<small>aufstehen · einschlafen · sterben — auch: bleiben, passieren, werden</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out sein">SEIN<small>ich bin aufgestanden</small></div>
+            </div>
+            <div class="flow-branch">
+              <div class="flow-cond">alle anderen Verben<small>machen · essen · sehen · kaufen …</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out haben">HABEN<small>ich habe gemacht</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subh">Partizip II bilden</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Verbtyp</th><th>Muster</th><th>Beispiele</th></tr></thead>
+          <tbody>
+            <tr><td class="fn">regelmäßig</td><td class="de">ge + Stamm + t</td><td class="ex">machen → gemacht · kaufen → gekauft · lernen → gelernt</td></tr>
+            <tr><td class="fn">unregelmäßig</td><td class="de">ge + Stamm + en</td><td class="ex">sehen → gesehen · trinken → getrunken · essen → gegessen</td></tr>
+            <tr><td class="fn">trennbar</td><td class="de wrap">Präfix + ge + …</td><td class="ex">einkaufen → ein<b>ge</b>kauft · anrufen → an<b>ge</b>rufen</td></tr>
+            <tr><td class="fn">untrennbar</td><td class="de wrap">ohne ge- (be-, ver-, er-, ent-, emp-, zer-)</td><td class="ex">besuchen → besucht · verstehen → verstanden</td></tr>
+            <tr><td class="fn">-ieren</td><td class="de">ohne ge-, mit -t</td><td class="ex">studieren → studiert · telefonieren → telefoniert</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid2">
+        <div>
+          <div class="subh" style="color:var(--dat)">Wichtige Verben mit sein</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Infinitiv</th><th>Perfekt</th><th>English</th></tr></thead>
+              <tbody>
+                <tr><td class="de">gehen</td><td class="de">ist gegangen</td><td class="en">to go</td></tr>
+                <tr><td class="de">fahren</td><td class="de">ist gefahren</td><td class="en">to drive / go</td></tr>
+                <tr><td class="de">kommen</td><td class="de">ist gekommen</td><td class="en">to come</td></tr>
+                <tr><td class="de">bleiben</td><td class="de">ist geblieben</td><td class="en">to stay</td></tr>
+                <tr><td class="de">aufstehen</td><td class="de">ist aufgestanden</td><td class="en">to get up</td></tr>
+                <tr><td class="de">werden</td><td class="de">ist geworden</td><td class="en">to become</td></tr>
+                <tr><td class="de">passieren</td><td class="de">ist passiert</td><td class="en">to happen</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subh">Wichtige unregelmäßige Verben mit haben</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Infinitiv</th><th>Perfekt</th><th>English</th></tr></thead>
+              <tbody>
+                <tr><td class="de">essen</td><td class="de">hat gegessen</td><td class="en">to eat</td></tr>
+                <tr><td class="de">trinken</td><td class="de">hat getrunken</td><td class="en">to drink</td></tr>
+                <tr><td class="de">sehen</td><td class="de">hat gesehen</td><td class="en">to see</td></tr>
+                <tr><td class="de">lesen</td><td class="de">hat gelesen</td><td class="en">to read</td></tr>
+                <tr><td class="de">schreiben</td><td class="de">hat geschrieben</td><td class="en">to write</td></tr>
+                <tr><td class="de">sprechen</td><td class="de">hat gesprochen</td><td class="en">to speak</td></tr>
+                <tr><td class="de">nehmen</td><td class="de">hat genommen</td><td class="en">to take</td></tr>
+                <tr><td class="de">geben</td><td class="de">hat gegeben</td><td class="en">to give</td></tr>
+                <tr><td class="de">finden</td><td class="de">hat gefunden</td><td class="en">to find</td></tr>
+                <tr><td class="de">helfen</td><td class="de">hat geholfen</td><td class="en">to help</td></tr>
+                <tr><td class="de">treffen</td><td class="de">hat getroffen</td><td class="en">to meet</td></tr>
+                <tr><td class="de">wissen</td><td class="de">hat gewusst</td><td class="en">to know</td></tr>
+                <tr><td class="de">denken</td><td class="de">hat gedacht</td><td class="en">to think</td></tr>
+                <tr><td class="de">bringen</td><td class="de">hat gebracht</td><td class="en">to bring</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRÄTERITUM ============ -->
+  <section class="card" id="sec-praeteritum">
+    <div class="card-head">
+      <div class="card-ico">📜</div>
+      <h2 class="card-title">Präteritum — war, hatte &amp; Modalverben<span class="en">Simple past — the forms you really need</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Im Alltag brauchst du das Präteritum vor allem von <b>sein</b>, <b>haben</b> und den <b>Modalverben</b> — alles andere sagt man im <a href="#sec-perfekt">Perfekt</a>. In Texten (Zeitung, Märchen) liest du es öfter.</p>
+      <div class="grid2">
+        <div>
+          <div class="subh">sein &amp; haben</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Person</th><th>sein</th><th>haben</th></tr></thead>
+              <tbody>
+                <tr><td class="de">ich</td><td class="de">war</td><td class="de">hatte</td></tr>
+                <tr><td class="de">du</td><td class="de">warst</td><td class="de">hattest</td></tr>
+                <tr><td class="de">er / sie / es</td><td class="de">war</td><td class="de">hatte</td></tr>
+                <tr><td class="de">wir</td><td class="de">waren</td><td class="de">hatten</td></tr>
+                <tr><td class="de">ihr</td><td class="de">wart</td><td class="de">hattet</td></tr>
+                <tr><td class="de">sie / Sie</td><td class="de">waren</td><td class="de">hatten</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subh">Modalverben</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Infinitiv</th><th>Präteritum</th><th>Beispiel</th></tr></thead>
+              <tbody>
+                <tr><td class="de">können</td><td class="de">konnte</td><td class="ex">Ich konnte nicht kommen.</td></tr>
+                <tr><td class="de">müssen</td><td class="de">musste</td><td class="ex">Er musste arbeiten.</td></tr>
+                <tr><td class="de">dürfen</td><td class="de">durfte</td><td class="ex">Wir durften hier nicht parken.</td></tr>
+                <tr><td class="de">wollen</td><td class="de">wollte</td><td class="ex">Sie wollte nur schlafen.</td></tr>
+                <tr><td class="de">sollen</td><td class="de">sollte</td><td class="ex">Ich sollte ihn anrufen.</td></tr>
+                <tr><td class="de">mögen</td><td class="de">mochte</td><td class="ex">Er mochte den Film nicht.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="subh">Häufige Formen in Texten</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Infinitiv</th><th>Präteritum</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">geben</td><td class="de">gab</td><td class="ex">Es gab keinen Kaffee mehr.</td></tr>
+            <tr><td class="de">gehen</td><td class="de">ging</td><td class="ex">Sie ging nach Hause.</td></tr>
+            <tr><td class="de">kommen</td><td class="de">kam</td><td class="ex">Er kam zu spät.</td></tr>
+            <tr><td class="de">sehen</td><td class="de">sah</td><td class="ex">Ich sah ihn am Bahnhof.</td></tr>
+            <tr><td class="de">wissen</td><td class="de">wusste</td><td class="ex">Das wusste ich nicht.</td></tr>
+            <tr><td class="de">machen <em>(regelmäßig)</em></td><td class="de">machte</td><td class="ex">Stamm + te: machte · sagte · spielte</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>konnte ≠ könnte!</b> <em>konnte</em> = Präteritum (Vergangenheit). <em>könnte</em> mit Umlaut = <a href="index.html#sec-konditional">Konjunktiv II</a> (höfliche Bitte). ich- und er-Form sind im Präteritum immer <b>gleich</b>: <em>ich war, er war</em>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ PLUSQUAMPERFEKT ============ -->
+  <section class="card" id="sec-plusquam">
+    <div class="card-head">
+      <div class="card-ico">⏮️</div>
+      <h2 class="card-title">Plusquamperfekt — die Vorvergangenheit<span class="en">Past perfect — the earlier of two past events</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Das Plusquamperfekt zeigt: Diese Handlung war schon <b>fertig</b>, bevor eine andere Handlung in der Vergangenheit passierte — die „Vergangenheit vor der Vergangenheit“ (<b>Vorzeitigkeit</b>).</p>
+
+      <div class="figure">
+        <svg class="fig" viewBox="0 0 560 122" role="img" aria-label="Zeitstrahl: Plusquamperfekt liegt vor dem Präteritum, danach kommt jetzt" style="max-width:560px;margin:0 auto;height:auto;display:block">
+          <line class="tline" x1="20" y1="78" x2="534" y2="78"/>
+          <polygon class="tarr" points="548,78 534,71 534,85"/>
+          <circle class="pt-dat" cx="90" cy="78" r="7"/>
+          <text class="flabel t-dat" x="90" y="50" text-anchor="middle">Plusquamperfekt</text>
+          <text class="t-mut" x="90" y="102" text-anchor="middle">1 · passiert zuerst</text>
+          <circle class="pt-past" cx="295" cy="78" r="7"/>
+          <text class="flabel t-past" x="295" y="50" text-anchor="middle">Präteritum / Perfekt</text>
+          <text class="t-mut" x="295" y="102" text-anchor="middle">2 · passiert danach</text>
+          <line class="tnow" x1="465" y1="30" x2="465" y2="94"/>
+          <circle class="pt-now" cx="465" cy="78" r="7"/>
+          <text class="flabel t-now" x="465" y="50" text-anchor="middle">JETZT</text>
+          <text class="t-mut" x="465" y="102" text-anchor="middle">Präsens</text>
+        </svg>
+        <div class="figcap">Die <b style="color:var(--dat)">frühere</b> Handlung → Plusquamperfekt. Die <b style="color:var(--akk)">spätere</b> Handlung → Präteritum/Perfekt.</div>
+      </div>
+
+      <div class="subh">Bildung: hatte/war (Präteritum) + Partizip II</div>
+      <p class="lead" style="margin-bottom:8px">Die gleiche haben/sein-Wahl wie im <a href="#sec-perfekt">Perfekt</a> — nur steht das Hilfsverb im Präteritum statt im Präsens.</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Person</th><th>haben-Verben</th><th>sein-Verben</th></tr></thead>
+          <tbody>
+            <tr><td class="de">ich</td><td class="de">hatte gegessen</td><td class="de">war gegangen</td></tr>
+            <tr><td class="de">du</td><td class="de">hattest gegessen</td><td class="de">warst gegangen</td></tr>
+            <tr><td class="de">er / sie / es</td><td class="de">hatte gegessen</td><td class="de">war gegangen</td></tr>
+            <tr><td class="de">wir</td><td class="de">hatten gegessen</td><td class="de">waren gegangen</td></tr>
+            <tr><td class="de">ihr</td><td class="de">hattet gegessen</td><td class="de">wart gegangen</td></tr>
+            <tr><td class="de">sie / Sie</td><td class="de">hatten gegessen</td><td class="de">waren gegangen</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div>Oft mit <b>schon</b>: <em>Sie <b>war</b> schon <b>weggefahren</b>, als ich ankam.</em></div></div>
+
+      <div class="subh">Die wichtigste Regel: nachdem + Zeitenfolge</div>
+      <p class="lead" style="margin-bottom:8px">Im <b>nachdem</b>-Satz steht das Plusquamperfekt (das Frühere) — im Hauptsatz das Präteritum oder Perfekt (das Spätere).</p>
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">nachdem + Plusquamperfekt → Hauptsatz + Präteritum</span>
+            <div class="sb-track">
+              <span class="slot konj">Nachdem</span>
+              <span class="slot">ich</span>
+              <span class="slot end">gegessen hatte,<span class="pos">Ende</span></span>
+              <span class="slot verb">ging<span class="pos">②</span></span>
+              <span class="slot">ich ins Bett.</span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">nachdem + Plusquamperfekt → Hauptsatz + Perfekt</span>
+            <div class="sb-track">
+              <span class="slot konj">Nachdem</span>
+              <span class="slot">sie die Prüfung</span>
+              <span class="slot end">bestanden hatte,<span class="pos">Ende</span></span>
+              <span class="slot verb">hat<span class="pos">②</span></span>
+              <span class="slot">sie gefeiert.</span>
+            </div>
+          </div>
+        </div>
+        <div class="figcap">Erst <b>nachdem …, dann</b> der Hauptsatz: das Frühere im Plusquamperfekt, das Spätere im Präteritum/Perfekt.</div>
+      </div>
+
+      <div class="subh">Temporale Nebensätze — Konnektoren für Zeit</div>
+      <p class="lead" style="margin-bottom:8px">Alle sind <b>subordinierend</b>: das konjugierte Verb steht am <b>Ende</b> des Nebensatzes → siehe <a href="#sec-wortstellung">Wortstellung</a>.</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Konnektor</th><th>Bedeutung</th><th>Zeitenregel</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">nachdem</td><td class="en">after</td><td class="en">Nebensatz früher → <b>Plusquamperfekt</b></td><td class="ex">Nachdem ich gegessen hatte, ging ich ins Bett.</td></tr>
+            <tr><td class="de">bevor</td><td class="en">before</td><td class="en">meist <b>gleiche</b> Zeit — kein Plusquamperfekt!</td><td class="ex">Bevor ich ging, putzte ich mir die Zähne.</td></tr>
+            <tr><td class="de">während</td><td class="en">while</td><td class="en">Gleichzeitigkeit — gleiche Zeit</td><td class="ex">Während ich kochte, hörte ich Musik.</td></tr>
+            <tr><td class="de">bis</td><td class="en">until</td><td class="en">Zeitpunkt als Grenze</td><td class="ex">Warte, bis ich fertig bin.</td></tr>
+            <tr><td class="de">sobald</td><td class="en">as soon as</td><td class="en">unmittelbar danach</td><td class="ex">Ich rufe dich an, sobald ich ankomme.</td></tr>
+            <tr><td class="de">seit / seitdem</td><td class="en">since</td><td class="en">andauernd — oft <b>Präsens</b></td><td class="ex">Seitdem ich in Berlin wohne, bin ich glücklicher.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>nachdem ≠ bevor/während:</b> Nur <b>nachdem</b> verlangt das Plusquamperfekt. Bei <b>bevor</b> und <b>während</b> stehen beide Verben meist in der <b>gleichen</b> Zeit.</div></div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Merksatz:</b> Das Plusquamperfekt brauchst du fast nur in <b>nachdem</b>-Sätzen, um zu zeigen, was zuerst passiert ist. Im Alltag ersetzt man es oft durch das <b>Perfekt</b> — benutze es nicht in jedem Satz!</div></div>
+    </div>
+  </section>
+
+  <!-- ============ FUTUR I ============ -->
+  <section class="card" id="sec-futur">
+    <div class="card-head">
+      <div class="card-ico">🔮</div>
+      <h2 class="card-title">Futur I — über die Zukunft sprechen<span class="en">Future — werden + Infinitiv</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Bauplan: <code>werden (Position 2) + Infinitiv (Ende)</code> — die gleiche Satzklammer wie bei den Modalverben.</p>
+
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">Hauptsatz — werden auf Position 2</span>
+            <div class="sb-track">
+              <span class="slot">Morgen</span>
+              <span class="slot verb">werde<span class="pos">②</span></span>
+              <span class="slot">ich Deutsch</span>
+              <span class="slot end">lernen.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">Nebensatz — Infinitiv + werden ganz am Ende</span>
+            <div class="sb-track">
+              <span class="slot">Ich hoffe,</span>
+              <span class="slot konj">dass</span>
+              <span class="slot">ich dich morgen</span>
+              <span class="slot end">anrufen werde.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="figcap">Teil 1 (<b>werden</b>) auf Position 2, Teil 2 (<b>Infinitiv</b>) am Ende — im Nebensatz landen beide zusammen ganz am Schluss.</div>
+      </div>
+
+      <div class="subh">Zwei Verwendungen</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Verwendung</th><th>Signalwörter</th><th>Beispiel</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="de wrap">🗓️ Zukunft / Absicht / Vorhersage</td><td class="de wrap">nächstes Jahr · bald · irgendwann</td><td class="ex">Nächstes Jahr <b>werde</b> ich nach Berlin <b>ziehen</b>.</td><td class="en">I'll move to Berlin next year.</td></tr>
+            <tr><td class="de wrap">🤔 Vermutung über die Gegenwart</td><td class="de wrap">wohl · wahrscheinlich · sicher · schon</td><td class="ex">Er <b>wird</b> jetzt <b>wohl</b> zu Hause <b>sein</b>.</td><td class="en">He's probably home right now.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Konjugation: werden</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Person</th><th>werden</th></tr></thead>
+          <tbody>
+            <tr><td class="de">ich</td><td class="de">werde</td></tr>
+            <tr><td class="de">du</td><td class="de"><b>wirst</b></td></tr>
+            <tr><td class="de">er / sie / es</td><td class="de"><b>wird</b></td></tr>
+            <tr><td class="de">wir</td><td class="de">werden</td></tr>
+            <tr><td class="de">ihr</td><td class="de">werdet</td></tr>
+            <tr><td class="de">sie / Sie</td><td class="de">werden</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>Unregelmäßig:</b> nur <em>du</em> und <em>er/sie/es</em> ändern den Stamm — <b>wirst</b>, <b>wird</b> (nicht „werst“, „werdt“). Gleiche Formen wie beim <a href="#sec-passiv">Passiv</a>!</div></div>
+
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Merksatz:</b> Für einen <b>festen Plan</b> reicht im Alltag meist <b>Präsens + Zeitangabe</b>: <em>„<b>Morgen</b> fahre ich nach Köln.“</em> Futur I klingt eher nach <b>Vorhersage</b> oder <b>Vermutung</b> — benutze es nicht für jeden Termin!</div></div>
+    </div>
+  </section>
+
+  <!-- ============ PASSIV ============ -->
+  <section class="card" id="sec-passiv">
+    <div class="card-head">
+      <div class="card-ico">🏗️</div>
+      <h2 class="card-title">Passiv<span class="en">Passive voice — werden + Partizip II</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Wichtig ist die <b>Handlung</b>, nicht wer sie macht: <code>werden (Position 2) + Partizip II (Ende)</code>.</p>
+
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">Aktiv</span>
+            <div class="sb-track">
+              <span class="slot">Man</span>
+              <span class="slot verb">repariert<span class="pos">②</span></span>
+              <span class="slot"><span class="k akk">das Auto</span>.</span>
+            </div>
+          </div>
+          <div class="tf-arr">↓ &nbsp;Das <span class="k akk">Akkusativ-Objekt</span> wird zum <span class="k nom">Subjekt</span></div>
+          <div class="sb-row">
+            <span class="sb-tag">Passiv</span>
+            <div class="sb-track">
+              <span class="slot"><span class="k nom">Das Auto</span></span>
+              <span class="slot verb">wird<span class="pos">②</span></span>
+              <span class="slot end">repariert.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div>
+          <div class="subh">Die Formen</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Zeit</th><th>Muster</th><th>Beispiel</th></tr></thead>
+              <tbody>
+                <tr><td class="fn">Präsens</td><td class="de wrap">wird + Partizip II</td><td class="ex">Das Haus wird gebaut.</td></tr>
+                <tr><td class="fn">Präteritum</td><td class="de wrap">wurde + Partizip II</td><td class="ex">Das Haus wurde 1990 gebaut.</td></tr>
+                <tr><td class="fn">Perfekt</td><td class="de wrap">ist + Partizip II + worden</td><td class="ex">Das Haus ist gebaut worden.</td></tr>
+                <tr><td class="fn">mit Modalverb</td><td class="de wrap">muss + Partizip II + werden</td><td class="ex">Das Auto muss repariert werden.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subh">werden (Präsens)</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Person</th><th>Form</th></tr></thead>
+              <tbody>
+                <tr><td class="de">ich</td><td class="de">werde</td></tr>
+                <tr><td class="de">du</td><td class="de">wirst</td></tr>
+                <tr><td class="de">er / sie / es</td><td class="de">wird</td></tr>
+                <tr><td class="de">wir / sie / Sie</td><td class="de">werden</td></tr>
+                <tr><td class="de">ihr</td><td class="de">werdet</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tip" style="margin-top:12px"><span class="ti">💡</span><div>Wer es macht → <b>von + <span class="k dat">Dativ</span></b>: <em>Der Brief wird <span class="k dat">von der Lehrerin</span> korrigiert.</em></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORTSTELLUNG ============ -->
+  <section class="card" id="sec-wortstellung">
+    <div class="card-head">
+      <div class="card-ico">🧩</div>
+      <h2 class="card-title">Wortstellung — Verbposition<span class="en">Where the verb goes</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Das <b>konjugierte Verb</b> hat einen festen Platz — der Schlüssel für <b>Sprachbausteine</b> und den <b>Brief</b>.</p>
+
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">Hauptsatz · Verb auf Position 2</span>
+            <div class="sb-track">
+              <span class="slot">Ich</span>
+              <span class="slot verb">wohne<span class="pos">②</span></span>
+              <span class="slot">jetzt</span>
+              <span class="slot">in Berlin.</span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">Position 1 besetzt (deshalb · dann · trotzdem) · Verb bleibt Position 2</span>
+            <div class="sb-track">
+              <span class="slot">Deshalb</span>
+              <span class="slot verb">wohne<span class="pos">②</span></span>
+              <span class="slot">ich</span>
+              <span class="slot">in Berlin.</span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">Nebensatz (weil · dass · wenn · obwohl · als) · Verb ans Ende</span>
+            <div class="sb-track">
+              <span class="slot konj">…, weil</span>
+              <span class="slot">ich</span>
+              <span class="slot">jetzt</span>
+              <span class="slot">in Berlin</span>
+              <span class="slot end">wohne.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="sb-legend">
+          <span><i style="background:var(--nom)"></i>konjugiertes Verb (Position 2)</span>
+          <span><i style="background:var(--akk)"></i>Verb am Satzende</span>
+          <span><i style="background:var(--gen)"></i>Konnektor</span>
+        </div>
+      </div>
+
+      <div class="subh">Die Satzklammer — zwei Verbteile umklammern den Satz</div>
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">Perfekt</span>
+            <div class="sb-track">
+              <span class="slot">Ich</span>
+              <span class="slot verb">habe<span class="pos">②</span></span>
+              <span class="slot">gestern Pizza</span>
+              <span class="slot end">gegessen.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">Modalverb</span>
+            <div class="sb-track">
+              <span class="slot">Ich</span>
+              <span class="slot verb">muss<span class="pos">②</span></span>
+              <span class="slot">heute lange</span>
+              <span class="slot end">arbeiten.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">Trennbares Verb</span>
+            <div class="sb-track">
+              <span class="slot">Ich</span>
+              <span class="slot verb">rufe<span class="pos">②</span></span>
+              <span class="slot">dich morgen</span>
+              <span class="slot end">an.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="figcap">Teil 1 auf Position 2, Teil 2 am Ende — dazwischen ist alles „eingeklammert“.</div>
+      </div>
+
+      <div class="subh">Konnektoren &amp; ihre Wortstellung</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Typ</th><th>Beispiele</th><th>Wortstellung</th></tr></thead>
+          <tbody>
+            <tr><td class="fn">koordinierend</td><td class="de wrap">und · aber · oder · denn · sondern <em>(ADUSO)</em></td><td class="en">normale Reihenfolge (Verb Position 2)</td></tr>
+            <tr><td class="fn">subordinierend</td><td class="de wrap">weil · dass · wenn · obwohl · als · damit · ob · bevor · nachdem · während · bis · sobald</td><td class="en">Verb ans <b>Ende</b> des Nebensatzes</td></tr>
+            <tr><td class="fn">Konnektor-Adverb</td><td class="de wrap">deshalb · darum · deswegen · dann · trotzdem · danach · sonst</td><td class="en">Inversion: Verb auf Position 2, Subjekt danach</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div>Auf <b>Position 1</b> kann das Subjekt <b>oder</b> etwas anderes stehen (Zeit, Ort, Konnektor-Adverb). Im Hauptsatz bleibt das konjugierte Verb <b>immer auf Position 2</b>.</div></div>
+
+      <div class="subh">Reihenfolge in der Satzmitte — TeKaMoLo</div>
+      <div class="sb-track" style="margin-bottom:8px">
+        <span class="slot">Ich</span>
+        <span class="slot verb">fahre<span class="pos">②</span></span>
+        <span class="slot"><b>Te</b> · morgen</span>
+        <span class="slot"><b>Ka</b> · wegen des Termins</span>
+        <span class="slot"><b>Mo</b> · mit dem Zug</span>
+        <span class="slot"><b>Lo</b> · nach Berlin.</span>
+      </div>
+      <div class="tip rule"><span class="ti">🧭</span><div><b>Te</b>mporal (wann?) → <b>Ka</b>usal (warum?) → <b>Mo</b>dal (wie?) → <b>Lo</b>kal (wohin/wo?). Kurze Faustregel: <b>Zeit vor Ort</b> — <em>Ich fahre <u>morgen</u> <u>nach Berlin</u>.</em></div></div>
+    </div>
+  </section>
+
+  <!-- ============ NEGATION ============ -->
+  <section class="card" id="sec-negation">
+    <div class="card-head">
+      <div class="card-ico">🚫</div>
+      <h2 class="card-title">Negation — nicht, kein &amp; doch<span class="en">How to say "not" &amp; "no"</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="figure">
+        <div class="flow">
+          <div class="flow-q">Was willst du verneinen?</div>
+          <div class="flow-stem"></div>
+          <div class="flow-branches" style="grid-template-columns:repeat(2,1fr);max-width:640px;margin:0 auto">
+            <div class="flow-branch">
+              <div class="flow-cond">Nomen mit „ein“ oder ohne Artikel<small>ein Auto · Zeit · Hunger</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out haben">KEIN-<small>Ich habe keine Zeit.</small></div>
+            </div>
+            <div class="flow-branch">
+              <div class="flow-cond">alles andere<small>Verb · Adjektiv · Ort · Nomen mit der/mein</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out strong">NICHT<small>Das ist nicht meine Tasche.</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subh">Wo steht „nicht“?</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Regel</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="en">ganzer Satz → <b>am Ende</b></td><td class="ex">Ich verstehe das <b>nicht</b>.</td></tr>
+            <tr><td class="en">vor dem Adjektiv/Adverb</td><td class="ex">Das Auto ist <b>nicht</b> neu. · Er fährt <b>nicht</b> schnell.</td></tr>
+            <tr><td class="en">vor der Ortsangabe</td><td class="ex">Ich wohne <b>nicht</b> in Berlin.</td></tr>
+            <tr><td class="en">vor dem 2. Verbteil (Partizip, Infinitiv, Präfix)</td><td class="ex">Ich habe <b>nicht</b> geschlafen. · Er kommt <b>nicht</b> mit.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div><b>kein</b> dekliniert wie <em>ein</em> (Plural: <em>keine</em>) → siehe <a href="faelle.html#sec-artikel">Artikel &amp; Pronomen</a>: <em>Ich habe kein<span style="color:var(--akk)"><b>en</b></span> Hunger.</em></div></div>
+      <div class="tip rule"><span class="ti">✅</span><div><b>doch!</b> = positive Antwort auf eine negative Frage: <em>„Hast du keine Lust?“ — „<b>Doch!</b>“</em> (= ich habe Lust!)</div></div>
+    </div>
+  </section>
+
+  <!-- ============ DASS ============ -->
+  <section class="card" id="sec-dass">
+    <div class="card-head">
+      <div class="card-ico">💬</div>
+      <h2 class="card-title">Konjunktion: dass<span class="en">"that" — reporting clauses</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead"><b>dass</b> = that. Man berichtet, was jemand sagt, denkt, fühlt oder glaubt. Das Verb geht ans <b>Ende</b> der dass-Klausel.</p>
+      <div class="satzbau" style="margin-bottom:14px">
+        <div class="sb-row">
+          <div class="sb-track">
+            <span class="slot">Ich</span>
+            <span class="slot verb">glaube,<span class="pos">②</span></span>
+            <span class="slot konj">dass</span>
+            <span class="slot">er krank</span>
+            <span class="slot end">ist.<span class="pos">Ende</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="subh">Beispiele</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Ich glaube, dass er krank <b>ist</b>.</td><td class="en">I think that he is sick.</td></tr>
+            <tr><td class="ex">Er sagt, dass er heute keine Zeit <b>hat</b>.</td><td class="en">He says that he has no time today.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid2">
+        <div>
+          <div class="subh">Verben vor dass</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Verb</th><th>Bedeutung</th></tr></thead>
+              <tbody>
+                <tr><td class="de">sagen</td><td class="en">to say</td></tr>
+                <tr><td class="de">denken</td><td class="en">to think</td></tr>
+                <tr><td class="de">meinen</td><td class="en">to mean</td></tr>
+                <tr><td class="de">finden</td><td class="en">to find</td></tr>
+                <tr><td class="de">glauben</td><td class="en">to believe</td></tr>
+                <tr><td class="de">hoffen</td><td class="en">to hope</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subh">Phrasen vor dass</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Phrase</th><th>Bedeutung</th></tr></thead>
+              <tbody>
+                <tr><td class="de wrap">ich bin sicher, dass…</td><td class="en">I'm sure that…</td></tr>
+                <tr><td class="de wrap">es ist wichtig, dass…</td><td class="en">It is important that…</td></tr>
+                <tr><td class="de wrap">es ist traurig, dass…</td><td class="en">It is sad that…</td></tr>
+                <tr><td class="de wrap">es ist lustig, dass…</td><td class="en">It is funny that…</td></tr>
+                <tr><td class="de wrap">es ist gut, dass…</td><td class="en">It is good that…</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WANN/WENN/DENN/DANN/WEIL ============ -->
+  <section class="card" id="sec-wwddw">
+    <div class="card-head">
+      <div class="card-ico">🔗</div>
+      <h2 class="card-title">wann · wenn · denn · dann · weil<span class="en">Easily-confused connectors</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Fünf fast gleiche Wörter — nur <b>drei Jobs</b>. Frag dich zuerst: Meinst du <b>„when“</b>, <b>„because“</b> oder <b>„then“</b>?</p>
+
+      <div class="subh" style="margin-top:14px">1 · „when“ — wann oder wenn?</div>
+      <div class="grid2">
+        <div>
+          <div class="tip" style="margin-top:0"><span class="ti">❓</span><div><b>wann</b> → nur in <b>Fragen</b> (auch indirekt)</div></div>
+          <div class="figure">
+            <div class="satzbau">
+              <div class="sb-row"><div class="sb-track">
+                <span class="slot konj">Wann</span>
+                <span class="slot verb">kommst<span class="pos">②</span></span>
+                <span class="slot">du?</span>
+              </div></div>
+              <div class="sb-row"><div class="sb-track">
+                <span class="slot">Ich weiß nicht,</span>
+                <span class="slot konj">wann</span>
+                <span class="slot">du</span>
+                <span class="slot end">kommst.<span class="pos">Ende</span></span>
+              </div></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="tip" style="margin-top:0"><span class="ti">🔁</span><div><b>wenn</b> → Aussagesatz („when / if“), Verb ans <b>Ende</b></div></div>
+          <div class="figure">
+            <div class="satzbau">
+              <div class="sb-row"><div class="sb-track">
+                <span class="slot konj">Wenn</span>
+                <span class="slot">ich Hunger</span>
+                <span class="slot end">habe,<span class="pos">Ende</span></span>
+                <span class="slot verb">esse<span class="pos">②</span></span>
+                <span class="slot">ich etwas.</span>
+              </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div>Versteckte Frage? → <b>wann</b>. Sonst → <b>wenn</b>. &nbsp;<span style="color:var(--text-muted)">(1× in der Vergangenheit → <a href="#sec-als">als</a> · Ja/Nein-Frage → <a href="#sec-indirekt">ob</a>)</span></div></div>
+
+      <div class="subh" style="margin-top:32px">2 · „because“ — weil oder denn?</div>
+      <p class="lead" style="margin-bottom:10px">Gleiche Bedeutung — nur die <b>Wortstellung</b> ist anders:</p>
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">weil → Verb ans Ende</span>
+            <div class="sb-track">
+              <span class="slot">Ich esse etwas,</span>
+              <span class="slot konj">weil</span>
+              <span class="slot">ich Hunger</span>
+              <span class="slot end">habe.<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">denn → alles bleibt normal</span>
+            <div class="sb-track">
+              <span class="slot">Ich esse etwas,</span>
+              <span class="slot konj">denn</span>
+              <span class="slot">ich</span>
+              <span class="slot verb">habe<span class="pos">②</span></span>
+              <span class="slot">Hunger.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>ADUSO</b> (<b>a</b>ber · <b>d</b>enn · <b>u</b>nd · <b>s</b>ondern · <b>o</b>der) = „Position 0“ → Wortstellung bleibt normal. <b>weil</b> gehört nicht dazu!</div></div>
+
+      <div class="subh" style="margin-top:32px">3 · „then / that’s why“ — dann &amp; deshalb</div>
+      <p class="lead" style="margin-bottom:10px">Beide besetzen Position 1 → das Verb kommt <b>sofort danach</b>:</p>
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">dann = danach (Zeit)</span>
+            <div class="sb-track">
+              <span class="slot">Ich habe Hunger,</span>
+              <span class="slot konj">dann</span>
+              <span class="slot verb">esse<span class="pos">②</span></span>
+              <span class="slot">ich etwas.</span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">deshalb (= darum / deswegen) = Folge</span>
+            <div class="sb-track">
+              <span class="slot">Ich habe Hunger,</span>
+              <span class="slot konj">deshalb</span>
+              <span class="slot verb">esse<span class="pos">②</span></span>
+              <span class="slot">ich etwas.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>dann ≠ denn:</b> dann = „then“ (Zeit / Folge) · denn = „because“ (Grund).</div></div>
+
+      <div class="subh" style="margin-top:32px">Alles auf einen Blick</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Wort</th><th>Bedeutung</th><th>Wortstellung</th></tr></thead>
+          <tbody>
+            <tr><td class="de">wann</td><td class="en">when? (Frage)</td><td class="en">Frage / indirekte Frage</td></tr>
+            <tr><td class="de">wenn</td><td class="en">when · if</td><td class="en">Verb ans <b>Ende</b></td></tr>
+            <tr><td class="de">weil</td><td class="en">because</td><td class="en">Verb ans <b>Ende</b></td></tr>
+            <tr><td class="de">denn</td><td class="en">because (ADUSO)</td><td class="en"><b>normal</b></td></tr>
+            <tr><td class="de">dann</td><td class="en">then · danach</td><td class="en">Verb <b>direkt danach</b></td></tr>
+            <tr><td class="de">deshalb</td><td class="en">that’s why</td><td class="en">Verb <b>direkt danach</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ALS ============ -->
+  <section class="card" id="sec-als">
+    <div class="card-head">
+      <div class="card-ico">⚖️</div>
+      <h2 class="card-title">als — Konjunktion &amp; Vergleich<span class="en">"when" (past) and "than"</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="subh">1 · als = when (einmaliges Ereignis in der Vergangenheit)</div>
+      <p class="lead" style="margin-bottom:8px">Das Verb geht ans Ende der als-Klausel.</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Als ich nach Berlin <b>kam</b>, war ich 18.</td><td class="en">When I came to Berlin, I was 18.</td></tr>
+            <tr><td class="ex">Als ich ein Kind <b>war</b>, habe ich in Iran gelebt.</td><td class="en">When I was a child, I lived in Iran.</td></tr>
+            <tr><td class="ex">Als er <b>ankam</b>, haben wir gegessen.</td><td class="en">When he arrived, we ate.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">2 · als = than (Vergleich)</div>
+      <p class="lead" style="margin-bottom:8px">Mit der Komparativform.</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="de">größer als</td><td class="en">bigger than</td></tr>
+            <tr><td class="de">älter als</td><td class="en">older than</td></tr>
+            <tr><td class="de">besser als</td><td class="en">better than</td></tr>
+            <tr><td class="ex">Berlin ist größer als Köln.</td><td class="en">Berlin is bigger than Cologne.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">als vs. wie</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Wort</th><th>Verwendung</th></tr></thead>
+          <tbody>
+            <tr><td class="de">als</td><td class="en">Unterschied — <b>A ≠ B</b> (<em>größer als</em>)</td></tr>
+            <tr><td class="de">wie</td><td class="en">Gleichheit — <b>A = B</b> (<em>so groß wie</em>)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="subh">als vs. wenn (Zeit)</div>
+      <div class="figure">
+        <div class="grid2">
+          <div>
+            <svg class="fig" viewBox="0 0 260 96" role="img" aria-label="als: ein Punkt in der Vergangenheit">
+              <line class="tline" x1="14" y1="58" x2="230" y2="58"/>
+              <polygon class="tarr" points="242,58 230,52 230,64"/>
+              <line class="tnow" x1="192" y1="26" x2="192" y2="74"/>
+              <text class="t-mut" x="192" y="18" text-anchor="middle">JETZT</text>
+              <circle class="pt-akk" cx="80" cy="58" r="8"/>
+              <text class="flabel t-akk" x="80" y="38" text-anchor="middle">als</text>
+              <text class="t-mut" x="80" y="82" text-anchor="middle">1× · Vergangenheit</text>
+            </svg>
+          </div>
+          <div>
+            <svg class="fig" viewBox="0 0 260 96" role="img" aria-label="wenn: wiederholte Punkte, auch Zukunft">
+              <line class="tline" x1="14" y1="58" x2="230" y2="58"/>
+              <polygon class="tarr" points="242,58 230,52 230,64"/>
+              <line class="tnow" x1="150" y1="26" x2="150" y2="74"/>
+              <text class="t-mut" x="150" y="18" text-anchor="middle">JETZT</text>
+              <circle class="pt-dat" cx="50" cy="58" r="7"/>
+              <circle class="pt-dat" cx="90" cy="58" r="7"/>
+              <circle class="pt-dat" cx="130" cy="58" r="7"/>
+              <circle class="pt-dat" cx="196" cy="58" r="7"/>
+              <text class="flabel t-dat" x="98" y="38" text-anchor="middle">wenn</text>
+              <text class="t-mut" x="120" y="82" text-anchor="middle">immer wieder · auch Zukunft</text>
+            </svg>
+          </div>
+        </div>
+        <div class="figcap"><b style="color:var(--akk)">als</b> = einmaliges Ereignis in der Vergangenheit &nbsp;·&nbsp; <b style="color:var(--dat)">wenn</b> = wiederholt oder Gegenwart/Zukunft (und „if“)</div>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Merksatz:</b> <em>„<b>Als</b> ich ein Kind <b>war</b> …“</em> (nur einmal Kind!) — aber <em>„(Immer) <b>wenn</b> ich Zeit <b>habe</b> …“</em>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ TROTZDEM / OBWOHL ============ -->
+  <section class="card" id="sec-trotzdem">
+    <div class="card-head">
+      <div class="card-ico">🌧️</div>
+      <h2 class="card-title">obwohl &amp; trotzdem<span class="en">although · nevertheless</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Beide verbinden einen <b>Gegengrund</b> — wie <em>weil/deshalb</em>, nur umgekehrt. Der Unterschied ist wieder die <b>Wortstellung</b>:</p>
+
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">obwohl → Verb ans Ende (wie weil)</span>
+            <div class="sb-track">
+              <span class="slot konj">Obwohl</span>
+              <span class="slot">es</span>
+              <span class="slot end">regnet,<span class="pos">Ende</span></span>
+              <span class="slot verb">gehe<span class="pos">②</span></span>
+              <span class="slot">ich spazieren.</span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">trotzdem → Position 1, Verb sofort danach (wie deshalb)</span>
+            <div class="sb-track">
+              <span class="slot">Es regnet.</span>
+              <span class="slot konj">Trotzdem</span>
+              <span class="slot verb">gehe<span class="pos">②</span></span>
+              <span class="slot">ich spazieren.</span>
+            </div>
+          </div>
+        </div>
+        <div class="figcap">Gleiche Bedeutung — andere Wortstellung. Genau das prüfen die <b>Sprachbausteine</b> gern.</div>
+      </div>
+
+      <div class="subh" style="margin-top:28px">Wo kann „trotzdem“ stehen?</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Position</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">Am Anfang</td><td class="ex">Es regnet. <b>Trotzdem gehe</b> ich spazieren.</td></tr>
+            <tr><td class="de wrap">Nach dem Verb</td><td class="ex">Es regnet. Ich <b>gehe trotzdem</b> spazieren.</td></tr>
+            <tr><td class="de">Am Ende <em>(gesprochen)</em></td><td class="ex">Es regnet. Ich gehe spazieren, <b>trotzdem</b>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Paar-Trick:</b> <b>obwohl</b> verhält sich wie <b>weil</b> (Verb ans Ende) · <b>trotzdem</b> verhält sich wie <b>deshalb</b> (Verb direkt danach) → siehe <a href="#sec-wwddw">Karte oben</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ ZWEITEILIGE KONNEKTOREN ============ -->
+  <section class="card" id="sec-zweiteilig">
+    <div class="card-head">
+      <div class="card-ico">🔀</div>
+      <h2 class="card-title">Zweiteilige Konnektoren — Doppelkonjunktionen<span class="en">Two-part connectors — both … and, either … or, neither … nor …</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Diese Konnektoren bestehen aus <b>zwei Teilen</b>, die zusammengehören und zwei gleichwertige Wörter, Satzteile oder Sätze verbinden.</p>
+
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Konnektor</th><th>Bedeutung</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de wrap">sowohl … als auch</td><td class="en">both … and</td><td class="ex">Ich mag <b>sowohl</b> Tee <b>als auch</b> Kaffee. · <b>Sowohl</b> mein Bruder <b>als auch</b> meine Schwester <b>wohnen</b> in Berlin. <em>(zwei Subjekte → Verb im Plural)</em></td></tr>
+            <tr><td class="de wrap">entweder … oder</td><td class="en">either … or</td><td class="ex">Wir treffen uns <b>entweder</b> heute <b>oder</b> morgen.</td></tr>
+            <tr><td class="de wrap">weder … noch</td><td class="en">neither … nor</td><td class="ex">Er trinkt <b>weder</b> Kaffee <b>noch</b> Tee. <em>(schon negativ, kein zusätzliches nicht/kein nötig)</em></td></tr>
+            <tr><td class="de wrap">nicht nur … sondern auch</td><td class="en">not only … but also</td><td class="ex">Sie ist <b>nicht nur</b> klug, <b>sondern auch</b> fleißig.</td></tr>
+            <tr><td class="de wrap">zwar … aber</td><td class="en">admittedly … but <em>(concession)</em></td><td class="ex">Das Auto ist <b>zwar</b> teuer, <b>aber</b> sehr gut.</td></tr>
+            <tr><td class="de wrap">je … desto/umso</td><td class="en">the … the <em>(+ comparative)</em></td><td class="ex"><b>Je</b> mehr ich lerne, <b>desto</b> besser verstehe ich.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh" style="margin-top:28px">„je … desto/umso“ — Sonderfall Wortstellung</div>
+      <p class="lead">Der <b>je</b>-Satz ist ein <b>Nebensatz</b> (Verb ans Ende), der <b>desto/umso</b>-Satz hat <b>Inversion</b> (Verb direkt nach dem Komparativ, Subjekt danach). Beide Teile brauchen einen <b>Komparativ</b> → <a href="faelle.html#sec-komparativ">Komparativ</a>.</p>
+
+      <div class="figure">
+        <div class="satzbau">
+          <div class="sb-row">
+            <span class="sb-tag">je-Satz → Nebensatz: Verb ans Ende</span>
+            <div class="sb-track">
+              <span class="slot konj">Je</span>
+              <span class="slot">länger</span>
+              <span class="slot">ich</span>
+              <span class="slot end">warte,<span class="pos">Ende</span></span>
+            </div>
+          </div>
+          <div class="sb-row">
+            <span class="sb-tag">desto-Satz → Inversion: Komparativ + Verb (Position 2) + Subjekt</span>
+            <div class="sb-track">
+              <span class="slot konj">desto</span>
+              <span class="slot">nervöser</span>
+              <span class="slot verb">werde<span class="pos">②</span></span>
+              <span class="slot">ich.</span>
+            </div>
+          </div>
+        </div>
+        <div class="figcap">„<b>Je</b> länger ich <b>warte</b>, <b>desto</b> nervöser <b>werde</b> ich.“ — der Komparativ steht direkt hinter je/desto.</div>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div><b>desto</b> und <b>umso</b> bedeuten dasselbe und sind austauschbar. Direkt danach steht immer der <b>Komparativ</b>: <em>desto besser</em>, <em>umso schneller</em> — nie die Grundform.</div></div>
+
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Merksatz:</b> Die meisten Paare verbinden zwei gleichwertige Teile und behalten die <b>normale Wortstellung</b> (Verb Position 2). Steht aber ein Konnektor wie <b>weder</b>, <b>nicht nur</b>, <b>zwar</b> oder <b>entweder</b> an <b>Position 1</b> (leitet er einen ganzen Satz ein), gibt es <b>Inversion</b> — Verb direkt danach, Subjekt folgt: <em>„<b>Weder</b> <b>hatte</b> ich Zeit, <b>noch</b> <b>hatte</b> ich Lust.“</em> · <em>„<b>Zwar</b> <b>ist</b> es teuer, <b>aber</b> es lohnt sich.“</em> Und: <b>weder … noch</b> ist schon negativ — kein zusätzliches <em>nicht/kein</em>! Mehr zur Wortstellung → <a href="#sec-wortstellung">Wortstellung</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ RELATIVSÄTZE ============ -->
+  <section class="card" id="sec-relativ">
+    <div class="card-head">
+      <div class="card-ico">🧷</div>
+      <h2 class="card-title">Relativsätze<span class="en">Relative clauses — der Mann, der …</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Ein Relativsatz beschreibt ein Nomen genauer. <b>Genus &amp; Numerus</b> kommen vom Nomen davor, der <b>Kasus</b> von der Rolle im Nebensatz. Verb ans <b>Ende</b>!</p>
+
+      <div class="grid2">
+        <div>
+          <table class="grid">
+            <caption>Relativpronomen <span style="color:var(--text-muted);font-weight:500">(fast wie der/die/das)</span></caption>
+            <thead><tr><th></th><th>M</th><th>F</th><th>N</th><th>Pl</th></tr></thead>
+            <tbody>
+              <tr><th class="h-nom">Nom</th><td>der</td><td>die</td><td>das</td><td>die</td></tr>
+              <tr><th class="h-akk">Akk</th><td><span class="ec">den</span></td><td>die</td><td>das</td><td>die</td></tr>
+              <tr><th class="h-dat">Dat</th><td><span class="ec">dem</span></td><td><span class="ec">der</span></td><td><span class="ec">dem</span></td><td><span class="ec">denen</span></td></tr>
+              <tr><th class="h-gen">Gen</th><td><span class="ec">dessen</span></td><td><span class="ec">deren</span></td><td><span class="ec">dessen</span></td><td><span class="ec">deren</span></td></tr>
+            </tbody>
+          </table>
+          <p class="lead" style="margin:8px 2px 0;font-size:.86rem">Anders als der Artikel: Dativ Plural = <b>denen</b>, Genitiv = <b>dessen/deren</b> (auf B1 selten).</p>
+        </div>
+        <div>
+          <div class="tip rule" style="margin-top:0"><span class="ti">🎯</span><div><b>Kasus-Trick:</b> Mach aus dem Relativsatz einen einfachen Satz mit Pronomen:<br><em>Der Film, ___ ich gesehen habe.</em> → <em>Ich habe <span class="k akk">ihn</span> gesehen.</em> → Akkusativ → <b>den</b>.</div></div>
+          <div class="tip" style="margin-top:12px"><span class="ti">💡</span><div>Mit Präposition steht die Präposition <b>vor</b> dem Pronomen: <em>Die Stadt, <b>in der</b> ich wohne …</em></div></div>
+        </div>
+      </div>
+
+      <div class="subh">Beispiele</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>Warum dieser Kasus?</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Der Mann, <span class="k nom">der</span> dort steht, ist mein Lehrer.</td><td class="en">er steht → Nominativ</td></tr>
+            <tr><td class="ex">Der Film, <span class="k akk">den</span> ich gestern gesehen habe, war super.</td><td class="en">ich habe ihn gesehen → Akkusativ</td></tr>
+            <tr><td class="ex">Die Freundin, <span class="k dat">der</span> ich oft helfe, wohnt in Bonn.</td><td class="en">ich helfe ihr → Dativ (helfen + Dat)</td></tr>
+            <tr><td class="ex">Die Stadt, in <span class="k dat">der</span> ich wohne, ist klein.</td><td class="en">wo? → in + Dativ</td></tr>
+            <tr><td class="ex">Die Leute, mit <span class="k dat">denen</span> ich arbeite, sind nett.</td><td class="en">mit + Dativ Plural → denen</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ZU + INFINITIV / UM ZU / DAMIT ============ -->
+  <section class="card" id="sec-zuinf">
+    <div class="card-head">
+      <div class="card-ico">🎯</div>
+      <h2 class="card-title">zu + Infinitiv · um … zu · damit<span class="en">Infinitive clauses &amp; purpose ("in order to")</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="subh">zu + Infinitiv</div>
+      <p class="lead" style="margin-bottom:8px">Nach vielen Verben und Ausdrücken folgt <code>…, … zu + Infinitiv</code> (am Ende):</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Auslöser</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de wrap">anfangen / aufhören</td><td class="ex">Ich höre auf, Süßigkeiten zu essen.</td></tr>
+            <tr><td class="de wrap">versuchen / vergessen</td><td class="ex">Vergiss nicht, die Tür ab<b>zu</b>schließen!</td></tr>
+            <tr><td class="de wrap">vorhaben / planen</td><td class="ex">Ich habe vor, mehr Sport zu machen.</td></tr>
+            <tr><td class="de wrap">Lust / Zeit / Angst haben</td><td class="ex">Hast du Lust, ins Kino zu gehen?</td></tr>
+            <tr><td class="de wrap">es ist + Adjektiv</td><td class="ex">Es ist wichtig, pünktlich zu sein.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div>Bei <a href="#sec-trennbar">trennbaren Verben</a> steht <b>zu</b> in der Mitte: <em>ab<b>zu</b>schließen, an<b>zu</b>rufen</em>. Nach <a href="#sec-modal">Modalverben</a> <b>kein</b> zu: <em>Ich muss gehen.</em></div></div>
+
+      <div class="subh">Ziel &amp; Zweck: um … zu vs. damit</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Struktur</th><th>Wann?</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de wrap">um … zu + Infinitiv</td><td class="en"><b>gleiches</b> Subjekt</td><td class="ex">Ich lerne Deutsch, <b>um</b> in Deutschland <b>zu arbeiten</b>. <em>(ich lerne, ich arbeite)</em></td></tr>
+            <tr><td class="de wrap">damit + Nebensatz</td><td class="en"><b>anderes</b> Subjekt</td><td class="ex">Ich spreche langsam, <b>damit</b> du mich <b>verstehst</b>. <em>(ich spreche, du verstehst)</em></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INDIREKTE FRAGEN ============ -->
+  <section class="card" id="sec-indirekt">
+    <div class="card-head">
+      <div class="card-ico">❔</div>
+      <h2 class="card-title">Indirekte Fragen — ob &amp; W-Wörter<span class="en">Indirect questions — polite &amp; useful in letters</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Höflicher fragen — perfekt für den <a href="index.html#sec-brief">Brief</a> und die mündliche Prüfung. Das Verb geht ans <b>Ende</b>.</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Direkte Frage</th><th>Indirekte Frage</th><th>Regel</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Kommst du morgen?</td><td class="ex">Ich weiß nicht, <b>ob</b> du morgen <b>kommst</b>.</td><td class="en">Ja/Nein-Frage → <b>ob</b></td></tr>
+            <tr><td class="ex">Wann fährt der Zug?</td><td class="ex">Können Sie mir sagen, <b>wann</b> der Zug <b>fährt</b>?</td><td class="en">W-Wort bleibt</td></tr>
+            <tr><td class="ex">Wo ist der Bahnhof?</td><td class="ex">Wissen Sie, <b>wo</b> der Bahnhof <b>ist</b>?</td><td class="en">W-Wort bleibt</td></tr>
+            <tr><td class="ex">Wie viel kostet der Kurs?</td><td class="ex">Ich möchte wissen, <b>wie viel</b> der Kurs <b>kostet</b>.</td><td class="en">W-Wort bleibt</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="subh">Nützliche Einleitungen</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:6px">
+        <span class="bp">Können Sie mir sagen, …?</span>
+        <span class="bp">Ich möchte wissen, …</span>
+        <span class="bp">Ich weiß nicht, …</span>
+        <span class="bp">Ich frage mich, …</span>
+        <span class="bp">Weißt du, …?</span>
+        <span class="bp">Ich bin nicht sicher, ob …</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="noresults" id="noresults">Keine Treffer für „<span id="nrq"></span>“. <br>Versuch ein anderes Stichwort.</div>
+
+</main>
+
+<button id="top" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg>
+</button>
+
+<footer>
+  <p>telc Deutsch B1 Cheat Sheet · zum Lernen &amp; Wiederholen. Kein offizielles telc-Material — Modelltests findest du bei telc. <br>
+  Tipp: <kbd>/</kbd> oder die Suchleiste oben nutzen · <kbd>Strg</kbd>/<kbd>⌘</kbd> + <kbd>P</kbd> zum Drucken/als PDF speichern.</p>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ----- Print ----- */
+  document.getElementById('printBtn').addEventListener('click',function(){window.print();});
+
+  /* ----- Search / filter ----- */
+  var search=document.getElementById('search');
+  var clearBtn=document.getElementById('clear');
+  var noResults=document.getElementById('noresults');
+  var nrq=document.getElementById('nrq');
+  var sections=[].slice.call(document.querySelectorAll('main .card:not([data-noindex])'));
+
+  // cache lower-cased text for speed
+  sections.forEach(function(sec){
+    sec._title=(sec.querySelector('.card-title')||{textContent:''}).textContent.toLowerCase();
+    sec._full=sec.textContent.toLowerCase();
+    sec._rows=[].slice.call(sec.querySelectorAll('tbody tr'));
+    sec._rows.forEach(function(r){ r._t=r.textContent.toLowerCase(); });
+  });
+
+  function runSearch(q){
+    q=q.trim().toLowerCase();
+    clearBtn.classList.toggle('show', q.length>0);
+    var anyVisible=false;
+
+    sections.forEach(function(sec){
+      if(!q){
+        sec.style.display='';
+        sec._rows.forEach(function(r){r.style.display='';});
+        anyVisible=true;
+        return;
+      }
+      // Decide visibility from the whole section (covers tables, diagrams, letter, exam parts…)
+      if(sec._full.indexOf(q)===-1){ sec.style.display='none'; return; }
+      sec.style.display=''; anyVisible=true;
+
+      if(sec._rows.length){
+        var titleMatch = sec._title.indexOf(q)>-1, rowHits=0;
+        sec._rows.forEach(function(r){ if(r._t.indexOf(q)>-1) rowHits++; });
+        if(titleMatch || rowHits===0){
+          // match is in the title or in non-table content → show all rows for context
+          sec._rows.forEach(function(r){r.style.display='';});
+        }else{
+          sec._rows.forEach(function(r){ r.style.display = r._t.indexOf(q)>-1 ? '' : 'none'; });
+        }
+      }
+    });
+
+    noResults.classList.toggle('show', !anyVisible && q.length>0);
+    nrq.textContent=q;
+  }
+
+  var t;
+  search.addEventListener('input',function(){
+    clearTimeout(t);
+    t=setTimeout(function(){runSearch(search.value);},90);
+  });
+  search.addEventListener('keydown',function(e){ if(e.key==='Escape'){search.value='';runSearch('');} });
+  clearBtn.addEventListener('click',function(){ search.value=''; runSearch(''); search.focus(); });
+
+  // "/" focuses search
+  document.addEventListener('keydown',function(e){
+    if(e.key==='/' && document.activeElement!==search && !/input|textarea/i.test((document.activeElement||{}).tagName||'')){
+      e.preventDefault(); search.focus();
+    }
+  });
+
+  /* ----- Back to top ----- */
+  var topBtn=document.getElementById('top');
+  window.addEventListener('scroll',function(){
+    topBtn.classList.toggle('show', window.scrollY>500);
+  },{passive:true});
+  topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+  /* ----- Scrollspy: highlight active nav chip ----- */
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var map={};
+  chips.forEach(function(c){ map[c.getAttribute('href').slice(1)]=c; });
+  var spySections=[].slice.call(document.querySelectorAll('main .card[id]:not([data-noindex])'));
+  if('IntersectionObserver' in window){
+    var current=null;
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          if(current) current.classList.remove('active');
+          var c=map[en.target.id];
+          if(c){ c.classList.add('active'); current=c;
+            // keep active chip visible if nav scrolls
+            if(c.scrollIntoView){ /* no-op to avoid jump on desktop */ }
+          }
+        }
+      });
+    },{rootMargin:'-45% 0px -50% 0px',threshold:0});
+    spySections.forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>

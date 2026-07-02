@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Deutsch Cheat Sheet für die telc B1 Prüfung — Prüfungsüberblick, Brief schreiben, Redemittel, Zeiten &amp; Modalverben, Präpositionen, Fälle, Nebensätze und Adjektivendungen mit Visualisierungen.">
+<meta name="theme-color" content="#0f4c5c">
+<title>telc B1 · Fälle &amp; Präpositionen</title>
+<style>
+/* ---------- Theme tokens (Ozean — hell) ---------- */
+:root{
+  --bg:#edf4f7;
+  --surface:#ffffff;
+  --surface-2:#f4f9fb;
+  --surface-3:#e6f0f5;
+  --text:#182430;
+  --text-muted:#54687a;
+  --border:#dde9ef;
+  --border-strong:#c4d8e2;
+  --primary:#0e7490;
+  --primary-2:#0d94b4;
+  --primary-dark:#0f4c5c;
+  --gold:#f2c53d;
+  --shadow-sm:0 1px 2px rgba(20,28,60,.06);
+  --shadow:0 2px 6px rgba(20,28,60,.06), 0 12px 28px rgba(20,28,60,.07);
+  --radius:16px;
+  --radius-sm:10px;
+
+  --nom:#2563eb;  --nom-bg:rgba(37,99,235,.12);
+  --akk:#e0245e;  --akk-bg:rgba(224,36,94,.12);
+  --dat:#15a34a;  --dat-bg:rgba(21,163,74,.14);
+  --gen:#d97706;  --gen-bg:rgba(217,119,6,.14);
+  --ok:#15a34a;   --ok-bg:rgba(21,163,74,.12);
+  --no:#e0245e;   --no-bg:rgba(224,36,94,.10);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+h1,h2,h3{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;line-height:1.2;margin:0}
+
+/* ---------- Header / hero ---------- */
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(1200px 400px at 12% -20%, rgba(255,255,255,.14), transparent 60%),
+    linear-gradient(135deg,var(--primary-dark),var(--primary) 55%,var(--primary-2));
+  color:#fff;
+  padding:34px 22px 30px;
+}
+.hero-inner{max-width:1180px;margin:0 auto}
+.flag{display:flex;height:6px;border-radius:6px;overflow:hidden;width:120px;margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.flag i{flex:1}
+.flag .b{background:#111}.flag .r{background:#dd0000}.flag .g{background:#ffce00}
+.hero h1{font-size:clamp(1.9rem,4.4vw,3rem);letter-spacing:.3px;color:#fff}
+.hero .sub{margin:10px 0 0;font-size:1.02rem;max-width:60ch;color:rgba(255,255,255,.9)}
+.hero .meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);
+  color:#fff;padding:4px 11px;border-radius:999px;font-size:.82rem;font-weight:600;
+  backdrop-filter:blur(4px);
+}
+
+/* ---------- Toolbar (sticky) ---------- */
+.toolbar{
+  position:sticky;top:0;z-index:40;
+  background:color-mix(in srgb, var(--surface) 86%, transparent);
+  backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+}
+.toolbar-inner{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search-wrap{position:relative;flex:1;min-width:200px}
+.search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--text-muted);pointer-events:none}
+#search{
+  width:100%;padding:10px 36px 10px 36px;border-radius:999px;
+  border:1px solid var(--border-strong);background:var(--surface-2);color:var(--text);
+  font-size:.95rem;outline:none;transition:border-color .15s, box-shadow .15s;
+}
+#search:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--nom-bg)}
+.clear-btn{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  border:none;background:var(--surface-3);color:var(--text-muted);cursor:pointer;
+  width:22px;height:22px;border-radius:50%;font-size:14px;line-height:1;display:none;
+}
+.clear-btn.show{display:inline-flex;align-items:center;justify-content:center}
+.tbtn{
+  border:1px solid var(--border-strong);background:var(--surface-2);color:var(--text);
+  padding:9px 14px;border-radius:999px;cursor:pointer;font-size:.88rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:7px;transition:background .15s,border-color .15s,transform .05s;
+  white-space:nowrap;
+}
+.tbtn:hover{border-color:var(--primary);background:var(--surface-3)}
+.tbtn:active{transform:translateY(1px)}
+.tbtn svg{width:16px;height:16px}
+
+/* ---------- Section nav ---------- */
+nav.jump{max-width:1180px;margin:16px auto 0;padding:0 16px}
+.navgroup{margin-bottom:6px}
+.navgroup-label{
+  font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-muted);margin:10px 2px 6px;
+}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{
+  text-decoration:none;color:var(--text);
+  background:var(--surface);border:1px solid var(--border);
+  padding:6px 12px;border-radius:999px;font-size:.85rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:6px;transition:all .15s;box-shadow:var(--shadow-sm);
+}
+.chip:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-1px)}
+.chip.active{background:var(--primary);border-color:var(--primary);color:#fff}
+.chip .ico{font-size:.95rem;filter:saturate(1.1)}
+
+/* ---------- Layout ---------- */
+main{max-width:1180px;margin:22px auto 60px;padding:0 16px;display:grid;gap:22px}
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:82px;
+}
+.card-head{
+  display:flex;align-items:center;gap:12px;padding:16px 20px;
+  border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg,var(--surface-2),var(--surface));
+}
+.card-ico{
+  flex:none;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+  font-size:1.15rem;background:var(--surface-3);border:1px solid var(--border);
+}
+.card-title{font-size:1.28rem;color:var(--text)}
+.card-title .en{font-family:system-ui,sans-serif;font-size:.8rem;font-weight:600;color:var(--text-muted);display:block;margin-top:1px;letter-spacing:.01em}
+.card-body{padding:18px 20px 22px}
+.lead{margin:0 0 14px;color:var(--text-muted);font-size:.96rem}
+.lead code{background:var(--surface-3);padding:1px 6px;border-radius:6px;font-size:.9em}
+
+/* subheadings inside cards */
+.subh{
+  font-family:system-ui,sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--primary);margin:22px 0 9px;display:flex;align-items:center;gap:8px;
+}
+.subh:first-child{margin-top:2px}
+.subh::before{content:"";width:14px;height:2px;border-radius:2px;background:var(--primary);opacity:.6}
+
+/* ---------- Tables ---------- */
+.table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius-sm);margin:0 0 6px}
+table.sheet{width:100%;border-collapse:collapse;font-size:.94rem;min-width:min(100%,520px)}
+table.sheet thead th{
+  background:linear-gradient(180deg,var(--primary-2),var(--primary));
+  color:#fff;text-align:left;padding:10px 14px;font-weight:700;font-size:.82rem;
+  letter-spacing:.03em;text-transform:uppercase;position:sticky;left:auto;
+}
+table.sheet tbody td{padding:9px 14px;border-top:1px solid var(--border);vertical-align:top}
+table.sheet tbody tr:nth-child(even){background:var(--surface-2)}
+table.sheet tbody tr:hover{background:var(--surface-3)}
+table.sheet td.de{font-weight:600;color:var(--text);white-space:nowrap}
+table.sheet td.de.wrap{white-space:normal}
+table.sheet td.en{color:var(--text-muted)}
+table.sheet td.ex{color:var(--text);font-style:italic}
+table.sheet td.center,table.sheet th.center{text-align:center}
+.mono{font-variant-numeric:tabular-nums}
+
+/* grid table (adjective endings) */
+table.grid{width:100%;border-collapse:collapse;font-size:.95rem;text-align:center}
+table.grid caption{caption-side:top;font-weight:700;padding:0 0 8px;text-align:left;color:var(--text)}
+table.grid th,table.grid td{border:1px solid var(--border);padding:8px 6px}
+table.grid thead th{background:var(--primary);color:#fff;font-size:.82rem;text-transform:uppercase;letter-spacing:.03em}
+table.grid tbody th{background:var(--surface-2);font-weight:700}
+table.grid tbody td{font-weight:600}
+table.grid td .ec{color:var(--primary);font-weight:800}
+.grid3{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.grid2{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+
+/* ---------- Case highlight spans ---------- */
+.k{font-weight:700;border-radius:5px;padding:.02em .28em}
+.nom{color:var(--nom);background:var(--nom-bg)}
+.akk{color:var(--akk);background:var(--akk-bg)}
+.dat{color:var(--dat);background:var(--dat-bg)}
+.gen{color:var(--gen);background:var(--gen-bg)}
+
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.legend .lg{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:600;
+  border:1px solid var(--border);background:var(--surface);padding:5px 11px;border-radius:999px}
+.dot{width:11px;height:11px;border-radius:50%}
+.dot.nom{background:var(--nom)}.dot.akk{background:var(--akk)}.dot.dat{background:var(--dat)}.dot.gen{background:var(--gen)}
+
+/* ---------- Callouts / tips ---------- */
+.tip{
+  display:flex;gap:11px;background:var(--surface-2);border:1px solid var(--border);
+  border-left:4px solid var(--primary);border-radius:var(--radius-sm);
+  padding:12px 14px;margin:14px 0 4px;font-size:.92rem;
+}
+.tip.warn{border-left-color:var(--gold)}
+.tip.rule{border-left-color:var(--dat)}
+.tip .ti{font-size:1.05rem;line-height:1.4;flex:none}
+.tip b{color:var(--text)}
+.tip code{background:var(--surface-3);padding:1px 6px;border-radius:6px;font-size:.9em}
+
+/* affirm / negate row accents for confirmation phrases */
+tr.pos td.de{box-shadow:inset 3px 0 0 var(--ok)}
+tr.neg td.de{box-shadow:inset 3px 0 0 var(--no)}
+
+/* rule label tags */
+.tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.03em;
+  padding:2px 8px;border-radius:999px;text-transform:uppercase}
+.tag.akku{background:var(--akk-bg);color:var(--akk)}
+.tag.dativ{background:var(--dat-bg);color:var(--dat)}
+
+/* ---------- Frequency scale ---------- */
+.freq{display:grid;gap:7px}
+.freq-row{display:grid;grid-template-columns:130px 120px 1fr;align-items:center;gap:12px;
+  padding:6px 4px;border-radius:8px}
+.freq-row:hover{background:var(--surface-2)}
+.freq-row .de{font-weight:700}
+.freq-row .en{color:var(--text-muted);font-size:.9rem}
+.bar{height:12px;border-radius:999px;background:var(--surface-3);overflow:hidden}
+.bar>i{display:block;height:100%;border-radius:999px;
+  background:linear-gradient(90deg,var(--primary),var(--primary-2))}
+@media(max-width:520px){
+  .freq-row{grid-template-columns:1fr 1fr;gap:6px}
+  .freq-row .bar{grid-column:1/-1}
+}
+
+/* ---------- Back to top ---------- */
+#top{
+  position:fixed;right:18px;bottom:18px;z-index:50;
+  width:46px;height:46px;border-radius:50%;border:1px solid var(--border-strong);
+  background:var(--primary);color:#fff;cursor:pointer;box-shadow:var(--shadow);
+  display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;
+}
+#top.show{opacity:1;pointer-events:auto}
+#top:hover{transform:translateY(-2px)}
+#top svg{width:20px;height:20px}
+
+/* no results */
+.noresults{display:none;text-align:center;color:var(--text-muted);padding:40px 10px;font-size:1rem}
+.noresults.show{display:block}
+
+/* footer */
+footer{max-width:1180px;margin:0 auto 40px;padding:22px 16px;color:var(--text-muted);
+  font-size:.85rem;border-top:1px solid var(--border);text-align:center}
+footer a{color:var(--primary)}
+main a{color:var(--primary)}
+
+kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8em;background:var(--surface-3);
+  border:1px solid var(--border-strong);border-bottom-width:2px;border-radius:5px;padding:1px 6px}
+
+/* ---------- Print ---------- */
+@media print{
+  :root{--bg:#fff;--surface:#fff;--surface-2:#fff;--surface-3:#f2f2f2;--shadow:none;--shadow-sm:none}
+  .toolbar,nav.jump,#top,.hero .meta,.clear-btn{display:none !important}
+  .hero{background:#fff;color:#111;padding:0 0 8px;border-bottom:2px solid #111}
+  .hero h1{color:#111}.hero .sub{color:#333}
+  body{background:#fff}
+  main{gap:12px;margin-top:12px}
+  .card{break-inside:avoid;box-shadow:none;border:1px solid #bbb}
+  .card-head{background:#f3f3f3}
+  table.sheet thead th,table.grid thead th{color:#fff !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+@media(max-width:640px){
+  .card-body{padding:14px 13px 18px}
+  .card-head{padding:13px 14px}
+  .hero{padding:26px 16px 24px}
+  .prep-grid{grid-template-columns:repeat(auto-fit,minmax(96px,1fr))}
+}
+
+/* ---------- Hero badge ---------- */
+.h1badge{
+  display:inline-block;vertical-align:middle;font-family:system-ui,sans-serif;
+  font-size:.42em;font-weight:800;letter-spacing:.04em;
+  background:var(--gold);color:#3a2a00;padding:.28em .7em;border-radius:999px;
+  margin-left:.35em;box-shadow:0 2px 6px rgba(0,0,0,.2);text-transform:uppercase;
+}
+
+/* ---------- Figures / SVG ---------- */
+.figure{margin:6px 0 8px;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:14px 14px 10px}
+.figcap{margin-top:8px;font-size:.82rem;color:var(--text-muted);text-align:center}
+.fig .box{fill:var(--surface-3);stroke:var(--border-strong);stroke-width:2}
+.fig .box-o{fill:none;stroke:var(--border-strong);stroke-width:2.4}
+.fig .ball{fill:var(--akk)}
+.fig .ground{stroke:var(--border);stroke-width:2;stroke-linecap:round}
+
+/* Prepositions picture grid */
+.prep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:10px;margin:6px 0 4px}
+.prep-cell{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:8px 4px 7px;text-align:center;transition:border-color .15s,transform .1s}
+.prep-cell:hover{border-color:var(--primary);transform:translateY(-2px)}
+.prep-cell svg{width:100%;height:62px;display:block}
+.prep-name{display:block;font-weight:800;color:var(--primary);margin-top:3px}
+.prep-en{display:block;font-size:.7rem;color:var(--text-muted)}
+
+/* hin/her figure */
+.fig .fperson{fill:var(--text)}
+.fig .a-her{fill:none;stroke:var(--dat);stroke-width:3;stroke-linecap:round}
+.fig .a-hin{fill:none;stroke:var(--gen);stroke-width:3;stroke-linecap:round}
+.fig .ah-her{fill:var(--dat)}
+.fig .ah-hin{fill:var(--gen)}
+.fig .flabel{font:700 14px system-ui,sans-serif}
+.fig .t-her{fill:var(--dat)}
+.fig .t-hin{fill:var(--gen)}
+.fig .t-mut{fill:var(--text-muted);font:600 12px system-ui,sans-serif}
+
+/* ---------- telc exam overview ---------- */
+.exam{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.exam-panel{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface-2);display:flex;flex-direction:column}
+.exam-panel .ep-head{padding:12px 16px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.exam-panel.written .ep-head{background:linear-gradient(135deg,var(--primary-dark),var(--primary))}
+.exam-panel.oral .ep-head{background:linear-gradient(135deg,#1f7a46,var(--dat))}
+.ep-head h3{font-family:system-ui,sans-serif;font-size:1.02rem;font-weight:800}
+.ep-time{font-size:.75rem;font-weight:700;background:rgba(255,255,255,.22);padding:3px 9px;border-radius:999px;white-space:nowrap}
+.part{display:flex;gap:11px;padding:11px 15px;border-top:1px solid var(--border);align-items:flex-start}
+.part:first-of-type{border-top:none}
+.part .p-ico{flex:none;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:1rem;background:var(--surface-3);border:1px solid var(--border)}
+.part .p-main{flex:1;min-width:0}
+.part .p-t{font-weight:700;font-size:.95rem}
+.part .p-t .en{font-weight:500;color:var(--text-muted);font-size:.82rem}
+.part .p-d{color:var(--text-muted);font-size:.84rem;margin-top:1px}
+.exam-note{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.exam-note .lg{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:600;border:1px solid var(--border);background:var(--surface);padding:6px 12px;border-radius:999px}
+
+/* ---------- Brief (letter) template ---------- */
+.letter{position:relative;background:var(--surface);border:1px solid var(--border-strong);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;font-size:.9rem;line-height:1.65}
+.letter .z{border-left:3px solid var(--border-strong);padding:2px 0 2px 12px;margin:11px 0}
+.letter .z .zt{display:block;font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:2px}
+.letter .z.anrede{border-left-color:var(--nom)}.letter .z.anrede .zt{color:var(--nom)}
+.letter .z.einl{border-left-color:var(--dat)}.letter .z.einl .zt{color:var(--dat)}
+.letter .z.haupt{border-left-color:var(--gen)}.letter .z.haupt .zt{color:var(--gen)}
+.letter .z.schluss{border-left-color:var(--akk)}.letter .z.schluss .zt{color:var(--akk)}
+.letter .z.gruss{border-left-color:var(--primary)}.letter .z.gruss .zt{color:var(--primary)}
+.letter .datum{text-align:right;color:var(--text-muted);font-size:.84rem}
+.letter em{color:var(--text-muted)}
+
+/* ---------- Satzbau / word order ---------- */
+.satzbau{display:grid;gap:15px;margin:8px 0 6px}
+.sb-row .sb-tag{display:block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:6px}
+.sb-track{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.slot{background:var(--surface);border:1px solid var(--border-strong);border-radius:8px;padding:6px 11px;font-weight:600;font-size:.9rem}
+.slot .pos{font-size:.68rem;font-weight:800;margin-left:5px;opacity:.85}
+.slot.verb{background:var(--nom-bg);border-color:var(--nom);color:var(--nom)}
+.slot.end{background:var(--akk-bg);border-color:var(--akk);color:var(--akk)}
+.slot.konj{background:var(--gen-bg);border-color:var(--gen);color:var(--gen)}
+.sb-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.sb-legend span{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;color:var(--text-muted)}
+.sb-legend i{width:12px;height:12px;border-radius:4px;display:inline-block}
+
+/* ---------- Decision flow (adjective signal) ---------- */
+.flow{margin:6px 0 4px}
+.flow-q{text-align:center;font-weight:700;background:var(--surface-3);border:1px solid var(--border);border-radius:10px;padding:9px 12px;max-width:460px;margin:0 auto}
+.flow-stem{width:2px;height:16px;background:var(--border-strong);margin:0 auto}
+.flow-branches{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:560px){.flow-branches{grid-template-columns:1fr}}
+.flow-branch{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px}
+.flow-cond{background:var(--surface);border:1px dashed var(--border-strong);border-radius:9px;padding:7px 10px;font-weight:700;width:100%}
+.flow-cond small{display:block;font-weight:500;color:var(--text-muted);font-size:.75rem}
+.flow-arr{color:var(--text-muted);font-size:1.1rem;line-height:1}
+.flow-out{border-radius:9px;padding:8px 10px;font-weight:800;width:100%;letter-spacing:.02em}
+.flow-out small{display:block;font-weight:600;font-size:.78rem;margin-top:1px}
+.flow-out.weak{background:var(--nom-bg);color:var(--nom);border:1px solid var(--nom)}
+.flow-out.mixed{background:var(--gen-bg);color:var(--gen);border:1px solid var(--gen)}
+.flow-out.strong{background:var(--akk-bg);color:var(--akk);border:1px solid var(--akk)}
+
+/* two-tone redemittel table */
+table.sheet td.fn{font-weight:700;color:var(--primary);white-space:nowrap}
+
+/* ---------- Case buckets (fixed-case prepositions) ---------- */
+.buckets{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin:6px 0 4px}
+.bucket{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface-2);display:flex;flex-direction:column}
+.bucket-head{padding:9px 14px;font-weight:800;color:#fff;font-size:.92rem;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.bucket.dat .bucket-head{background:var(--dat)}
+.bucket.akk .bucket-head{background:var(--akk)}
+.bucket.gen .bucket-head{background:var(--gen)}
+.bucket-head .bh-en{font-weight:600;font-size:.74rem;opacity:.9}
+.bucket-body{padding:11px 12px 8px;display:flex;flex-wrap:wrap;gap:7px;align-content:flex-start}
+.bp{background:var(--surface);border:1px solid var(--border-strong);border-radius:999px;padding:4px 11px;font-weight:700;font-size:.9rem}
+.bp small{font-weight:500;color:var(--text-muted)}
+.bucket-note{padding:4px 13px 11px;font-size:.8rem;color:var(--text-muted)}
+
+/* ---------- Timeline figures ---------- */
+.fig .tline{stroke:var(--border-strong);stroke-width:2.5;stroke-linecap:round}
+.fig .tarr{fill:var(--border-strong)}
+.fig .tnow{stroke:var(--primary);stroke-width:2;stroke-dasharray:4 5}
+.fig .pt-past{fill:var(--akk)}.fig .pt-now{fill:var(--primary)}.fig .pt-fut{fill:var(--nom)}
+.fig .t-past{fill:var(--akk)}.fig .t-now{fill:var(--primary)}.fig .t-fut{fill:var(--nom)}
+.fig .pt-akk{fill:var(--akk)}.fig .pt-nom{fill:var(--nom)}
+.fig .t-akk{fill:var(--akk)}.fig .t-nom{fill:var(--nom)}
+
+/* ---------- Komparativ steps ---------- */
+.steps{display:flex;align-items:flex-end;gap:10px;max-width:480px;margin:2px auto 4px}
+.step{flex:1;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,var(--primary-2),var(--primary));color:#fff;
+  display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:8px 6px;font-weight:800;font-size:.95rem}
+.step small{font-weight:600;opacity:.85;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em}
+.step.s1{min-height:58px}.step.s2{min-height:88px}.step.s3{min-height:118px}
+
+/* flow variants: haben/sein & kein/nicht */
+.flow-out.sein{background:var(--dat-bg);color:var(--dat);border:1px solid var(--dat)}
+.flow-out.haben{background:var(--nom-bg);color:var(--nom);border:1px solid var(--nom)}
+
+/* case-colored row headers in grid tables */
+table.grid tbody th.h-nom{background:var(--nom-bg);color:var(--nom)}
+table.grid tbody th.h-akk{background:var(--akk-bg);color:var(--akk)}
+table.grid tbody th.h-dat{background:var(--dat-bg);color:var(--dat)}
+table.grid tbody th.h-gen{background:var(--gen-bg);color:var(--gen)}
+
+/* transformation arrow (Aktiv → Passiv) */
+.tf-arr{text-align:center;color:var(--text-muted);font-size:.9rem;font-weight:600;line-height:1.3;margin:2px 0}
+
+/* ---------- Merksatz callout (memory hooks) ---------- */
+.tip.merk{border-left-color:var(--gold);background:rgba(242,197,61,.12)}
+
+/* ---------- Schnell-Check memo cards ---------- */
+.memo{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:4px 0 2px}
+.memo-card{position:relative;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:10px 12px 11px 44px;font-size:.88rem;line-height:1.45}
+.memo-card .n{position:absolute;left:12px;top:11px;width:22px;height:22px;border-radius:50%;background:var(--primary);color:#fff;font-size:.75rem;font-weight:800;display:grid;place-items:center}
+.memo-card .mx{display:block;color:var(--text-muted);margin-top:2px}
+
+/* extra figure tokens */
+.fig .pt-dat{fill:var(--dat)}
+.fig .t-dat{fill:var(--dat)}
+.fig .ball-dat{fill:var(--dat)}
+.fig .a-akk{fill:none;stroke:var(--akk);stroke-width:3;stroke-linecap:round}
+.fig .ah-akk{fill:var(--akk)}
+
+/* adjective-table pattern highlight */
+table.grid td.hl{background:rgba(242,197,61,.22)}
+
+/* page switcher */
+.pageswitch{max-width:1180px;margin:0 auto;padding:14px 16px 0;display:flex;gap:8px;flex-wrap:wrap}
+.pageswitch a{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:999px;font-size:.86rem;font-weight:700;text-decoration:none;color:var(--text-muted);background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.pageswitch a:hover{border-color:var(--primary);color:var(--primary)}
+.pageswitch a[aria-current="page"]{background:var(--primary);color:#fff;border-color:var(--primary)}
+@media print{.pageswitch{display:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="flag"><i class="b"></i><i class="r"></i><i class="g"></i></div>
+    <h1>Deutsch Cheat Sheet <span class="h1badge">telc B1</span></h1>
+    <p class="sub">Fälle, Präpositionen, Deklination &amp; Adjektivendungen — die <b>Grammatik</b> für die telc Deutsch B1 Prüfung.</p>
+    <div class="meta">
+      <span class="pill">🎓 telc B1 Prüfung</span>
+      <span class="pill">✍️ Brief &amp; Redemittel</span>
+      <span class="pill">🖼️ Visualisierungen</span>
+      <span class="pill">🔎 Live-Suche</span>
+      <span class="pill">🖨️ Druckfreundlich</span>
+    </div>
+  </div>
+</header>
+
+<nav class="pageswitch" aria-label="Seiten">
+  <a href="index.html">🎓 telc &amp; Redemittel</a>
+  <a href="verben.html">🔧 Verben &amp; Sätze</a>
+  <a href="faelle.html" aria-current="page">📦 Fälle &amp; Präpositionen</a>
+</nav>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      <input id="search" type="search" placeholder="Suchen…  z. B. „Brief“, „Perfekt“, „weil“, „Dativ“" autocomplete="off" aria-label="Cheat Sheet durchsuchen">
+      <button class="clear-btn" id="clear" aria-label="Suche löschen">✕</button>
+    </div>
+    <button class="tbtn" id="printBtn" aria-label="Drucken">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M6 14h12v8H6z"></path></svg>
+      <span>Drucken</span>
+    </button>
+  </div>
+</div>
+
+<nav class="jump" id="jump">
+  <div class="navgroup">
+    <div class="navgroup-label">Fälle &amp; Präpositionen</div>
+    <div class="chips">
+      <a class="chip" href="#sec-artikel"><span class="ico">📦</span>Artikel &amp; Pronomen</a>
+      <a class="chip" href="#sec-datakk"><span class="ico">🎁</span>Dativ + Akkusativ</a>
+      <a class="chip" href="#sec-ndekl"><span class="ico">👤</span>n-Deklination</a>
+      <a class="chip" href="#sec-genitiv"><span class="ico">🔑</span>Genitiv</a>
+      <a class="chip" href="#sec-temporal"><span class="ico">🕒</span>Zeitangaben</a>
+      <a class="chip" href="#sec-wechsel"><span class="ico">🧭</span>Wechselpräpositionen</a>
+      <a class="chip" href="#sec-fest"><span class="ico">📌</span>Feste Präpositionen</a>
+      <a class="chip" href="#sec-verbprep"><span class="ico">🔌</span>Verb + Präposition</a>
+      <a class="chip" href="#sec-woda"><span class="ico">❓</span>wo(r)- / da(r)-</a>
+      <a class="chip" href="#sec-reflexiv"><span class="ico">🔁</span>Reflexive Verben</a>
+      <a class="chip" href="#sec-komparativ"><span class="ico">📈</span>Komparativ</a>
+      <a class="chip" href="#sec-adjektiv"><span class="ico">🎨</span>Adjektivendungen</a>
+    </div>
+  </div>
+  <div class="navgroup">
+    <div class="navgroup-label">Extras</div>
+    <div class="chips">
+      <a class="chip" href="#sec-haeufig"><span class="ico">📊</span>Häufigkeit</a>
+      <a class="chip" href="#sec-richtung"><span class="ico">↕️</span>Richtungen (hin/her)</a>
+    </div>
+  </div>
+</nav>
+
+<main id="content">
+
+  <!-- Legend card -->
+  <section class="card" id="sec-legend" data-noindex>
+    <div class="card-body" style="padding-top:16px;padding-bottom:16px">
+      <div class="subh" style="margin-top:0">Farbcode der Fälle</div>
+      <div class="legend">
+        <span class="lg"><span class="dot nom"></span>Nominativ <span style="color:var(--text-muted);font-weight:500">— Subjekt</span></span>
+        <span class="lg"><span class="dot akk"></span>Akkusativ <span style="color:var(--text-muted);font-weight:500">— direktes Objekt</span></span>
+        <span class="lg"><span class="dot dat"></span>Dativ <span style="color:var(--text-muted);font-weight:500">— indirektes Objekt</span></span>
+        <span class="lg"><span class="dot gen"></span>Genitiv <span style="color:var(--text-muted);font-weight:500">— Besitz</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ARTIKEL & PRONOMEN ============ -->
+  <section class="card" id="sec-artikel">
+    <div class="card-head">
+      <div class="card-ico">📦</div>
+      <h2 class="card-title">Artikel &amp; Pronomen — Deklination<span class="en">The foundation: article &amp; pronoun endings</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Die Basis für alles: Fälle, Präpositionen, Adjektivendungen. Wichtigste Regel: <b>nur Maskulin ändert sich im Akkusativ</b> (der → den, ein → einen).</p>
+
+      <div class="grid2">
+        <div>
+          <table class="grid">
+            <caption>Bestimmter Artikel <span style="color:var(--text-muted);font-weight:500">(der / die / das)</span></caption>
+            <thead><tr><th></th><th>M</th><th>F</th><th>N</th><th>Pl</th></tr></thead>
+            <tbody>
+              <tr><th class="h-nom">Nom</th><td>der</td><td>die</td><td>das</td><td>die</td></tr>
+              <tr><th class="h-akk">Akk</th><td><span class="ec">den</span></td><td>die</td><td>das</td><td>die</td></tr>
+              <tr><th class="h-dat">Dat</th><td><span class="ec">dem</span></td><td><span class="ec">der</span></td><td><span class="ec">dem</span></td><td><span class="ec">den</span> +n</td></tr>
+              <tr><th class="h-gen">Gen</th><td><span class="ec">des</span> +s</td><td><span class="ec">der</span></td><td><span class="ec">des</span> +s</td><td><span class="ec">der</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <table class="grid">
+            <caption>Unbestimmter Artikel <span style="color:var(--text-muted);font-weight:500">(ein / kein / mein …)</span></caption>
+            <thead><tr><th></th><th>M</th><th>F</th><th>N</th><th>Pl (kein)</th></tr></thead>
+            <tbody>
+              <tr><th class="h-nom">Nom</th><td>ein</td><td>eine</td><td>ein</td><td>keine</td></tr>
+              <tr><th class="h-akk">Akk</th><td><span class="ec">einen</span></td><td>eine</td><td>ein</td><td>keine</td></tr>
+              <tr><th class="h-dat">Dat</th><td><span class="ec">einem</span></td><td><span class="ec">einer</span></td><td><span class="ec">einem</span></td><td><span class="ec">keinen</span> +n</td></tr>
+              <tr><th class="h-gen">Gen</th><td><span class="ec">eines</span> +s</td><td><span class="ec">einer</span></td><td><span class="ec">eines</span> +s</td><td><span class="ec">keiner</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subh">Personalpronomen</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Nominativ</th><th>Akkusativ</th><th>Dativ</th></tr></thead>
+          <tbody>
+            <tr><td class="de"><span class="k nom">ich</span></td><td class="de"><span class="k akk">mich</span></td><td class="de"><span class="k dat">mir</span></td></tr>
+            <tr><td class="de"><span class="k nom">du</span></td><td class="de"><span class="k akk">dich</span></td><td class="de"><span class="k dat">dir</span></td></tr>
+            <tr><td class="de"><span class="k nom">er</span></td><td class="de"><span class="k akk">ihn</span></td><td class="de"><span class="k dat">ihm</span></td></tr>
+            <tr><td class="de"><span class="k nom">sie</span></td><td class="de"><span class="k akk">sie</span></td><td class="de"><span class="k dat">ihr</span></td></tr>
+            <tr><td class="de"><span class="k nom">es</span></td><td class="de"><span class="k akk">es</span></td><td class="de"><span class="k dat">ihm</span></td></tr>
+            <tr><td class="de"><span class="k nom">wir</span></td><td class="de"><span class="k akk">uns</span></td><td class="de"><span class="k dat">uns</span></td></tr>
+            <tr><td class="de"><span class="k nom">ihr</span></td><td class="de"><span class="k akk">euch</span></td><td class="de"><span class="k dat">euch</span></td></tr>
+            <tr><td class="de"><span class="k nom">sie / Sie</span></td><td class="de"><span class="k akk">sie / Sie</span></td><td class="de"><span class="k dat">ihnen / Ihnen</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip"><span class="ti">💡</span><div><b>Dativ Plural:</b> auch das Nomen bekommt <b>-n</b>: <em>mit <span class="k dat">den Kinder<b>n</b></span></em>.</div></div>
+      <div class="tip rule"><span class="ti">📎</span><div><b>n-Deklination:</b> Einige Maskulina bekommen <b>-(e)n</b> in allen Fällen außer Nominativ: <em>der Junge → <span class="k akk">den Jungen</span> / <span class="k dat">dem Jungen</span></em>. Auch: der Mensch, der Kunde, der Kollege, der Student, der Nachbar, der Herr (den Herrn).</div></div>
+    </div>
+  </section>
+
+  <!-- ============ DATIV + AKKUSATIV ============ -->
+  <section class="card" id="sec-datakk">
+    <div class="card-head">
+      <div class="card-ico">🎁</div>
+      <h2 class="card-title">Dativ + Akkusativ<span class="en">Two objects in one sentence</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Die <b>Person</b>, die etwas bekommt, steht meist im <span class="k dat">Dativ</span>. Die <b>Sache</b>, die gegeben wird, steht im <span class="k akk">Akkusativ</span>.</p>
+
+      <div class="subh">Zwei Nomen: Dativ vor Akkusativ</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Ich gebe <span class="k dat">dem Vater</span> <span class="k akk">das Geschenk</span>.</td><td class="en">I give the father the present.</td></tr>
+            <tr><td class="ex">Ich schicke <span class="k dat">der Mutter</span> <span class="k akk">eine Nachricht</span>.</td><td class="en">I send the mother a message.</td></tr>
+            <tr><td class="ex">Ich erkläre <span class="k dat">dem Kind</span> <span class="k akk">die Aufgabe</span>.</td><td class="en">I explain the task to the child.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Zwei Pronomen: Akkusativ vor Dativ</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Ich gebe <span class="k akk">es</span> <span class="k dat">ihm</span>.</td><td class="en">I give it to him.</td></tr>
+            <tr><td class="ex">Ich schicke <span class="k akk">sie</span> <span class="k dat">ihr</span>.</td><td class="en">I send it to her.</td></tr>
+            <tr><td class="ex">Ich erkläre <span class="k akk">sie</span> <span class="k dat">ihm</span>.</td><td class="en">I explain it to him.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>Reihenfolge:</b> Zwei Nomen → <span class="k dat">Dativ</span> zuerst. Zwei Pronomen → <span class="k akk">Akkusativ</span> zuerst. Ein Pronomen kommt immer <b>vor</b> das Nomen.</div></div>
+
+      <div class="subh">Verben nur mit Dativ</div>
+      <p class="lead" style="margin-bottom:8px">Diese Verben haben <b>kein</b> Akkusativ-Objekt — die Person steht direkt im <span class="k dat">Dativ</span>:</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Verb</th><th>English</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">helfen</td><td class="en">to help</td><td class="ex">Ich helfe <span class="k dat">dir</span>.</td></tr>
+            <tr><td class="de">danken</td><td class="en">to thank</td><td class="ex">Ich danke <span class="k dat">Ihnen</span>.</td></tr>
+            <tr><td class="de">gefallen</td><td class="en">to please / like</td><td class="ex">Der Film gefällt <span class="k dat">mir</span>.</td></tr>
+            <tr><td class="de">gehören</td><td class="en">to belong to</td><td class="ex">Das Buch gehört <span class="k dat">meinem Bruder</span>.</td></tr>
+            <tr><td class="de">schmecken</td><td class="en">to taste (good)</td><td class="ex">Die Pizza schmeckt <span class="k dat">uns</span>.</td></tr>
+            <tr><td class="de">passen</td><td class="en">to fit / suit</td><td class="ex">Der Termin passt <span class="k dat">mir</span> gut.</td></tr>
+            <tr><td class="de">antworten</td><td class="en">to answer sb.</td><td class="ex">Er antwortet <span class="k dat">der Lehrerin</span>.</td></tr>
+            <tr><td class="de">gratulieren</td><td class="en">to congratulate</td><td class="ex">Wir gratulieren <span class="k dat">dir</span> zum Geburtstag!</td></tr>
+            <tr><td class="de">zuhören</td><td class="en">to listen to</td><td class="ex">Hör <span class="k dat">mir</span> bitte zu!</td></tr>
+            <tr><td class="de">glauben</td><td class="en">to believe sb.</td><td class="ex">Ich glaube <span class="k dat">dir</span>.</td></tr>
+            <tr><td class="de">wehtun</td><td class="en">to hurt</td><td class="ex">Der Kopf tut <span class="k dat">mir</span> weh.</td></tr>
+            <tr><td class="de">fehlen</td><td class="en">to be missing / missed</td><td class="ex">Du fehlst <span class="k dat">mir</span>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ N-DEKLINATION ============ -->
+  <section class="card" id="sec-ndekl">
+    <div class="card-head">
+      <div class="card-ico">👤</div>
+      <h2 class="card-title">n-Deklination — schwache Maskulina<span class="en">Weak masculine nouns (der Junge → den Jungen)</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Eine kleine Gruppe <b>maskuliner</b> Nomen bekommt die Endung <b>-(e)n</b> in <b>jedem Fall außer dem Nominativ Singular</b> — also Akkusativ, Dativ und Genitiv Singular <b>und</b> der ganze Plural. Nur die Grundform bleibt gleich: <span class="k nom">der Junge</span> → ich kenne <span class="k akk">den Jungen</span>, ich helfe <span class="k dat">dem Jungen</span>, das Fahrrad <span class="k gen">des Jungen</span>.</p>
+
+      <div class="subh">Welche Nomen bekommen das?</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Muster</th><th>Beispiele</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="fn">-e (Menschen/Tiere)</td><td class="de wrap">der Junge, der Kollege, der Kunde, der Löwe, der Franzose</td><td class="en">boy, colleague, customer, lion, Frenchman</td></tr>
+            <tr><td class="fn">bestimmte Personen</td><td class="de wrap">der Herr → <b>Herrn</b> (Sg.!) / Herren (Pl.), der Mensch, der Nachbar, der Held</td><td class="en">gentleman/Mr., human being, neighbor, hero</td></tr>
+            <tr><td class="fn">Fremdwörter</td><td class="de wrap"><span style="color:var(--text-muted);font-weight:600">-ent/-ant/-ist/-at/-graf/-loge:</span> der Student, der Praktikant, der Polizist, der Journalist, der Kandidat, der Tourist, der Biologe</td><td class="en">student, intern, police officer, journalist, candidate, tourist, biologist</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Deklination im Singular</div>
+      <div class="grid2">
+        <div>
+          <table class="grid">
+            <caption>Vier Beispiele <span style="color:var(--text-muted);font-weight:500">(mit bestimmtem Artikel)</span></caption>
+            <thead><tr><th></th><th>Junge</th><th>Student</th><th>Herr</th><th>Name</th></tr></thead>
+            <tbody>
+              <tr><th class="h-nom">Nom</th><td>der Junge</td><td>der Student</td><td>der Herr</td><td>der Name</td></tr>
+              <tr><th class="h-akk">Akk</th><td>den Junge<span class="ec">n</span></td><td>den Student<span class="ec">en</span></td><td class="hl">den Herr<span class="ec">n</span></td><td>den Name<span class="ec">n</span></td></tr>
+              <tr><th class="h-dat">Dat</th><td>dem Junge<span class="ec">n</span></td><td>dem Student<span class="ec">en</span></td><td class="hl">dem Herr<span class="ec">n</span></td><td>dem Name<span class="ec">n</span></td></tr>
+              <tr><th class="h-gen">Gen</th><td>des Junge<span class="ec">n</span></td><td>des Student<span class="ec">en</span></td><td class="hl">des Herr<span class="ec">n</span></td><td class="hl">des Name<span class="ec">ns</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="tip rule" style="margin-top:0"><span class="ti">📎</span><div><b>Zwei Ausnahmen</b> (gelb markiert): <b>Herr</b> bekommt im Singular nur <b>-n</b> statt <b>-en</b> — im Plural aber <b>Herren</b>. <b>Name</b> ist „gemischt“: Akkusativ/Dativ wie die anderen auf -e (<b>Namen</b>), aber der Genitiv bekommt zusätzlich ein <b>-s</b>: <b>des Namens</b>.</div></div>
+          <div class="tip" style="margin-top:12px"><span class="ti">🔗</span><div>Die Artikelformen selbst (der/die/das, Personalpronomen) stehen bei <a href="#sec-artikel">Artikel &amp; Pronomen</a>.</div></div>
+        </div>
+      </div>
+
+      <div class="subh">Beispiele</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Ich kenne <span class="k akk">den Studenten</span>.</td><td class="en">I know the student.</td></tr>
+            <tr><td class="ex">Ich helfe <span class="k dat">dem Jungen</span>.</td><td class="en">I help the boy.</td></tr>
+            <tr><td class="ex">Das ist das Auto <span class="k gen">des Nachbarn</span>.</td><td class="en">That's the neighbor's car.</td></tr>
+            <tr><td class="ex">Kennst du <span class="k akk">Herrn Müller</span>?</td><td class="en">Do you know Mr. Müller?</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>Die -n nicht vergessen:</b> nicht „Ich sehe den Student“, sondern „Ich sehe den <span class="k akk">Studenten</span>.“ Das gilt in <b>jedem</b> Fall außer Nominativ Singular — auch im Akkusativ Singular, wo andere Maskulina sonst keine Endung bekommen.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ GENITIV ============ -->
+  <section class="card" id="sec-genitiv">
+    <div class="card-head">
+      <div class="card-ico">🔑</div>
+      <h2 class="card-title">Genitiv — Besitz &amp; Zugehörigkeit<span class="en">The genitive: whose? (das Auto meines Vaters)</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Der Genitiv ist der <b>2. Fall</b> — er zeigt <b>Besitz</b> oder <b>Zugehörigkeit</b> und beantwortet die Frage <b>wessen?</b> (whose?). Anders als im Englischen steht das Genitivattribut <b>nach</b> dem Nomen: <em>das Auto <span class="k gen">meines Vaters</span></em> <span style="color:var(--text-muted)">(nicht wie „my father's car“)</span>.</p>
+
+      <div class="subh">Artikel &amp; Possessiv im Genitiv</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Genus</th><th>bestimmt</th><th>unbestimmt</th><th>Possessiv (mein)</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="fn">Maskulin</td><td class="de"><span class="k gen">des</span></td><td class="de"><span class="k gen">eines</span></td><td class="de"><span class="k gen">meines</span></td><td class="ex">„des Vaters“ · „meines Bruders“</td></tr>
+            <tr><td class="fn">Neutrum</td><td class="de"><span class="k gen">des</span></td><td class="de"><span class="k gen">eines</span></td><td class="de"><span class="k gen">meines</span></td><td class="ex">„des Kindes“ · „des Autos“</td></tr>
+            <tr><td class="fn">Feminin</td><td class="de"><span class="k gen">der</span></td><td class="de"><span class="k gen">einer</span></td><td class="de"><span class="k gen">meiner</span></td><td class="ex">„der Mutter“ · „meiner Schwester“</td></tr>
+            <tr><td class="fn">Plural</td><td class="de"><span class="k gen">der</span></td><td class="de">—</td><td class="de"><span class="k gen">meiner</span></td><td class="ex">„der Eltern“ · „meiner Freunde“</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Nomen: -es oder -s?</div>
+      <p class="lead" style="margin-bottom:8px">Nur <b>Maskulin</b> und <b>Neutrum</b> bekommen im Genitiv Singular eine Nomen-Endung: <b>-es</b> bei einsilbigen Nomen und bei Endungen auf <b>-s/-ss/-z/-tz/-x</b>, sonst nur <b>-s</b>. <b>Feminin</b> und <b>Plural</b> bekommen <b>keine</b> Endung — nur der Artikel wird zu <b>der</b>.</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Regel</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="fn">+es</td><td class="ex">des Mann<span class="k gen">es</span> · des Haus<span class="k gen">es</span></td></tr>
+            <tr><td class="fn">+s</td><td class="ex">des Vater<span class="k gen">s</span> · des Auto<span class="k gen">s</span></td></tr>
+            <tr><td class="fn">— (f/Pl)</td><td class="ex">der Mutter · der Eltern</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Eigennamen (Personen, Länder)</div>
+      <p class="lead" style="margin-bottom:8px">Namen bekommen einfach <b>-s</b> — <b>ohne Apostroph</b> (anders als im Englischen!):</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="ex"><span class="k gen">Annas</span> Auto ist neu.</td><td class="en">Anna's car is new.</td></tr>
+            <tr><td class="ex">Das ist <span class="k gen">Peters</span> Buch.</td><td class="en">That's Peter's book.</td></tr>
+            <tr><td class="ex"><span class="k gen">Deutschlands</span> Hauptstadt ist Berlin.</td><td class="en">Germany's capital is Berlin.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Gesprochen vs. geschrieben:</b> Im Alltag ersetzt man den Genitiv oft durch <b>von + <span class="k dat">Dativ</span></b>: <em>das Auto <span class="k dat">von meinem Vater</span></em> statt <em><span class="k gen">meines Vaters</span></em>. Merksatz: <b>Genitiv = schriftlich, von + Dativ = gesprochen.</b></div></div>
+      <div class="tip"><span class="ti">🔗</span><div>Auch einige <b>Präpositionen</b> stehen mit Genitiv: <b>wegen, während, trotz, (an)statt</b> — Details bei <a href="#sec-fest">Feste Präpositionen</a> und <a href="#sec-temporal">Zeitangaben</a>. Bei schwachen Maskulina ändert sich zusätzlich das Nomen: <em>des Studenten, des Herrn, des Namens</em> → <a href="#sec-ndekl">n-Deklination</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ ZEITANGABEN ============ -->
+  <section class="card" id="sec-temporal">
+    <div class="card-head">
+      <div class="card-ico">🕒</div>
+      <h2 class="card-title">Zeitangaben — wann sagt man was?<span class="en">Time prepositions: am, um, im, seit, vor …</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Für Termine, Briefe und Small Talk: die richtige Präposition für <b>Uhrzeit, Tag, Monat</b> und Zeiträume.</p>
+
+      <div class="figure">
+        <svg class="fig" viewBox="0 0 560 150" role="img" aria-label="Zeitstrahl: vor, seit, in, ab" style="max-width:560px;margin:0 auto;height:auto;display:block">
+          <line class="tline" x1="16" y1="84" x2="534" y2="84"/>
+          <polygon class="tarr" points="548,84 534,77 534,91"/>
+          <line class="tnow" x1="290" y1="26" x2="290" y2="104"/>
+          <text class="flabel t-now" x="290" y="18" text-anchor="middle">JETZT</text>
+          <!-- vor: point in the past -->
+          <circle class="pt-akk" cx="80" cy="84" r="7"/>
+          <text class="flabel t-akk" x="80" y="46" text-anchor="middle">vor</text>
+          <text class="t-mut" x="80" y="62" text-anchor="middle">vor zwei Jahren</text>
+          <!-- seit: from past until now -->
+          <line class="a-her" x1="150" y1="84" x2="276" y2="84"/>
+          <polygon class="ah-her" points="284,84 272,77 272,91"/>
+          <text class="flabel t-her" x="215" y="64" text-anchor="middle">seit →</text>
+          <!-- in: point in the future -->
+          <circle class="pt-nom" cx="380" cy="84" r="7"/>
+          <text class="flabel t-nom" x="380" y="46" text-anchor="middle">in</text>
+          <text class="t-mut" x="380" y="62" text-anchor="middle">in einer Woche</text>
+          <!-- ab: from a point onwards -->
+          <line class="a-hin" x1="450" y1="84" x2="520" y2="84"/>
+          <polygon class="ah-hin" points="528,84 516,77 516,91"/>
+          <text class="flabel t-hin" x="485" y="64" text-anchor="middle">ab →</text>
+          <text class="t-mut" x="110" y="128" text-anchor="middle">Vergangenheit</text>
+          <text class="t-mut" x="450" y="128" text-anchor="middle">Zukunft</text>
+        </svg>
+        <div class="figcap"><b style="color:var(--akk)">vor</b> = Punkt in der Vergangenheit („ago“) · <b style="color:var(--dat)">seit</b> = läuft bis jetzt · <b style="color:var(--nom)">in</b> = Punkt in der Zukunft · <b style="color:var(--gen)">ab</b> = von da an</div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Präposition</th><th>Verwendung</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">um</td><td class="en">Uhrzeit</td><td class="ex">um 8 Uhr · um halb neun</td></tr>
+            <tr><td class="de">am</td><td class="en">Tag · Datum · Tageszeit</td><td class="ex">am Montag · am 3. Mai · am Abend <em>(aber: in der Nacht)</em></td></tr>
+            <tr><td class="de">im</td><td class="en">Monat · Jahreszeit</td><td class="ex">im Juli · im Winter</td></tr>
+            <tr><td class="de">—</td><td class="en">Jahreszahl allein</td><td class="ex">2026 / im Jahr 2026 <em>(nicht „in 2026“)</em></td></tr>
+            <tr><td class="de">von … bis</td><td class="en">Zeitraum</td><td class="ex">von Montag bis Freitag</td></tr>
+            <tr><td class="de">ab</td><td class="en">Startpunkt (Zukunft)</td><td class="ex">ab morgen · ab nächster Woche</td></tr>
+            <tr><td class="de">seit <span class="tag dativ">Dat</span></td><td class="en">begann früher, dauert noch</td><td class="ex">seit <span class="k dat">einem Jahr</span> <em>(+ Präsens!)</em></td></tr>
+            <tr><td class="de">vor <span class="tag dativ">Dat</span></td><td class="en">„ago“</td><td class="ex">vor <span class="k dat">zwei Jahren</span></td></tr>
+            <tr><td class="de">in <span class="tag dativ">Dat</span></td><td class="en">in der Zukunft</td><td class="ex">in <span class="k dat">einer Woche</span></td></tr>
+            <tr><td class="de">nach <span class="tag dativ">Dat</span></td><td class="en">danach</td><td class="ex">nach <span class="k dat">dem Kurs</span></td></tr>
+            <tr><td class="de">zwischen <span class="tag dativ">Dat</span></td><td class="en">Zeitspanne</td><td class="ex">zwischen 8 und 9 Uhr</td></tr>
+            <tr><td class="de">gegen <span class="tag akku">Akk</span></td><td class="en">ungefähre Zeit</td><td class="ex">gegen 8 Uhr (≈ um 8)</td></tr>
+            <tr><td class="de">während</td><td class="en">Zeitraum (Genitiv)</td><td class="ex">während <span class="k gen">der Pause</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>seit + Präsens:</b> <em>Ich <b>lerne</b> seit zwei Jahren Deutsch.</em> — nicht Perfekt wie im Englischen („I have been learning“)!</div></div>
+    </div>
+  </section>
+
+  <!-- ============ WECHSELPRÄPOSITIONEN ============ -->
+  <section class="card" id="sec-wechsel">
+    <div class="card-head">
+      <div class="card-ico">🧭</div>
+      <h2 class="card-title">Wechselpräpositionen<span class="en">Two-way prepositions (Dativ or Akkusativ)</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Diese 9 Präpositionen nehmen den <span class="k akk">Akkusativ</span> <b>oder</b> den <span class="k dat">Dativ</span> — je nachdem, ob es um Bewegung oder Ort geht.</p>
+
+      <div class="figure">
+        <div class="prep-grid">
+          <div class="prep-cell">
+            <svg class="fig" viewBox="0 0 120 84" role="img" aria-label="Ball an der Kiste"><line class="ground" x1="12" y1="72" x2="108" y2="72"/><rect class="box" x="45" y="46" width="30" height="26" rx="2"/><circle class="ball" cx="35" cy="62" r="10"/></svg>
+            <span class="prep-name">an</span><span class="prep-en">at · on</span>
+          </div>
+          <div class="prep-cell">
+            <svg class="fig" viewBox="0 0 120 84" role="img" aria-label="Ball auf der Kiste"><line class="ground" x1="12" y1="72" x2="108" y2="72"/><rect class="box" x="45" y="46" width="30" height="26" rx="2"/><circle class="ball" cx="60" cy="36" r="10"/></svg>
+            <span class="prep-name">auf</span><span class="prep-en">on top</span>
+          </div>
+          <div class="prep-cell">
+            <svg class="fig" viewBox="0 0 120 84" role="img" aria-label="Ball in der Kiste"><line class="ground" x1="12" y1="72" x2="108" y2="72"/><circle class="ball" cx="60" cy="58" r="9"/><rect class="box-o" x="45" y="46" width="30" height="26" rx="2"/></svg>
+            <span class="prep-name">in</span><span class="prep-en">inside</span>
+          </div>
+          <div class="prep-cell">
+            <svg class="fig" viewBox="0 0 120 84" role="img" aria-label="Ball hinter der Kiste"><line class="ground" x1="12" y1="72" x2="108" y2="72"/><circle class="ball" cx="60" cy="40" r="10"/><rect class="box" x="45" y="46" width="30" height="26" rx="2"/></svg>
+            <span class="prep-name">hinter</span><span class="prep-en">behind</span>
+          </div>
+          <div class="prep-cell">
+            <svg class="fig" viewBox="0 0 120 84" role="img" aria-label="Ball neben der Kiste"><line class="ground" x1="12" y1="72" x2="108" y2="72"/><rect class="box" x="45" y="46" width="30" height="26" rx="2"/><circle class="ball" cx="96" cy="62" r="10"/></svg>
+            <span class="prep-name">neben</span><span class="prep-en">next to</span>
+          </div>
+          <div class="prep-cell">
+            <svg class="fig" viewBox="0 0 120 84" role="img" aria-label="Ball über der Kiste"><line class="ground" x1="12" y1="72" x2="108" y2="72"/><rect class="box" x="45" y="46" width="30" height="26" rx="2"/><circle class="ball" cx="60" cy="24" r="10"/></svg>
+            <span class="prep-name">über</span><span class="prep-en">above</span>
+          </div>
+          <div class="prep-cell">
+            <svg class="fig" viewBox="0 0 120 84" role="img" aria-label="Ball unter der Kiste"><rect class="box" x="45" y="26" width="30" height="22" rx="2"/><circle class="ball" cx="60" cy="64" r="10"/></svg>
+            <span class="prep-name">unter</span><span class="prep-en">under</span>
+          </div>
+          <div class="prep-cell">
+            <svg class="fig" viewBox="0 0 120 84" role="img" aria-label="Ball vor der Kiste"><line class="ground" x1="12" y1="72" x2="108" y2="72"/><rect class="box" x="45" y="46" width="30" height="26" rx="2"/><circle class="ball" cx="72" cy="60" r="10"/></svg>
+            <span class="prep-name">vor</span><span class="prep-en">in front</span>
+          </div>
+          <div class="prep-cell">
+            <svg class="fig" viewBox="0 0 120 84" role="img" aria-label="Ball zwischen zwei Kisten"><line class="ground" x1="12" y1="72" x2="108" y2="72"/><rect class="box" x="25" y="46" width="22" height="26" rx="2"/><rect class="box" x="73" y="46" width="22" height="26" rx="2"/><circle class="ball" cx="60" cy="58" r="9"/></svg>
+            <span class="prep-name">zwischen</span><span class="prep-en">between</span>
+          </div>
+        </div>
+        <div class="figcap">Gleiche Kiste, andere Position: so „sieht“ man die Präposition.</div>
+      </div>
+
+      <div class="tip rule"><span class="ti">🎯</span><div>
+        <b>Die Faustregel:</b><br>
+        <b>Wohin?</b> → Bewegung von A nach B → <span class="tag akku">Akkusativ</span><br>
+        <b>Wo?</b> → fester Ort, keine Bewegung → <span class="tag dativ">Dativ</span>
+      </div></div>
+
+      <div class="figure">
+        <div class="grid2">
+          <div>
+            <svg class="fig" viewBox="0 0 260 100" role="img" aria-label="Wohin: Ball fliegt in die Kiste — Akkusativ">
+              <line class="ground" x1="12" y1="86" x2="248" y2="86"/>
+              <rect class="box-o" x="160" y="40" width="56" height="46" rx="3"/>
+              <circle class="ball" cx="42" cy="74" r="11"/>
+              <path class="a-akk" d="M60 60 C 95 28, 140 30, 176 52"/>
+              <polygon class="ah-akk" points="184,58 168,44 172,60"/>
+              <text class="flabel t-akk" x="100" y="18" text-anchor="middle">Wohin? → Akkusativ</text>
+            </svg>
+          </div>
+          <div>
+            <svg class="fig" viewBox="0 0 260 100" role="img" aria-label="Wo: Ball liegt ruhig in der Kiste — Dativ">
+              <line class="ground" x1="12" y1="86" x2="248" y2="86"/>
+              <circle class="ball-dat" cx="130" cy="72" r="11"/>
+              <rect class="box-o" x="100" y="40" width="60" height="46" rx="3"/>
+              <text class="flabel t-dat" x="130" y="18" text-anchor="middle">Wo? → Dativ</text>
+            </svg>
+          </div>
+        </div>
+        <div class="figcap"><b style="color:var(--akk)">Bewegung</b>: <em>Er legt das Buch auf <b>den</b> Tisch.</em> &nbsp;·&nbsp; <b style="color:var(--dat)">Position</b>: <em>Das Buch liegt auf <b>dem</b> Tisch.</em></div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Präposition</th><th>Bedeutung</th><th class="center">Wohin? (Akk)</th><th class="center">Wo? (Dat)</th></tr></thead>
+          <tbody>
+            <tr><td class="de">an</td><td class="en">at · to · on (vertical)</td><td class="center"><span class="k akk">an den</span></td><td class="center"><span class="k dat">an dem / am</span></td></tr>
+            <tr><td class="de">auf</td><td class="en">on · onto · on top of</td><td class="center"><span class="k akk">auf den</span></td><td class="center"><span class="k dat">auf dem</span></td></tr>
+            <tr><td class="de">hinter</td><td class="en">behind</td><td class="center"><span class="k akk">hinter den</span></td><td class="center"><span class="k dat">hinter dem</span></td></tr>
+            <tr><td class="de">in</td><td class="en">in · into</td><td class="center"><span class="k akk">in den</span></td><td class="center"><span class="k dat">in dem / im</span></td></tr>
+            <tr><td class="de">neben</td><td class="en">next to · beside</td><td class="center"><span class="k akk">neben den</span></td><td class="center"><span class="k dat">neben dem</span></td></tr>
+            <tr><td class="de">über</td><td class="en">over · above · about</td><td class="center"><span class="k akk">über den</span></td><td class="center"><span class="k dat">über dem</span></td></tr>
+            <tr><td class="de">unter</td><td class="en">under · below · among</td><td class="center"><span class="k akk">unter den</span></td><td class="center"><span class="k dat">unter dem</span></td></tr>
+            <tr><td class="de">vor</td><td class="en">in front of · before · ago</td><td class="center"><span class="k akk">vor den</span></td><td class="center"><span class="k dat">vor dem</span></td></tr>
+            <tr><td class="de">zwischen</td><td class="en">between</td><td class="center"><span class="k akk">zwischen die</span></td><td class="center"><span class="k dat">zwischen den</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Beispiele</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Frage</th><th>Deutsch</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="de"><b>Wohin?</b> <span class="tag akku">Akk</span></td><td class="ex">Er legt das Buch <span class="k akk">auf den Tisch</span>.</td><td class="en">He puts the book onto the table. <em>(motion)</em></td></tr>
+            <tr><td class="de"><b>Wo?</b> <span class="tag dativ">Dat</span></td><td class="ex">Das Buch liegt <span class="k dat">auf dem Tisch</span>.</td><td class="en">The book lies on the table. <em>(location)</em></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Merkhilfe:</b> <b>A</b>ktion → <b>A</b>kkusativ &nbsp;·&nbsp; <b>D</b>a bleibt es → <b>D</b>ativ.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ FESTE PRÄPOSITIONEN ============ -->
+  <section class="card" id="sec-fest">
+    <div class="card-head">
+      <div class="card-ico">📌</div>
+      <h2 class="card-title">Präpositionen mit festem Kasus<span class="en">Prepositions that always take the same case</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Diese Präpositionen nehmen <b>immer denselben Fall</b> — am besten als Reihe auswendig lernen. (Die 9 <a href="#sec-wechsel">Wechselpräpositionen</a> haben eine eigene Karte.)</p>
+
+      <div class="buckets">
+        <div class="bucket dat">
+          <div class="bucket-head">immer + DATIV <span class="bh-en">always dative</span></div>
+          <div class="bucket-body">
+            <span class="bp">aus <small>from · out of</small></span>
+            <span class="bp">bei <small>at · near</small></span>
+            <span class="bp">mit <small>with</small></span>
+            <span class="bp">nach <small>after · to</small></span>
+            <span class="bp">seit <small>since · for</small></span>
+            <span class="bp">von <small>from · of</small></span>
+            <span class="bp">zu <small>to</small></span>
+            <span class="bp">gegenüber <small>opposite</small></span>
+          </div>
+          <div class="bucket-note">Merkspruch: „aus, bei, mit, nach, seit, von, zu — immer mit dem Dativ, du!“</div>
+        </div>
+        <div class="bucket akk">
+          <div class="bucket-head">immer + AKKUSATIV <span class="bh-en">always accusative</span></div>
+          <div class="bucket-body">
+            <span class="bp">durch <small>through</small></span>
+            <span class="bp">für <small>for</small></span>
+            <span class="bp">gegen <small>against · approx.</small></span>
+            <span class="bp">ohne <small>without</small></span>
+            <span class="bp">um <small>at · around</small></span>
+            <span class="bp">bis <small>until</small></span>
+            <span class="bp">entlang <small>along (nachgestellt)</small></span>
+          </div>
+          <div class="bucket-note">Im Rhythmus lernen: „durch – für – gegen – ohne – um“.</div>
+        </div>
+        <div class="bucket gen">
+          <div class="bucket-head">+ GENITIV <span class="bh-en">genitive</span></div>
+          <div class="bucket-body">
+            <span class="bp">wegen <small>because of</small></span>
+            <span class="bp">während <small>during</small></span>
+            <span class="bp">trotz <small>despite</small></span>
+            <span class="bp">statt <small>instead of</small></span>
+          </div>
+          <div class="bucket-note">Gesprochen oft mit Dativ (<em>wegen dem Wetter</em>) — im Brief besser Genitiv: <em>wegen des Wetters</em>.</div>
+        </div>
+      </div>
+
+      <div class="subh">Beispiele</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Deutsch</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="ex">Ich fahre mit <span class="k dat">dem Bus</span> zu <span class="k dat">meiner Freundin</span>.</td><td class="en">I take the bus to my friend's place.</td></tr>
+            <tr><td class="ex">Er kommt aus <span class="k dat">der Türkei</span> und wohnt bei <span class="k dat">seinen Eltern</span>.</td><td class="en">He's from Turkey and lives with his parents.</td></tr>
+            <tr><td class="ex">Das Geschenk ist für <span class="k akk">meinen Bruder</span>.</td><td class="en">The present is for my brother.</td></tr>
+            <tr><td class="ex">Wir gehen ohne <span class="k akk">ihn</span> durch <span class="k akk">den Park</span>.</td><td class="en">We walk through the park without him.</td></tr>
+            <tr><td class="ex">Wegen <span class="k gen">des Regens</span> bleiben wir zu Hause.</td><td class="en">Because of the rain we stay home.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Kurzformen (Kontraktionen)</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:6px">
+        <span class="bp">zu dem → <b>zum</b></span>
+        <span class="bp">zu der → <b>zur</b></span>
+        <span class="bp">von dem → <b>vom</b></span>
+        <span class="bp">bei dem → <b>beim</b></span>
+        <span class="bp">an dem → <b>am</b></span>
+        <span class="bp">in dem → <b>im</b></span>
+        <span class="bp">an das → <b>ans</b></span>
+        <span class="bp">in das → <b>ins</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VERB + KASUS + PRÄPOSITION ============ -->
+  <section class="card" id="sec-verbprep">
+    <div class="card-head">
+      <div class="card-ico">🔌</div>
+      <h2 class="card-title">Verb + Kasus + Präposition<span class="en">Verbs with fixed prepositions</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Viele Verben haben eine feste Präposition und einen festen Fall. Am besten in <b>Gruppen</b> lernen — hier nach Kasus und Präposition sortiert.</p>
+      <div class="grid2">
+        <div>
+          <div class="subh" style="color:var(--akk)">mit Akkusativ</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Verb + Präposition</th><th>Beispiel</th></tr></thead>
+              <tbody>
+                <tr><td class="de">denken <b>an</b></td><td class="ex">Ich denke <span class="k akk">an dich</span>.</td></tr>
+                <tr><td class="de">sich erinnern <b>an</b></td><td class="ex">Ich erinnere mich <span class="k akk">an dich</span>.</td></tr>
+                <tr><td class="de">schreiben <b>an</b></td><td class="ex">Er schreibt <span class="k akk">an seine Freundin</span>.</td></tr>
+                <tr><td class="de">warten <b>auf</b></td><td class="ex">Ich warte <span class="k akk">auf den Bus</span>.</td></tr>
+                <tr><td class="de">sich freuen <b>auf</b></td><td class="ex">Ich freue mich <span class="k akk">auf das Wochenende</span>. <em>(Zukunft)</em></td></tr>
+                <tr><td class="de">sich freuen <b>über</b></td><td class="ex">Sie freut sich <span class="k akk">über das Geschenk</span>. <em>(jetzt)</em></td></tr>
+                <tr><td class="de">sprechen <b>über</b></td><td class="ex">Wir sprechen <span class="k akk">über den Film</span>.</td></tr>
+                <tr><td class="de">lachen <b>über</b></td><td class="ex">Wir lachen <span class="k akk">über den Witz</span>.</td></tr>
+                <tr><td class="de">sich interessieren <b>für</b></td><td class="ex">Er interessiert sich <span class="k akk">für Musik</span>.</td></tr>
+                <tr><td class="de">sich bedanken <b>für</b></td><td class="ex">Ich bedanke mich <span class="k akk">für die Hilfe</span>.</td></tr>
+                <tr><td class="de">sich entscheiden <b>für</b></td><td class="ex">Sie entscheidet sich <span class="k akk">für das rote Kleid</span>.</td></tr>
+                <tr><td class="de">sich kümmern <b>um</b></td><td class="ex">Sie kümmert sich <span class="k akk">um die Kinder</span>.</td></tr>
+                <tr><td class="de">sich verlieben <b>in</b></td><td class="ex">Er hat sich <span class="k akk">in Maria</span> verliebt.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subh" style="color:var(--dat)">mit Dativ</div>
+          <div class="table-wrap" style="margin:0">
+            <table class="sheet">
+              <thead><tr><th>Verb + Präposition</th><th>Beispiel</th></tr></thead>
+              <tbody>
+                <tr><td class="de">sprechen <b>mit</b></td><td class="ex">Ich spreche <span class="k dat">mit meinem Lehrer</span>.</td></tr>
+                <tr><td class="de">sich treffen <b>mit</b></td><td class="ex">Ich treffe mich <span class="k dat">mit meinen Freunden</span>.</td></tr>
+                <tr><td class="de">anfangen <b>mit</b></td><td class="ex">Sie fängt <span class="k dat">mit der Arbeit</span> an.</td></tr>
+                <tr><td class="de">sich beschäftigen <b>mit</b></td><td class="ex">Ich beschäftige mich <span class="k dat">mit Musik</span>.</td></tr>
+                <tr><td class="de">träumen <b>von</b></td><td class="ex">Sie träumt <span class="k dat">von einer Reise</span>.</td></tr>
+                <tr><td class="de">abhängen <b>von</b></td><td class="ex">Es hängt <span class="k dat">vom Wetter</span> ab.</td></tr>
+                <tr><td class="de">helfen <b>bei</b></td><td class="ex">Er hilft <span class="k dat">bei den Hausaufgaben</span>.</td></tr>
+                <tr><td class="de">fragen <b>nach</b></td><td class="ex">Ich frage <span class="k dat">nach dem Weg</span>.</td></tr>
+                <tr><td class="de">teilnehmen <b>an</b> ⚠️</td><td class="ex">Er nimmt <span class="k dat">an dem Kurs</span> teil.</td></tr>
+                <tr><td class="de">Angst haben <b>vor</b> ⚠️</td><td class="ex">Sie hat Angst <span class="k dat">vor Spinnen</span>.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Muster statt Auswendiglernen:</b> <b>mit · von · bei · nach</b> → immer <span class="k dat">Dativ</span> (wie immer!). <b>für · um</b> → immer <span class="k akk">Akkusativ</span>. Nur bei <b>an / auf / über / in / vor</b> musst du aufpassen: meist <span class="k akk">Akkusativ</span> — Ausnahmen mit ⚠️: <em>teilnehmen an, Angst haben vor</em> (+ Dativ).</div></div>
+    </div>
+  </section>
+
+  <!-- ============ WO(R) / DA(R) ============ -->
+  <section class="card" id="sec-woda">
+    <div class="card-head">
+      <div class="card-ico">❓</div>
+      <h2 class="card-title">Worauf? Darauf! — wo(r)- / da(r)-<span class="en">Prepositional pronouns for things</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead"><code>wo(r) + Präposition</code> → Frage &nbsp;·&nbsp; <code>da(r) + Präposition</code> → Antwort. Nur für <b>Sachen</b>, nicht für Personen. Für Personen: <em>mit wem?</em>, <em>über wen?</em> …</p>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Frage</th><th>Antwort</th><th>Bedeutung (English)</th></tr></thead>
+          <tbody>
+            <tr><td class="de">womit?</td><td class="de">damit</td><td class="en">with what? → with it</td></tr>
+            <tr><td class="de">wovon?</td><td class="de">davon</td><td class="en">about/from what? → about/from it</td></tr>
+            <tr><td class="de">worauf?</td><td class="de">darauf</td><td class="en">on what? → on it</td></tr>
+            <tr><td class="de">worüber?</td><td class="de">darüber</td><td class="en">about what? → about it</td></tr>
+            <tr><td class="de">woran?</td><td class="de">daran</td><td class="en">what on/about? → on/about it</td></tr>
+            <tr><td class="de">wofür?</td><td class="de">dafür</td><td class="en">for what? → for it</td></tr>
+            <tr><td class="de">wogegen?</td><td class="de">dagegen</td><td class="en">against what? → against it</td></tr>
+            <tr><td class="de">worin?</td><td class="de">darin</td><td class="en">in what? → in it</td></tr>
+            <tr><td class="de">worunter?</td><td class="de">darunter</td><td class="en">under what? → under it</td></tr>
+            <tr><td class="de">woraufhin?</td><td class="de">daraufhin</td><td class="en">as a result of what? → as a result</td></tr>
+            <tr><td class="de">warum?</td><td class="de">darum</td><td class="en">why? → that's why</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Die -r-Regel:</b> Präposition beginnt mit <b>Vokal</b> (a, e, i, o, u) → <b>+r</b> als Brücke: <code>wo<b>r</b>+auf</code>, <code>da<b>r</b>+über</code>. Konsonant → kein r: <code>wo+mit</code>, <code>da+von</code>. Zwei Vokale nebeneinander klingen schlecht — deshalb das r!</div></div>
+    </div>
+  </section>
+
+  <!-- ============ REFLEXIVE VERBEN ============ -->
+  <section class="card" id="sec-reflexiv">
+    <div class="card-head">
+      <div class="card-ico">🔁</div>
+      <h2 class="card-title">Reflexive Verben<span class="en">Reflexive pronouns</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Reflexivpronomen im <b>Akkusativ</b> (z. B. <em>sich freuen</em>, <em>sich interessieren</em>).</p>
+
+      <div class="figure">
+        <svg class="fig" viewBox="0 0 300 124" role="img" aria-label="Die Aktion geht zum Subjekt zurück" style="max-width:340px;margin:0 auto;height:auto;display:block">
+          <circle class="fperson" cx="70" cy="42" r="12"/>
+          <path class="fperson" d="M50 100 Q50 60 70 60 Q90 60 90 100 Z"/>
+          <path class="a-akk" d="M96 52 C 175 8, 240 60, 122 86"/>
+          <polygon class="ah-akk" points="112,89 130,78 132,94"/>
+          <text class="flabel t-akk" x="192" y="28" text-anchor="middle">mich · dich · sich …</text>
+          <text class="t-mut" x="70" y="118" text-anchor="middle">Subjekt</text>
+        </svg>
+        <div class="figcap">Reflexiv = die Aktion kommt <b>zum Subjekt zurück</b>: <em>Ich wasche <b style="color:var(--akk)">mich</b>.</em></div>
+      </div>
+
+      <div class="grid2">
+        <div class="table-wrap" style="margin:0">
+          <table class="sheet">
+            <thead><tr><th>Subjekt</th><th class="center">Reflexivpronomen (Akk)</th></tr></thead>
+            <tbody>
+              <tr><td class="de">ich</td><td class="center de">mich</td></tr>
+              <tr><td class="de">du</td><td class="center de">dich</td></tr>
+              <tr><td class="de">er / sie / es</td><td class="center de">sich</td></tr>
+              <tr><td class="de">wir</td><td class="center de">uns</td></tr>
+              <tr><td class="de">ihr</td><td class="center de">euch</td></tr>
+              <tr><td class="de">sie / Sie</td><td class="center de">sich</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="tip rule"><span class="ti">➕</span><div><b>Dativ-Form</b> (wenn es zusätzlich ein Akkusativobjekt gibt): nur <b>ich → mir</b> und <b>du → dir</b> ändern sich.<br><em>Ich wasche <span class="k dat">mir</span> <span class="k akk">die Hände</span>.</em> · <em>Putz <span class="k dat">dir</span> <span class="k akk">die Zähne</span>!</em><br>Alle anderen bleiben gleich (sich, uns, euch, sich).</div></div>
+        </div>
+      </div>
+
+      <div class="subh">Zwei Bedeutungen: sich vorstellen</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Struktur</th><th>Bedeutung</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de wrap">sich <span class="k akk">(Akk)</span> vorstellen</td><td class="en">to introduce oneself</td><td class="ex">Darf ich <span class="k akk">mich</span> vorstellen? · Ich stelle <span class="k akk">mich</span> vor.</td></tr>
+            <tr><td class="de wrap">sich <span class="k dat">(Dat)</span> etwas vorstellen</td><td class="en">to imagine sth.</td><td class="ex">Stell <span class="k dat">dir</span> <span class="k akk">das</span> vor! · Ich stelle <span class="k dat">mir</span> <span class="k akk">eine Reise</span> vor.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Merkhilfe:</b> Gibt es <b>zusätzlich ein Akkusativ-Objekt</b> (die Sache, die du dir vorstellst)? → Reflexivpronomen im <span class="k dat">Dativ</span>. Ohne Extra-Objekt → <span class="k akk">Akkusativ</span>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ KOMPARATIV & SUPERLATIV ============ -->
+  <section class="card" id="sec-komparativ">
+    <div class="card-head">
+      <div class="card-ico">📈</div>
+      <h2 class="card-title">Komparativ &amp; Superlativ<span class="en">Comparing: schneller, am schnellsten</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="figure">
+        <div class="steps">
+          <div class="step s1">schnell<small>Grundform</small></div>
+          <div class="step s2">schneller<small>Komparativ +er</small></div>
+          <div class="step s3">am schnellsten<small>Superlativ am …sten</small></div>
+        </div>
+        <div class="figcap">Immer <b>+er</b> (nie „mehr schnell“!) und <b>am …sten</b>.</div>
+      </div>
+
+      <div class="subh">Regeln</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Typ</th><th>Regel</th><th>Beispiele</th></tr></thead>
+          <tbody>
+            <tr><td class="fn">regelmäßig</td><td class="de">+er · am …sten</td><td class="ex">klein → kleiner → am kleinsten</td></tr>
+            <tr><td class="fn">a / o / u</td><td class="de wrap">oft Umlaut ä / ö / ü</td><td class="ex">alt → älter · groß → größer · jung → jünger</td></tr>
+            <tr><td class="fn">-el / -er</td><td class="de">-e- fällt weg</td><td class="ex">teuer → teurer · dunkel → dunkler</td></tr>
+            <tr><td class="fn">-d / -t / -s / -z</td><td class="de">am …esten</td><td class="ex">kalt → am kältesten · kurz → am kürzesten</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Unregelmäßige Formen (auswendig!)</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Grundform</th><th>Komparativ</th><th>Superlativ</th><th>English</th></tr></thead>
+          <tbody>
+            <tr><td class="de">gut</td><td class="de">besser</td><td class="de">am besten</td><td class="en">good</td></tr>
+            <tr><td class="de">viel</td><td class="de">mehr</td><td class="de">am meisten</td><td class="en">much</td></tr>
+            <tr><td class="de">gern</td><td class="de">lieber</td><td class="de">am liebsten</td><td class="en">gladly (like to)</td></tr>
+            <tr><td class="de">hoch</td><td class="de">höher</td><td class="de">am höchsten</td><td class="en">high</td></tr>
+            <tr><td class="de">nah</td><td class="de">näher</td><td class="de">am nächsten</td><td class="en">near</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subh">Vergleichen</div>
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>Muster</th><th>Bedeutung</th><th>Beispiel</th></tr></thead>
+          <tbody>
+            <tr><td class="de">so … wie</td><td class="en">gleich (A = B)</td><td class="ex">Er ist so groß wie ich.</td></tr>
+            <tr><td class="de">Komparativ + als</td><td class="en">ungleich (A ≠ B)</td><td class="ex">Sie ist größer als ich.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">💡</span><div>Vor einem Nomen bekommt der Komparativ/Superlativ normale <a href="#sec-adjektiv">Adjektivendungen</a>: <em>der schneller<b>e</b> Zug · der schnellst<b>e</b> Zug</em>. Mehr zu <em>als/wie</em> → <a href="verben.html#sec-als">als</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ ADJEKTIVDEKLINATION ============ -->
+  <section class="card" id="sec-adjektiv">
+    <div class="card-head">
+      <div class="card-ico">🎨</div>
+      <h2 class="card-title">Adjektivdeklination — Signal-Trick<span class="en">Adjective endings</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Die einfachste Methode: <b>erst das SIGNAL finden</b> (welcher Artikel steht davor?), danach kennst du die Endung.</p>
+
+      <div class="tip warn"><span class="ti">⚠️</span><div><b>Ohne Nomen keine Endung!</b> Nach <b>sein / werden / bleiben</b> steht das Adjektiv <b>prädikativ</b> — Grundform ohne Endung: <em>Er ist nett. · Die Kollegen sind sehr nett. · Das Auto ist neu.</em> Nur <b>attributiv</b> (vor dem Nomen) gibt es Endungen: <em>der nett<b>e</b> Chef · ein neu<b>es</b> Auto</em>. Beliebte Sprachbausteine-Falle!</div></div>
+
+      <div class="figure">
+        <div class="flow">
+          <div class="flow-q">Welcher Artikel steht vor dem Adjektiv?</div>
+          <div class="flow-stem"></div>
+          <div class="flow-branches">
+            <div class="flow-branch">
+              <div class="flow-cond">der · die · das<small>bestimmter Artikel</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out weak">SCHWACH<small>meist -e / -en</small></div>
+            </div>
+            <div class="flow-branch">
+              <div class="flow-cond">ein · kein · mein …<small>unbestimmt / Possessiv</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out mixed">GEMISCHT<small>Mischung</small></div>
+            </div>
+            <div class="flow-branch">
+              <div class="flow-cond">— (kein Artikel)<small>Nullartikel</small></div>
+              <div class="flow-arr">↓</div>
+              <div class="flow-out strong">STARK<small>zeigt Fall &amp; Genus</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div>
+          <table class="grid">
+            <caption>1 · Bestimmter Artikel <span style="color:var(--text-muted);font-weight:500">(der/die/das)</span> → <b>schwach</b></caption>
+            <thead><tr><th></th><th>M</th><th>F</th><th>N</th><th>Pl</th></tr></thead>
+            <tbody>
+              <tr><th>Nom</th><td class="hl"><span class="ec">e</span></td><td class="hl"><span class="ec">e</span></td><td class="hl"><span class="ec">e</span></td><td><span class="ec">en</span></td></tr>
+              <tr><th>Akk</th><td><span class="ec">en</span></td><td class="hl"><span class="ec">e</span></td><td class="hl"><span class="ec">e</span></td><td><span class="ec">en</span></td></tr>
+              <tr><th>Dat</th><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td></tr>
+              <tr><th>Gen</th><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td></tr>
+            </tbody>
+          </table>
+          <p class="lead" style="margin:8px 2px 0;font-size:.86rem"><em>der große Hund, die schöne Wohnung, das neue Auto</em></p>
+        </div>
+        <div>
+          <table class="grid">
+            <caption>2 · Unbestimmter Artikel <span style="color:var(--text-muted);font-weight:500">(ein/mein…)</span> → <b>gemischt</b></caption>
+            <thead><tr><th></th><th>M</th><th>F</th><th>N</th><th>Pl</th></tr></thead>
+            <tbody>
+              <tr><th>Nom</th><td><span class="ec">er</span></td><td><span class="ec">e</span></td><td><span class="ec">es</span></td><td><span class="ec">en</span></td></tr>
+              <tr><th>Akk</th><td><span class="ec">en</span></td><td><span class="ec">e</span></td><td><span class="ec">es</span></td><td><span class="ec">en</span></td></tr>
+              <tr><th>Dat</th><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td></tr>
+              <tr><th>Gen</th><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td><td><span class="ec">en</span></td></tr>
+            </tbody>
+          </table>
+          <p class="lead" style="margin:8px 2px 0;font-size:.86rem"><em>ein großer Hund, eine schöne Wohnung, mein gutes Essen</em></p>
+        </div>
+        <div>
+          <table class="grid">
+            <caption>3 · Kein Artikel → <b>stark</b></caption>
+            <thead><tr><th></th><th>M</th><th>F</th><th>N</th><th>Pl</th></tr></thead>
+            <tbody>
+              <tr><th>Nom</th><td><span class="ec">er</span></td><td><span class="ec">e</span></td><td><span class="ec">es</span></td><td><span class="ec">e</span></td></tr>
+              <tr><th>Akk</th><td><span class="ec">en</span></td><td><span class="ec">e</span></td><td><span class="ec">es</span></td><td><span class="ec">e</span></td></tr>
+              <tr><th>Dat</th><td><span class="ec">em</span></td><td><span class="ec">er</span></td><td><span class="ec">em</span></td><td><span class="ec">en</span></td></tr>
+              <tr><th>Gen</th><td><span class="ec">en</span></td><td><span class="ec">er</span></td><td><span class="ec">en</span></td><td><span class="ec">er</span></td></tr>
+            </tbody>
+          </table>
+          <p class="lead" style="margin:8px 2px 0;font-size:.86rem"><em>großer Hunger, schöne Musik, kaltes Wasser, mit frisch gekochtem Tee</em></p>
+        </div>
+      </div>
+      <div class="tip merk"><span class="ti">🧠</span><div><b>Merke:</b> Nach <b>der/die/das</b> gibt es nur <b>zwei</b> Endungen: <b>-e</b> (die 5 gelb markierten Felder — der Block oben links) oder <b>-en</b> (alle anderen). Die halbe Tabelle ist also geschenkt!</div></div>
+      <div class="tip"><span class="ti">💡</span><div><b>Logik:</b> Zeigt der Artikel schon Fall &amp; Genus (das <em>Signal</em>), reicht dem Adjektiv das schwache <b>-e/-en</b>. Fehlt das Signal, muss das Adjektiv die Arbeit übernehmen (starke Endung).</div></div>
+    </div>
+  </section>
+
+  <!-- ============ HÄUFIGKEIT ============ -->
+  <section class="card" id="sec-haeufig">
+    <div class="card-head">
+      <div class="card-ico">📊</div>
+      <h2 class="card-title">Häufigkeitsadverbien<span class="en">Adverbs of frequency</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead">Von <b>immer</b> (100 %) bis <b>nie</b> (0 %).</p>
+      <div class="freq">
+        <div class="freq-row"><span class="de">immer</span><span class="en">always · <b>100 %</b></span><span class="bar"><i style="width:100%"></i></span></div>
+        <div class="freq-row"><span class="de">meistens</span><span class="en">usually · <b>90 %</b></span><span class="bar"><i style="width:90%"></i></span></div>
+        <div class="freq-row"><span class="de">häufig</span><span class="en">frequently · <b>75 %</b></span><span class="bar"><i style="width:75%"></i></span></div>
+        <div class="freq-row"><span class="de">oft</span><span class="en">often · <b>60 %</b></span><span class="bar"><i style="width:60%"></i></span></div>
+        <div class="freq-row"><span class="de">manchmal</span><span class="en">sometimes · <b>45 %</b></span><span class="bar"><i style="width:45%"></i></span></div>
+        <div class="freq-row"><span class="de">gelegentlich</span><span class="en">occasionally · <b>35 %</b></span><span class="bar"><i style="width:35%"></i></span></div>
+        <div class="freq-row"><span class="de">ab und zu</span><span class="en">now and then · <b>25 %</b></span><span class="bar"><i style="width:25%"></i></span></div>
+        <div class="freq-row"><span class="de">selten</span><span class="en">seldom · <b>15 %</b></span><span class="bar"><i style="width:15%"></i></span></div>
+        <div class="freq-row"><span class="de">fast nie</span><span class="en">hardly ever · <b>5 %</b></span><span class="bar"><i style="width:5%"></i></span></div>
+        <div class="freq-row"><span class="de">nie</span><span class="en">never · <b>0 %</b></span><span class="bar"><i style="width:2%"></i></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RICHTUNGEN hin/her ============ -->
+  <section class="card" id="sec-richtung">
+    <div class="card-head">
+      <div class="card-ico">↕️</div>
+      <h2 class="card-title">Richtungen: hin- &amp; her-<span class="en">Direction prefixes</span></h2>
+    </div>
+    <div class="card-body">
+      <p class="lead"><b>her-</b> = Richtung <b>zum Sprecher</b> (hierher). <b>hin-</b> = Richtung <b>weg vom Sprecher</b> (dorthin).</p>
+
+      <div class="figure">
+        <svg class="fig" viewBox="0 0 300 138" role="img" aria-label="her zeigt zum Sprecher, hin zeigt weg vom Sprecher" style="max-width:420px;margin:0 auto;height:auto">
+          <!-- Sprecher -->
+          <circle class="fperson" cx="42" cy="52" r="12"/>
+          <path class="fperson" d="M22 104 Q22 70 42 70 Q62 70 62 104 Z"/>
+          <text class="t-mut" x="42" y="124" text-anchor="middle">ich / Sprecher</text>
+          <!-- her: toward speaker -->
+          <text class="flabel t-her" x="184" y="34" text-anchor="middle">her- → zu mir</text>
+          <line class="a-her" x1="258" y1="52" x2="104" y2="52"/>
+          <polygon class="ah-her" points="96,52 108,45 108,59"/>
+          <!-- hin: away from speaker -->
+          <line class="a-hin" x1="104" y1="90" x2="252" y2="90"/>
+          <polygon class="ah-hin" points="260,90 248,83 248,97"/>
+          <text class="flabel t-hin" x="184" y="114" text-anchor="middle">hin- → weg von mir</text>
+        </svg>
+        <div class="figcap">„Komm <b style="color:var(--dat)">her</b>unter!“ (zu mir) · „Gehen wir <b style="color:var(--gen)">hin</b>auf?“ (weg von mir)</div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="sheet">
+          <thead><tr><th>her- <span style="font-weight:500;text-transform:none">(zum Sprecher)</span></th><th>hin- <span style="font-weight:500;text-transform:none">(weg vom Sprecher)</span></th><th>Umgangssprache <span style="font-weight:500;text-transform:none">(no direction)</span></th></tr></thead>
+          <tbody>
+            <tr><td class="de">herauf</td><td class="de">hinauf</td><td class="de">rauf</td></tr>
+            <tr><td class="de">herunter</td><td class="de">hinunter</td><td class="de">runter</td></tr>
+            <tr><td class="de">heraus</td><td class="de">hinaus</td><td class="de">raus</td></tr>
+            <tr><td class="de">herein</td><td class="de">hinein</td><td class="de">rein</td></tr>
+            <tr><td class="de">herüber</td><td class="de">hinüber</td><td class="de">rüber</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><span class="ti">🗣️</span><div><em>„Komm doch <b>herunter</b>!“</em> (zu mir herunter) &nbsp;·&nbsp; <em>„Gehen wir <b>hinauf</b>?“</em> (nach oben, weg). In der Umgangssprache oft nur: <em>Komm <b>runter</b>! / Gehen wir <b>rauf</b>?</em></div></div>
+    </div>
+  </section>
+
+  <div class="noresults" id="noresults">Keine Treffer für „<span id="nrq"></span>“. <br>Versuch ein anderes Stichwort.</div>
+
+</main>
+
+<button id="top" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg>
+</button>
+
+<footer>
+  <p>telc Deutsch B1 Cheat Sheet · zum Lernen &amp; Wiederholen. Kein offizielles telc-Material — Modelltests findest du bei telc. <br>
+  Tipp: <kbd>/</kbd> oder die Suchleiste oben nutzen · <kbd>Strg</kbd>/<kbd>⌘</kbd> + <kbd>P</kbd> zum Drucken/als PDF speichern.</p>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ----- Print ----- */
+  document.getElementById('printBtn').addEventListener('click',function(){window.print();});
+
+  /* ----- Search / filter ----- */
+  var search=document.getElementById('search');
+  var clearBtn=document.getElementById('clear');
+  var noResults=document.getElementById('noresults');
+  var nrq=document.getElementById('nrq');
+  var sections=[].slice.call(document.querySelectorAll('main .card:not([data-noindex])'));
+
+  // cache lower-cased text for speed
+  sections.forEach(function(sec){
+    sec._title=(sec.querySelector('.card-title')||{textContent:''}).textContent.toLowerCase();
+    sec._full=sec.textContent.toLowerCase();
+    sec._rows=[].slice.call(sec.querySelectorAll('tbody tr'));
+    sec._rows.forEach(function(r){ r._t=r.textContent.toLowerCase(); });
+  });
+
+  function runSearch(q){
+    q=q.trim().toLowerCase();
+    clearBtn.classList.toggle('show', q.length>0);
+    var anyVisible=false;
+
+    sections.forEach(function(sec){
+      if(!q){
+        sec.style.display='';
+        sec._rows.forEach(function(r){r.style.display='';});
+        anyVisible=true;
+        return;
+      }
+      // Decide visibility from the whole section (covers tables, diagrams, letter, exam parts…)
+      if(sec._full.indexOf(q)===-1){ sec.style.display='none'; return; }
+      sec.style.display=''; anyVisible=true;
+
+      if(sec._rows.length){
+        var titleMatch = sec._title.indexOf(q)>-1, rowHits=0;
+        sec._rows.forEach(function(r){ if(r._t.indexOf(q)>-1) rowHits++; });
+        if(titleMatch || rowHits===0){
+          // match is in the title or in non-table content → show all rows for context
+          sec._rows.forEach(function(r){r.style.display='';});
+        }else{
+          sec._rows.forEach(function(r){ r.style.display = r._t.indexOf(q)>-1 ? '' : 'none'; });
+        }
+      }
+    });
+
+    noResults.classList.toggle('show', !anyVisible && q.length>0);
+    nrq.textContent=q;
+  }
+
+  var t;
+  search.addEventListener('input',function(){
+    clearTimeout(t);
+    t=setTimeout(function(){runSearch(search.value);},90);
+  });
+  search.addEventListener('keydown',function(e){ if(e.key==='Escape'){search.value='';runSearch('');} });
+  clearBtn.addEventListener('click',function(){ search.value=''; runSearch(''); search.focus(); });
+
+  // "/" focuses search
+  document.addEventListener('keydown',function(e){
+    if(e.key==='/' && document.activeElement!==search && !/input|textarea/i.test((document.activeElement||{}).tagName||'')){
+      e.preventDefault(); search.focus();
+    }
+  });
+
+  /* ----- Back to top ----- */
+  var topBtn=document.getElementById('top');
+  window.addEventListener('scroll',function(){
+    topBtn.classList.toggle('show', window.scrollY>500);
+  },{passive:true});
+  topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+  /* ----- Scrollspy: highlight active nav chip ----- */
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var map={};
+  chips.forEach(function(c){ map[c.getAttribute('href').slice(1)]=c; });
+  var spySections=[].slice.call(document.querySelectorAll('main .card[id]:not([data-noindex])'));
+  if('IntersectionObserver' in window){
+    var current=null;
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          if(current) current.classList.remove('active');
+          var c=map[en.target.id];
+          if(c){ c.classList.add('active'); current=c;
+            // keep active chip visible if nav scrolls
+            if(c.scrollIntoView){ /* no-op to avoid jump on desktop */ }
+          }
+        }
+      });
+    },{rootMargin:'-45% 0px -50% 0px',threshold:0});
+    spySections.forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
