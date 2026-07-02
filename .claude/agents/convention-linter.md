@@ -9,7 +9,7 @@ You audit the cheat sheet's HTML for compliance with the repo's CLAUDE.md conven
 
 ## Checks
 
-1. **Self-contained**: no external CSS/JS/images, no CDN links, no `<script src>` / `<link href>` to remote resources, no build tooling or package references. Everything inline. This is a hard constraint — flag any violation prominently.
+1. **Self-contained**: no external CSS/JS/images, no CDN links, no `<script src>` / `<link href>` to remote resources, no build tooling or package references. Everything inline. This is a hard constraint — flag any violation prominently. (A plain outbound `<a href="https://…">` navigation link, e.g. the header GitHub link, is allowed — only external resource *loads* are forbidden.)
 2. **No dark mode**: no dark-mode toggle or media-query dark theme was (re)introduced. Light-only "Ozean" palette only.
 3. **Nav mirrors DOM order** (within the page): the order of `.chip` links (`href="#sec-..."`) in that page's nav matches the order of the corresponding `<section id="sec-...">` in that page's `<main>`. List any mismatch — scrollspy depends on this.
 4. **Every chip has a section and vice versa**: no orphan chips pointing at missing sections, no sections missing a chip. The legend card must carry `data-noindex`.
